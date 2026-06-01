@@ -127,7 +127,7 @@ if (contactForm) {
             contactForm.querySelector("textarea").value;
 
         const text =
-`Halo PT Minera Pangan Indonesia
+`Halo PT Manera Pacific Indonesia
 
 Nama : ${nama}
 WhatsApp : ${whatsapp}
@@ -138,7 +138,7 @@ Detail Kebutuhan :
 ${pesan}`;
 
         const nomorAdmin =
-            "6281234567890";
+            "6282322238885";
 
         const url =
             `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(text)}`;
@@ -321,7 +321,7 @@ if (floatingWa) {
         e.preventDefault();
 
         window.open(
-            "https://wa.me/6281234567890",
+            "https://wa.me/6282322238885",
             "_blank"
         );
 

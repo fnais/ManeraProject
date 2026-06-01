@@ -37,7 +37,6 @@
             <li><a href="#services">Layanan Maklon</a></li>
             <li><a href="#products">Kategori Produk</a></li>
             <li><a href="#quality">Standar Mutu</a></li>
-            <li><a href="#calculator">Kalkulator Maklon</a></li>
             <li><a href="#contact">Kontak</a></li>
           </ul>
         </nav>
@@ -72,9 +71,7 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#calculator" class="btn-primary">
-              Hitung Estimasi Maklon
-            </a>
+            <a href="#about" class="btn-primary"> Tentang Kami </a>
 
             <a href="#services" class="btn-secondary"> Jelajahi Layanan → </a>
           </div>
@@ -215,13 +212,25 @@
 
         <div class="category-grid">
           <div class="category-card">
-            <img src="{{ url_for('static', filename='image/product1.jpg') }}" />
-            <h3>Minuman Bubuk</h3>
+            <a href="/minuman_bubuk" class="category-card">
+              <img
+                src="{{ url_for('static',
+                filename='image/product1.jpg') }}"
+              />
+
+              <h3>Minuman Bubuk</h3>
+            </a>
           </div>
 
           <div class="category-card">
-            <img src="{{ url_for('static', filename='image/product2.jpg') }}" />
-            <h3>Granola & Snack</h3>
+            <a href="/granola" class="category-card">
+              <img
+                src="{{ url_for('static',
+                filename='image/product2.jpg') }}"
+              />
+
+              <h3>Granola</h3>
+            </a>
           </div>
 
           <div class="category-card">
@@ -292,43 +301,6 @@
           <div class="step">
             <span>4</span>
             <h4>Pengiriman</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CALCULATOR ================= -->
-
-    <section class="calculator" id="calculator">
-      <div class="container">
-        <div class="section-header">
-          <span>KALKULATOR MAKLON</span>
-          <h2>Rancang Produk & Hitung Estimasi Awal</h2>
-        </div>
-
-        <div class="calculator-box">
-          <div class="calculator-form">
-            <select>
-              <option>Minuman Bubuk</option>
-              <option>Snack</option>
-              <option>Saus</option>
-            </select>
-
-            <input
-              type="range"
-              min="3000"
-              max="100000"
-              value="5000"
-              id="volume"
-            />
-          </div>
-
-          <div class="summary-card">
-            <h3>Ringkasan Produksi</h3>
-
-            <p>Total Produksi:</p>
-
-            <h2 id="volumeValue">5000 pcs</h2>
           </div>
         </div>
       </div>
