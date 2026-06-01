@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manera Pacific Indonesia</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="container nav-wrapper">
+        <div class="logo">
+          <div class="logo-icon">M</div>
+          <span>manera.co.id</span>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#services">Layanan Maklon</a></li>
+            <li><a href="#products">Kategori Produk</a></li>
+            <li><a href="#quality">Standar Mutu</a></li>
+            <li><a href="#calculator">Kalkulator Maklon</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contact" class="btn-wa">
+          <i class="fab fa-whatsapp"></i>
+          Konsultasi Gratis
+        </a>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+      <div class="overlay"></div>
+
+      <div class="container hero-wrapper">
+        <div class="hero-left">
+          <div class="hero-badge">
+            ✓ FASILITAS TERSERTIFIKASI BPOM, HALAL & HACCP
+          </div>
+
+          <h1>
+            Pionir Manufaktur Makanan & Minuman
+            <span>Berkualitas Tinggi</span>
+          </h1>
+
+          <p>
+            PT Manera Pacific Indonesia memproduksi produk pangan inovatif,
+            higienis dan berstandar internasional. Mitra OEM/ODM terpercaya
+            untuk mengembangkan merek Anda.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#calculator" class="btn-primary">
+              Hitung Estimasi Maklon
+            </a>
+
+            <a href="#services" class="btn-secondary"> Jelajahi Layanan → </a>
+          </div>
+
+          <div class="stats">
+            <div>
+              <h3>100+</h3>
+              <span>PRODUK SUKSES</span>
+            </div>
+
+            <div>
+              <h3>15+</h3>
+              <span>TAHUN PENGALAMAN</span>
+            </div>
+
+            <div>
+              <h3>10M+</h3>
+              <span>KAPASITAS BULANAN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="feature-card">
+            <small>PABRIK AKTIF 24/7</small>
+
+            <div class="feature-item">
+              <h4>Tim R&D Inovatif</h4>
+              <p>Formulasi produk sesuai tren pasar dan regulasi terbaru.</p>
+            </div>
+
+            <div class="feature-item">
+              <h4>Bahan Baku Premium</h4>
+              <p>Rantai pasok lokal dan global tersertifikasi.</p>
+            </div>
+
+            <div class="feature-item">
+              <h4>Jaminan Higienis Maksimal</h4>
+              <p>Produksi terstandar HACCP dan GMP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+      <div class="container about-wrapper">
+        <div class="about-image">
+          <img
+            src="{{ url_for('static', filename='image/about.jpg') }}"
+            alt="about"
+          />
+
+          <div class="quality-box">
+            <h2>100%</h2>
+            <p>Menggunakan bahan baku lulus uji laboratorium</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-tag">TENTANG PT MANERA PACIFIC INDONESIA</div>
+
+          <h2>
+            Dedikasi Kami untuk Kualitas Nutrisi dan Keamanan Pangan Terbaik
+          </h2>
+
+          <p>
+            Sejak didirikan, PT Manera Pacific Indonesia berkomitmen menjadi
+            produsen pangan modern yang fokus pada kualitas, inovasi dan
+            keamanan.
+          </p>
+
+          <p>
+            Kami menyediakan solusi end-to-end mulai dari formulasi,
+            sertifikasi, produksi massal hingga distribusi produk.
+          </p>
+
+          <div class="vision-grid">
+            <div class="vision-box">
+              <h4>Visi Kami</h4>
+              <p>Menjadi produsen pangan global terpercaya.</p>
+            </div>
+
+            <div class="vision-box">
+              <h4>Misi Kami</h4>
+              <p>Memberikan layanan manufaktur terbaik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span>LAYANAN KAMI</span>
+
+          <h2>Layanan Solusi Manufaktur Terintegrasi</h2>
+
+          <p>Dari ide hingga produk siap edar.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="icon">⚙️</div>
+            <h3>Maklon Penuh (OEM/ODM)</h3>
+            <p>Produksi lengkap sesuai spesifikasi merek Anda.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">🧪</div>
+            <h3>R&D & Formulasi</h3>
+            <p>Pengembangan formula inovatif dan kompetitif.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="icon">📋</div>
+            <h3>Sertifikasi & Regulasi</h3>
+            <p>Pendampingan BPOM, Halal dan legalitas produk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="section-header">
+          <span>KATEGORI PRODUK</span>
+
+          <h2>Produk Yang Dapat Kami Produksi</h2>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card">
+            <img src="{{ url_for('static', filename='image/product1.jpg') }}" />
+            <h3>Minuman Bubuk</h3>
+          </div>
+
+          <div class="category-card">
+            <img src="{{ url_for('static', filename='image/product2.jpg') }}" />
+            <h3>Granola & Snack</h3>
+          </div>
+
+          <div class="category-card">
+            <img src="{{ url_for('static', filename='image/product3.jpg') }}" />
+            <h3>Saus & Pasta</h3>
+          </div>
+
+          <div class="category-card">
+            <img src="{{ url_for('static', filename='image/product4.jpg') }}" />
+            <h3>Makanan Siap Saji</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUALITY ================= -->
+
+    <section class="quality" id="quality">
+      <div class="container">
+        <div class="section-header center">
+          <span>STANDAR KEAMANAN INTERNASIONAL</span>
+
+          <h2>Tanpa Kompromi Pada Keamanan & Sanitasi</h2>
+        </div>
+
+        <div class="quality-grid">
+          <div class="quality-item">
+            <h3>BPOM RI</h3>
+          </div>
+
+          <div class="quality-item">
+            <h3>HALAL</h3>
+          </div>
+
+          <div class="quality-item">
+            <h3>HACCP</h3>
+          </div>
+
+          <div class="quality-item">
+            <h3>ISO 22000</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WORKFLOW ================= -->
+
+    <section class="workflow">
+      <div class="container">
+        <h2>4 Alur Kerja Kolaborasi Maklon Bersama Kami</h2>
+
+        <div class="workflow-grid">
+          <div class="step">
+            <span>1</span>
+            <h4>Konsultasi</h4>
+          </div>
+
+          <div class="step">
+            <span>2</span>
+            <h4>Sertifikasi</h4>
+          </div>
+
+          <div class="step">
+            <span>3</span>
+            <h4>Produksi</h4>
+          </div>
+
+          <div class="step">
+            <span>4</span>
+            <h4>Pengiriman</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CALCULATOR ================= -->
+
+    <section class="calculator" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <span>KALKULATOR MAKLON</span>
+          <h2>Rancang Produk & Hitung Estimasi Awal</h2>
+        </div>
+
+        <div class="calculator-box">
+          <div class="calculator-form">
+            <select>
+              <option>Minuman Bubuk</option>
+              <option>Snack</option>
+              <option>Saus</option>
+            </select>
+
+            <input
+              type="range"
+              min="3000"
+              max="100000"
+              value="5000"
+              id="volume"
+            />
+          </div>
+
+          <div class="summary-card">
+            <h3>Ringkasan Produksi</h3>
+
+            <p>Total Produksi:</p>
+
+            <h2 id="volumeValue">5000 pcs</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h2>Mari Ciptakan Produk Makanan Merek Anda Sendiri</h2>
+
+            <p>Hubungi tim kami sekarang.</p>
+          </div>
+
+          <form class="contact-form">
+            <input type="text" placeholder="Nama" />
+
+            <input type="text" placeholder="WhatsApp" />
+
+            <input type="text" placeholder="Nama Brand" />
+
+            <textarea rows="6" placeholder="Pesan"></textarea>
+
+            <button type="submit">Kirim Melalui WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn">Berapa MOQ minimum?</button>
+          <div class="faq-content">MOQ mulai dari 3000 pcs.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-btn">Berapa lama proses produksi?</button>
+          <div class="faq-content">Sekitar 30-60 hari.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>manera.co.id</h3>
+          <p>Produsen pangan terpercaya Indonesia.</p>
+        </div>
+
+        <div>
+          <h4>Perusahaan</h4>
+          <ul>
+            <li>Tentang Kami</li>
+            <li>Layanan</li>
+            <li>Produk</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Kontak</h4>
+          <ul>
+            <li>+62 812 3456 7890</li>
+            <li>info@manera.co.id</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="floating-wa">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
