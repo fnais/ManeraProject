@@ -6,26 +6,25 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/minuman_bubuk')
-def minuman_bubuk():
-    return render_template('minuman_bubuk.html')
+@app.route('/Bihun_Jagung_Pion_Tunggal')
+def Bihun_Jagung_Pion_Tunggal():
+    return render_template('Bihun_Jagung_Pion_Tunggal.html')
 
 
-@app.route('/granola')
+@app.route('/Bihun_Jagung_Pitung')
 def granola():
-    return render_template('granola.html')
+    return render_template('Bihun_Jagung_Pitung.html')
 
 
-@app.route('/saus')
+@app.route('/Sohun_Iyon')
 def saus():
-    return render_template('saus.html')
+    return render_template('Sohun_Iyon.html')
 
 
-@app.route('/mre')
+@app.route('/Penyedap_Rasa_Sisuka')
 def mre():
-    return render_template('mre.html')
+    return render_template('Penyedap_Rasa_Sisuka.html')
 
-if __name__ == '__main__':
-    # app.run(debug=True)
-    
-    app.run(host="0.0.0.0", port=5000)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)

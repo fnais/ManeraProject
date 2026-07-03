@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Bihun Jagung Pion Tunggal
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',
+filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <section class="detail-hero">
+      <div class="container">
+        <h1>Bihun Jagung Pion Tunggal</h1>
+
+        <p>
+          Bihun Jagung Pion Tunggal memiliki 2 variasi gramasi
+          140gr dan 280gr
+                  </p>
+      </div>
+    </section>
+
+    <section class="detail-content">
+      <div class="container">
+        <div class="detail-grid">
+          <div>
+            <img
+              src="{{ url_for('static',
+                filename='image/bihunkenyal.png') }}"
+            />
+          </div>
+
+          <div>
+            <h2>KENAPA HARUS BIHUN JAGUNG PION TUNGGAL?</h2>
+
+            <ul>
+              <li>Bebas glutten dan rendah kalori</li>
+
+              <li>Tinggi fiber dan vitamin</li>
+
+              <li>Waktu masak hanya 2 menit</li>
+
+              <li>Mampu menyerap bumbu dengan sempurna</li>
+
+              <li>Ketahanan suhu ruang sampai 24 jam</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spec-section">
+      <div class="container">
+        <h2>KATALOG PRODUK</h2>
+
+    <section class="spec-grid">
+      <div class="spec-card"
+        <h3>
+          <img
+           src="{{ url_for('static',
+          filename='image/140grpion.png') }}"
+              />
+              
+        <h3>Bihun Pion Tunggal 140GR</h3>
+
+      </div>
+
+      <div class="spec-card"
+        <h3>
+          <img
+           src="{{ url_for('static',
+          filename='image/280grpion.png') }}"
+              />
+              
+        <h3>Bihun Pion Tunggal 280GR</h3>
+
+      </div>
+
+        <!-- <div class="spec-grid">
+          <div class="spec-card">
+            <h3>Kemasan 140gr</h3>
+
+            <p>1 Bal isi 24 Pack</p>
+          </div>
+
+          <div class="spec-card">
+            <h3>Kemasan 280gr</h3>
+
+            <p>1 Bal isi 12 Pack</p>
+          </div> -->
+
+          <!-- <div class="spec-card">
+            <h3>Sertifikasi</h3>
+
+            <p>BPOM, Halal, HACCP</p>
+          </div>
+
+          <div class="spec-card">
+            <h3>Lead Time</h3>
+
+            <p>30-60 Hari</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+<section class="gallery">
+    <div class="container">
+        <h2>Testimoni</h2>
+
+        <div class="gallery-grid">
+
+            <video controls>
+                <source src="{{ url_for('static', filename='image/testia.mp4')}}"type="video/mp4">
+               
+            </video>
+
+            <video controls>
+                <source src="{{ url_for('static', filename='image/testib.mp4') }}" type="video/mp4">
+                
+            </video>
+
+            <video controls>
+                <source src="{{ url_for('static', filename='image/testic.mp4') }}" type="video/mp4">
+                
+            </video>
+
+        </div>
+    </div>
+</section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Mau masak apa hari ini?</h2>
+
+        <a href="https://wa.me/6282322238885" class="btn-primary">
+          Belanja Sekarang
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
