@@ -279,32 +279,32 @@ const statNumbers =
 
 let animated = false;
 
-window.addEventListener("scroll", () => {
+// window.addEventListener("scroll", () => {
 
-    const stats =
-        document.querySelector(".stats");
+//     const stats =
+//         document.querySelector(".stats");
 
-    if (!stats) return;
+//     if (!stats) return;
 
-    const position =
-        stats.getBoundingClientRect().top;
+//     const position =
+//         stats.getBoundingClientRect().top;
 
-    if (
-        position < window.innerHeight &&
-        !animated
-    ) {
+//     if (
+//         position < window.innerHeight &&
+//         !animated
+//     ) {
 
-        animated = true;
+//         animated = true;
 
-        animateCounter(statNumbers[0], 100);
+//         animateCounter(statNumbers[0], 100);
 
-        animateCounter(statNumbers[1], 15);
+//         animateCounter(statNumbers[1], 15);
 
-        statNumbers[2].innerText = "10M+";
+//         statNumbers[2].innerText = "10M+";
 
-    }
+//     }
 
-});
+// });
 
 
 /* ==========================
@@ -362,3 +362,162 @@ const reveal = () => {
 window.addEventListener("scroll", reveal);
 
 reveal();
+
+/* ==========================
+   AUTO PRODUCT CAROUSEL
+   HOVER = PAUSE
+========================== */
+
+const productCarousel =
+    document.querySelector(".product-carousel");
+
+const productSlider =
+    document.getElementById("productSlider");
+
+const productViewport =
+    document.querySelector(".product-viewport");
+
+const prevProduct =
+    document.getElementById("prevProduct");
+
+const nextProduct =
+    document.getElementById("nextProduct");
+
+
+if (
+    productCarousel &&
+    productSlider &&
+    productViewport
+) {
+
+    /* =================================
+       DUPLICATE PRODUCT
+       UNTUK INFINITE LOOP
+    ================================= */
+
+    const originalCards =
+        Array.from(
+            productSlider.children
+        );
+
+
+    originalCards.forEach(card => {
+
+        const clone =
+            card.cloneNode(true);
+
+        productSlider.appendChild(clone);
+
+    });
+
+
+    /* =================================
+       VARIABLE
+    ================================= */
+
+    let position = 0;
+
+    let speed = 0.45;
+
+    let isPaused = false;
+
+    let animationFrame;
+
+
+    /* =================================
+       HITUNG LEBAR 1 SET
+    ================================= */
+
+    function getLoopWidth() {
+
+        return productSlider.scrollWidth / 2;
+
+    }
+
+
+    /* =================================
+       ANIMATION
+    ================================= */
+
+    function animate() {
+
+        if (!isPaused) {
+
+            position -= speed;
+
+
+            /*
+                Kalau sudah melewati
+                produk original pertama,
+                reset ke awal.
+
+                Karena produk sudah diduplikasi,
+                reset tidak akan terlihat.
+            */
+
+            if (
+                Math.abs(position)
+                >= getLoopWidth()
+            ) {
+
+                position = 0;
+
+            }
+
+
+            productSlider.style.transform =
+                `translateX(${position}px)`;
+
+        }
+
+
+        animationFrame =
+            requestAnimationFrame(
+                animate
+            );
+
+    }
+
+
+    /* =================================
+       HOVER PRODUCT
+    ================================= */
+
+    const cards =
+        productSlider.querySelectorAll(
+            ".category-card"
+        );
+
+
+    cards.forEach(card => {
+
+        card.addEventListener(
+            "mouseenter",
+            function() {
+
+                isPaused = true;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            function() {
+
+                isPaused = false;
+
+            }
+        );
+
+    });
+
+
+
+    /* =================================
+       START
+    ================================= */
+
+    animate();
+
+}

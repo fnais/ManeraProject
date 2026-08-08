@@ -1,147 +1,604 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
 
-    <title>Bihun Jagung Pion Tunggal
-    </title>
+<head>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static',
-filename='style.css') }}"
-    />
-  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-    <section class="detail-hero">
-      <div class="container">
-        <h1>Bihun Jagung Pion Tunggal</h1>
+    <title>Bihun Jagung Pion Tunggal 280GR</title>
 
-        <p>
-          Bihun Jagung Pion Tunggal memiliki 2 variasi gramasi
-          140gr dan 280gr
-                  </p>
-      </div>
-    </section>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <section class="detail-content">
-      <div class="container">
-        <div class="detail-grid">
-          <div>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS Website -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='detail.css')}}">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+   <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="container nav-wrapper">
+        <div class="logo">
             <img
-              src="{{ url_for('static',
-                filename='image/bihunkenyal.png') }}"
-            />
-          </div>
-
-          <div>
-            <h2>KENAPA HARUS BIHUN JAGUNG PION TUNGGAL?</h2>
-
-            <ul>
-              <li>Bebas glutten dan rendah kalori</li>
-
-              <li>Tinggi fiber dan vitamin</li>
-
-              <li>Waktu masak hanya 2 menit</li>
-
-              <li>Mampu menyerap bumbu dengan sempurna</li>
-
-              <li>Ketahanan suhu ruang sampai 24 jam</li>
-            </ul>
-          </div>
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera Pacific Indonesia"
+                class="logo-img"
+            >
+            <!-- <span>manera.co.id</span> -->
         </div>
-      </div>
-    </section>
 
-    <section class="spec-section">
-      <div class="container">
-        <h2>KATALOG PRODUK</h2>
+        <nav>
+          <ul>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#services">Sertifikasi</a></li>
+            <li><a href="#products">Kategori Produk</a></li>
+            <li><a href="#quality">Distribusi</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
 
-    <section class="spec-grid">
-      <div class="spec-card"
-        <h3>
-          <img
-           src="{{ url_for('static',
-          filename='image/140grpion.png') }}"
-              />
-              
-        <h3>Bihun Pion Tunggal 140GR</h3>
-
-      </div>
-
-      <div class="spec-card"
-        <h3>
-          <img
-           src="{{ url_for('static',
-          filename='image/280grpion.png') }}"
-              />
-              
-        <h3>Bihun Pion Tunggal 280GR</h3>
-
-      </div>
-
-        <!-- <div class="spec-grid">
-          <div class="spec-card">
-            <h3>Kemasan 140gr</h3>
-
-            <p>1 Bal isi 24 Pack</p>
-          </div>
-
-          <div class="spec-card">
-            <h3>Kemasan 280gr</h3>
-
-            <p>1 Bal isi 12 Pack</p>
-          </div> -->
-
-          <!-- <div class="spec-card">
-            <h3>Sertifikasi</h3>
-
-            <p>BPOM, Halal, HACCP</p>
-          </div>
-
-          <div class="spec-card">
-            <h3>Lead Time</h3>
-
-            <p>30-60 Hari</p>
-          </div> -->
-        </div>
-      </div>
-    </section>
-
-<section class="gallery">
-    <div class="container">
-        <h2>Testimoni</h2>
-
-        <div class="gallery-grid">
-
-            <video controls>
-                <source src="{{ url_for('static', filename='image/testia.mp4')}}"type="video/mp4">
-               
-            </video>
-
-            <video controls>
-                <source src="{{ url_for('static', filename='image/testib.mp4') }}" type="video/mp4">
-                
-            </video>
-
-            <video controls>
-                <source src="{{ url_for('static', filename='image/testic.mp4') }}" type="video/mp4">
-                
-            </video>
-
-        </div>
-    </div>
-</section>
-
-    <section class="cta-section">
-      <div class="container">
-        <h2>Mau masak apa hari ini?</h2>
-
-        <a href="https://wa.me/6282322238885" class="btn-primary">
-          Belanja Sekarang
+        <a href="#contact" class="btn-wa">
+          <i class="fab fa-whatsapp"></i>
+          Konsultasi Gratis
         </a>
       </div>
-    </section>
-  </body>
+    </header>
+
+<!-- =========================================
+HERO SECTION
+========================================= -->
+
+<section class="hero">
+
+    <!-- Background -->
+    <img src="{{ url_for('static', filename='image/pionlandscape.png') }}"
+         alt="Banner"
+         class="hero-bg">
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-container">
+
+        <!-- ================= LEFT ================= -->
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                HALAL • BPOM • GLUTEN FREE
+            </span>
+
+            <h1>
+                BIHUN JAGUNG <br>
+                PION TUNGGAL
+            </h1>
+
+            <p>
+                Bihun jagung berkualitas tinggi dengan tekstur lebih kenyal,
+                tidak mudah putus, cepat matang, dan cocok untuk berbagai
+                masakan Indonesia.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#order" class="btn-primary">
+                    Pesan Sekarang
+                </a>
+
+                <a href="#detail" class="btn-outline">
+                    Detail Produk
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ================= RIGHT ================= -->
+
+        <div class="hero-image">
+
+            <img src="{{ url_for('static', filename='image/280grpion.png') }}"
+                 alt="Bihun Pion">
+        </div>
+    </div>
+
+</section>
+
+<!-- =========================================
+ABOUT PRODUCT
+========================================= -->
+
+<section class="about-product" id="detail">
+
+    <div class="container">
+        <div class="about-wrapper">
+
+            <!-- ================= LEFT ================= -->
+
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='image/280grpion.png') }}">
+            </div>
+
+            <!-- ================= RIGHT ================= -->
+
+            <div class="about-content">
+                <span class="section-tag">
+                    TENTANG PRODUK
+                </span>
+
+                <h2>
+                    Bihun Jagung
+                    Pion Tunggal
+                </h2>
+
+                <p>
+                    Bihun Jagung Pion Tunggal merupakan bihun jagung
+                    berkualitas tinggi yang dibuat dari bahan baku pilihan
+                    menggunakan proses produksi modern sehingga menghasilkan
+                    tekstur lebih kenyal, tidak mudah putus, cepat matang,
+                    dan cocok untuk berbagai masakan Nusantara.
+                </p>
+
+                <div class="about-feature">
+                    <div class="feature-item">
+                        <i class="fas fa-circle-check"></i>
+                        <span>Gluten Free</span>
+
+                    </div>
+
+                    <div class="feature-item">
+                        <i class="fas fa-circle-check"></i>
+                        <span>Tekstur Lebih Kenyal</span>
+
+                    </div>
+
+                    <div class="feature-item">
+                        <i class="fas fa-circle-check"></i>
+                        <span>Tidak Mudah Putus</span>
+
+                    </div>
+
+                    <div class="feature-item">
+                        <i class="fas fa-circle-check"></i>
+                        <span>Cepat Matang</span>
+
+                    </div>
+                </div>
+
+                <a href="#order" class="btn-primary">
+                    Pesan Sekarang
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- =====================================================
+SECTION 3 - KEUNGGULAN PRODUK
+===================================================== -->
+
+<section class="advantages">
+
+    <div class="container">
+        <div class="section-title">
+            <span>KENAPA MEMILIH KAMI</span>
+            <h2>Keunggulan Bihun Jagung Pion Tunggal</h2>
+            <p>
+                Dibuat dari bahan pilihan dan diproses dengan standar kualitas tinggi
+                sehingga menghasilkan bihun jagung yang disukai keluarga Indonesia.
+            </p>
+        </div>
+
+        <div class="advantages-grid">
+            <div class="adv-card">
+                <div class="adv-icon">
+                    🌽
+                </div>
+
+                <h3>100% Jagung Berkualitas</h3>
+
+                <p>
+                    Terbuat dari jagung pilihan sehingga menghasilkan tekstur
+                    yang lebih lembut namun tetap kenyal.
+                </p>
+
+            </div>
+
+            <div class="adv-card">
+                <div class="adv-icon">
+                    🍜
+                </div>
+                <h3>Tidak Mudah Putus</h3>
+
+                <p>
+                    Tetap utuh ketika direbus maupun dimasak sehingga
+                    tampil lebih menarik saat disajikan.
+                </p>
+
+            </div>
+
+            <div class="adv-card">
+                <div class="adv-icon">
+                    ⚡
+                </div>
+                <h3>Cepat Matang</h3>
+
+                <p>
+                    Praktis digunakan untuk kebutuhan rumah tangga,
+                    UMKM maupun restoran.
+                </p>
+
+            </div>
+
+            <div class="adv-card">
+                <div class="adv-icon">
+                    🥗
+                </div>
+
+                <h3>Gluten Free</h3>
+
+                <p>
+                    Cocok untuk berbagai kebutuhan menu sehat
+                    tanpa mengurangi cita rasa.
+                </p>
+
+            </div>
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    🍲
+                </div>
+                <h3>Serbaguna</h3>
+                <p>
+                    Cocok digunakan untuk Soto, Bakso, Capcay,
+                    Bihun Goreng, Lumpia hingga Hotpot.
+                </p>
+
+            </div>
+
+            <div class="adv-card">
+                <div class="adv-icon">
+                    ✅
+                </div>
+                <h3>Halal & BPOM</h3>
+                <p>
+                    Sudah memiliki izin edar BPOM dan Sertifikasi
+                    Halal Indonesia sehingga lebih terpercaya.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- =======================================================
+SECTION 4
+INSPIRASI MENU
+======================================================= -->
+
+<section class="menu-section">
+
+    <div class="container">
+        <div class="section-title">
+            <span>INSPIRASI MENU</span>
+            <h2>Satu Produk, Banyak Kreasi</h2>
+
+            <p>
+                Bihun Jagung Pion Tunggal cocok digunakan untuk berbagai
+                jenis masakan Indonesia maupun oriental.
+            </p>
+
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="{{ url_for('static', filename='image/soto.jpg') }}">
+
+                <div class="menu-overlay">
+                    <h3>Soto Ayam</h3>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ url_for('static', filename='image/bakso.jpg') }}">
+                <div class="menu-overlay">
+                    <h3>Bakso</h3>
+                </div>
+
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ url_for('static', filename='image/bihungoreng.jpg') }}">
+                <div class="menu-overlay">
+                    <h3>Bihun Goreng</h3>
+                </div>
+
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ url_for('static', filename='image/capcay.jpg') }}">
+                <div class="menu-overlay">
+                    <h3>Capcay</h3>
+                </div>
+
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ url_for('static', filename='image/lumpia.jpg') }}">
+                <div class="menu-overlay">
+                    <h3>Lumpia</h3>
+                </div>
+
+            </div>
+
+            <div class="menu-card">
+                <img src="{{ url_for('static', filename='image/miekuah.jpg') }}">
+                <div class="menu-overlay">
+                    <h3>Menu Favorit Lainnya</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= VIDEO TESTIMONI ================= -->
+
+<section class="testimoni">
+
+    <div class="testimoni-title">
+
+        <span>TESTIMONI</span>
+
+        <h2>Apa Kata Mereka?</h2>
+
+        <p>
+            Lihat pengalaman dan cerita mereka bersama
+            Bihun Jagung Pion Tunggal.
+        </p>
+
+    </div>
+
+
+    <div class="video-container">
+
+
+      <!-- VIDEO 1  -->
+
+        <div class="video-card">
+
+            <video controls playsinline preload="metadata">
+                <source src="{{ url_for('static', filename='image/testi.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+
+            <h3>Testimoni Pelanggan 1</h3>
+
+        </div>
+
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="video-card">
+
+            <video controls playsinline preload="metadata">
+                <source src="{{ url_for('static', filename='image/testia.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+
+            <h3>Testimoni Pelanggan 2</h3>
+
+        </div>
+
+
+        <!-- VIDEO 3 -->
+
+        <div class="video-card">
+
+            <video controls playsinline preload="metadata">
+                <source src="{{ url_for('static', filename='image/testib.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+
+            <h3>Testimoni Pelanggan 3</h3>
+
+        </div>
+
+
+        <!-- VIDEO 4 -->
+
+        <div class="video-card">
+
+            <video controls playsinline preload="metadata">
+                <source src="{{ url_for('static', filename='image/testic.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
+            </video>
+
+            <h3>Testimoni Pelanggan 4</h3>
+
+        </div>
+
+
+    </div>
+
+</section>
+<script>
+
+const video = document.querySelector("video");
+
+video.addEventListener("loadedmetadata", function () {
+    console.log("VIDEO BERHASIL DIBACA");
+    console.log("Durasi:", video.duration);
+    console.log("Lebar:", video.videoWidth);
+    console.log("Tinggi:", video.videoHeight);
+});
+
+video.addEventListener("error", function () {
+    console.log("VIDEO ERROR");
+    console.log(video.error);
+
+    if (video.error) {
+        console.log("Code:", video.error.code);
+        console.log("Message:", video.error.message);
+    }
+});
+
+</script>
+
+<!-- =========================================
+     SECTION 6 — CTA PEMBELIAN
+========================================= -->
+
+<section class="purchase-cta" id="order">
+
+    <div class="container">
+        <div class="cta-box">
+
+            <!-- Background Decoration -->
+            <div class="cta-decoration cta-decoration-1"></div>
+            <div class="cta-decoration cta-decoration-2"></div>
+
+            <div class="cta-content">
+
+                <span class="cta-label">
+                    SIAP MENCOBA?
+                </span>
+
+                <h2>
+                    Saatnya Hadirkan<br>
+                    <strong>Bihun Jagung Pion Tunggal</strong>
+                    di Dapur Anda
+                </h2>
+
+                <p>
+                    Cocok untuk soto, bakso, bihun goreng,
+                    capcay, dan berbagai hidangan favorit keluarga.
+                </p>
+
+                <div class="cta-buttons">
+
+                    <!-- WhatsApp -->
+                    <a
+                        href="https://wa.me/6282322238885?text=Halo%20PT%20Manera,%20saya%20ingin%20memesan%20Bihun%20Jagung%20Pitung"
+                        class="cta-primary"
+                        target="_blank">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                        Pesan Sekarang
+
+                    </a>
+
+                    <!-- Kembali ke Produk -->
+                    <a
+                        href="/"
+                        class="cta-secondary">
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Lihat Produk Lain
+
+                    </a>
+
+                </div>
+
+                <!-- Trust -->
+                <div class="cta-trust">
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Halal Indonesia</span>
+                    </div>
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Terdaftar BPOM</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Produk Berkualitas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Image -->
+            <div class="cta-product">
+                <div class="product-glow"></div>
+                <img
+                    src="{{ url_for('static', filename='image/bihunpion.png') }}"
+                    alt="Bihun Jagung Pion Tunggal">
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("JS Berjalan");
+
+    new Swiper(".heroSwiper", {
+        loop: true,
+        speed: 1000,
+        effect: "fade",
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+});
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+
+    const navbar = document.querySelector(".navbar");
+
+    if(window.scrollY > 80){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+</script>
+
+</body>
 </html>

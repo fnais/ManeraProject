@@ -1,38 +1,40 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Manera Pacific Indonesia</title>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}"
-    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS Website -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+</body>
+
     <!-- ================= NAVBAR ================= -->
 
     <header class="navbar">
       <div class="container nav-wrapper">
-        <!-- <div class="logo">
-          <div class="logo-icon">M</div>
-          <span>manera</span>
-        </div> -->
         <div class="logo">
             <img
                 src="{{ url_for('static', filename='image/logo_manera.png') }}"
@@ -62,69 +64,132 @@
     <!-- ================= HERO ================= -->
 
     <section class="hero">
-      <div class="overlay"></div>
 
-      <div class="container hero-wrapper">
-        <div class="hero-left">
-          <div class="hero-badge">
-            ✓ TERSERTIFIKASI HALAL 100% & BPOM
-          </div>
+    <div class="swiper heroSwiper">
 
-          <h1>
-            Pionir Manufaktur Makanan & Minuman
-            <span>Berkualitas Tinggi</span>
-          </h1>
+        <div class="swiper-wrapper">
 
-          <p>
-           Manera merupakan perusahaan manufaktur makanan yang memproduksi bihun jagung dan penyedap rasa. Dengan merk Bihun Jagung Pion Tunggal, Bihun Jagung Pitung, Bihun Jagung Dorasa, Sohun Iyon dan Penyedap Rasa Sisuka. Produk yang diproduksi dan diperdagangkan oleh PT Manera Pacific Indonesia telah terdaftar di BPOM (Badan Pengawas Obat dan Makanan Indonesia) dan telah mendapatkan sertifikasi HALAL Indonesia.
-          </p>
+            <!-- ================= Slide 1 ================= -->
+            <div class="swiper-slide">
 
-          <div class="hero-buttons">
-            <a href="#about" class="btn-primary"> Tentang Kami </a>
+                <!-- background -->
+                <img class="hero-bg" src="{{ url_for('static', filename='image/foto_pabrik.png') }}"
+                     class="hero-bg">
 
-            <a href="#services" class="btn-secondary"> Jelajahi Layanan → </a>
-          </div>
+                <div class="overlay"></div>
 
-          <div class="stats">
-            <div>
-              <h3>50+ KOTA</h3>
-              <span>DISTRIBUSI PULAU JAWA</span>
+                <!-- isi hero -->
+                <div class="container hero-wrapper">
+
+                    <div class="hero-left">
+
+                        <div class="hero-badge">
+                            ✓ TERSERTIFIKASI HALAL 100% & BPOM
+                        </div>
+
+                        <h1>
+                            Pionir Manufaktur Makanan & Minuman
+                            <span>Berkualitas Tinggi</span>
+                        </h1>
+
+                        <p>
+                            Manera merupakan perusahaan manufaktur makanan yang memproduksi bihun jagung dan penyedap rasa. Dengan merk Bihun Jagung Pion Tunggal, Bihun Jagung Pitung, Bihun Jagung Dorasa, Sohun Iyon dan Penyedap Rasa Sisuka. Produk yang diproduksi dan diperdagangkan oleh PT Manera Pacific Indonesia telah terdaftar di BPOM (Badan Pengawas Obat dan Makanan Indonesia) dan telah mendapatkan sertifikasi HALAL Indonesia.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#about" class="btn-primary">
+                                Tentang Kami
+                            </a>
+
+                            <a href="#services" class="btn-secondary">
+                                Sertifikasi →
+                            </a>
+                        </div>
+
+                        <div class="stats">
+
+                            <div>
+                                <h3>50+ KOTA</h3>
+                                <span>DISTRIBUSI PULAU JAWA</span>
+                            </div>
+
+                            <div>
+                                <h3>10+ KOTA</h3>
+                                <span>DISTRIBUSI LUAR PULAU JAWA</span>
+                            </div>
+
+                            <div>
+                                <h3>2 NEGARA</h3>
+                                <span>DISTRIBUSI INTERNASIONAL</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="hero-right">
+
+                        <div class="feature-card">
+
+                            <small>JAMINAN PRODUK</small>
+
+                            <div class="feature-item">
+                                <h4>Jaminan Produk</h4>
+                                <p>Kualitas produk yang berkualitas tinggi dan tersertifikasi.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <h4>Produksi Terstandar</h4>
+                                <p>Produksi sesuai standar industri.</p>
+                            </div>
+
+                            <div class="feature-item">
+                                <h4>Distribusi & Logistik</h4>
+                                <p>Pengiriman cepat dan aman.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div>
-              <h3>10+ KOTA</h3>
-              <span>DISTRIBUSI LUAR PULAU JAWA</span>
+            <!-- ================= Slide 2 ================= -->
+
+            <div class="swiper-slide">
+
+                <img class="hero-bg" src="{{ url_for('static', filename='image/pitunglandscape.png') }}"
+                     class="hero-bg">
+
             </div>
 
-            <div>
-              <h3>2 NEGARA</h3>
-              <span>DISTRIBUSI INTERNASIONAL</span>
+            <!-- ================= Slide 3 ================= -->
+
+            <div class="swiper-slide">
+
+                <img class="hero-bg" src="{{ url_for('static', filename='image/sisukalandscape.png') }}"
+                     class="hero-bg">
+
             </div>
-          </div>
+
+            <!-- ================= Slide 4 ================= -->
+
+            <div class="swiper-slide">
+
+                <img class="hero-bg" src="{{ url_for('static', filename='image/landscapeiyon.png')}}"
+                     class="hero-bg">
+
+            </div>
+
         </div>
 
-        <div class="hero-right">
-          <div class="feature-card">
-            <small>JAMINAN PRODUK</small>
+        <div class="swiper-pagination"></div>
 
-            <div class="feature-item">
-              <h4>Jaminan Produk</h4>
-              <p>Kualitas produk yang berkualitas tinggi dan tersertifikasi</p>
-            </div>
+    </div> <!-- heroSwiper -->
 
-            <div class="feature-item">
-              <h4>Produksi Terstandar</h4>
-              <p>Produksi yang dilakukan sesuai dengan standar industri dan regulasi yang berlaku</p>
-            </div>
-
-            <div class="feature-item">
-              <h4>Distribusi dan Logistik</h4>
-              <p>Optimal dalam pengiriman yang cepat dan aman.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+</section>
 
     <!-- ================= ABOUT ================= -->
 
@@ -200,137 +265,176 @@
               <img src="{{ url_for('static', filename='image/LOGOBPOM.png') }}" alt="Logo BPOM">
             </div>
             <h3>TERSERTIFIKASI BPOM</h3>
-            <!-- <p>Pengembangan formula inovatif dan kompetitif.</p> -->
           </div>
 
-          <!-- <div class="service-card">
-            <div class="icon">📋</div>
-            <h3>Sertifikasi & Regulasi</h3>
-            <p>Pendampingan BPOM, Halal dan legalitas produk.</p> -->
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= PRODUCTS ================= -->
-    <section class="products" id="products">
-      <div class="container">
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products_corousel" id="products">
+
+    <div class="container">
+        
         <div class="section-header">
-          <span>KATEGORI PRODUK</span>
-          <h2>PRODUK KAMI</h2>
+            <span>KATEGORI PRODUK</span>
+            <h2>PRODUK KAMI</h2>
         </div>
 
-        <div class="category-grid">
-          <div class="category-card">
-            <a href="/Bihun_Jagung_Pion_Tunggal" class="category-card">
-              <img
-                src="{{ url_for('static',
-                filename='image/IMG_9052.jpg') }}"
-              />
 
-              <h3>BIHUN JAGUNG PION TUNGGAL</h3>
-            </a>
-          </div>
+        <div class="product-carousel">
 
-          <div class="category-card">
-            <a href="/Bihun_Jagung_Pitung" class="category-card">
-              <img
-                src="{{ url_for('static',
-                filename='image/bihunpitung.png')}}"
-              />
+            <div class="product-viewport">
 
-              <h3>BIHUN JAGUNG PITUNG</h3>
-            </a>
-          </div>
+                <div class="category-grid" id="productSlider">
 
-          <div class="category-card">
-            <a href="/Sohun_Iyon" class="category-card">
-              <img
-                src="{{ url_for('static',
-                filename='image/sohuniyoncover.png') }}"
-              />
+                    <!-- PRODUK 1 -->
+                    <div class="category-card">
+                        <a href="/Bihun_Jagung_Pion_Tunggal" class="category-link">
 
-              <h3>SOHUN IYON</h3>
-            </a>
-          </div>
+                            <img
+                                src="{{ url_for('static', filename='image/kenyal.png') }}"
+                                class="side-img left">
 
-          <div class="category-card">
-            <a href="/penyedaprasasisuka" class="category-card">
-              <img
-                src="{{ url_for('static',
-                filename='image/ssika.png') }}"
-              />
-              
-            <h3>PENYEDAP RASA SISUKA</h3>
-          </div>
+                            <img
+                                src="{{ url_for('static', filename='image/280grpion.png') }}"
+                                class="main-img">
 
-          <!-- <div class="category-card">
-            <img src="{{ url_for('static', filename='image/product4.jpg') }}" />
-            <h3>Makanan Siap Saji</h3>
-          </div>
+                            <img
+                                src="{{ url_for('static', filename='image/bihungoreng.png') }}"
+                                class="side-img right">
+
+                            <h3>BIHUN JAGUNG PION TUNGGAL 280GR</h3>
+
+                        </a>
+                    </div>
+
+
+                    <!-- PRODUK 2 -->
+                    <div class="category-card">
+                        <a href="/Bihun_Jagung_Pion_Tunggal" class="category-link">
+
+                            <img
+                                src="{{ url_for('static', filename='image/kenyal.png') }}"
+                                class="side-img left">
+
+                            <img
+                                src="{{ url_for('static', filename='image/140grpion.png') }}"
+                                class="main-img">
+
+                            <img
+                                src="{{ url_for('static', filename='image/bihungoreng.png') }}"
+                                class="side-img right">
+
+                            <h3>BIHUN JAGUNG PION TUNGGAL 140GR</h3>
+
+                        </a>
+                    </div>
+
+
+                    <!-- PRODUK 3 -->
+                    <div class="category-card">
+                        <a href="/Bihun_Jagung_Pitung" class="category-link">
+
+                            <img
+                                src="{{ url_for('static', filename='image/lembut.png') }}"
+                                class="side-img left">
+
+                            <img
+                                src="{{ url_for('static', filename='image/300grpitung.png') }}"
+                                class="main-img">
+
+                            <img
+                                src="{{ url_for('static', filename='image/soto.png') }}"
+                                class="side-img right">
+
+                            <h3>BIHUN JAGUNG PITUNG</h3>
+
+                        </a>
+                    </div>
+
+
+                    <!-- PRODUK 4 -->
+                    <div class="category-card">
+                        <a href="/Sohun_Iyon" class="category-link">
+
+                            <img
+                                src="{{ url_for('static', filename='image/kenyal.png') }}"
+                                class="side-img left">
+
+                            <img
+                                src="{{ url_for('static', filename='image/50griyon.png') }}"
+                                class="main-img">
+
+                            <img
+                                src="{{ url_for('static', filename='image/baksoiyon.png') }}"
+                                class="side-img right">
+
+                            <h3>SOHUN IYON</h3>
+
+                        </a>
+                    </div>
+
+
+                    <!-- PRODUK 5 -->
+                    <div class="category-card">
+                        <a href="/Penyedap_Rasa_Sisuka" class="category-link">
+
+                            <img
+                                src="{{ url_for('static', filename='image/msg.png') }}"
+                                class="side-img left">
+
+                            <img
+                                src="{{ url_for('static', filename='image/250grsisuka.png') }}"
+                                class="main-img">
+
+                            <img
+                                src="{{ url_for('static', filename='image/sup.png') }}"
+                                class="side-img right">
+
+                            <h3>PENYEDAP RASA SISUKA</h3>
+
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </div>
-      </div> -->
-    </section>
 
-    <!-- ================= QUALITY ================= -->
+    </div>
+    
+</section>
 
-    <section class="quality" id="quality">
-      <div class="container">
+
+<!-- ================= DISTRIBUSI ================= -->
+<section class="quality" id="quality">
+
+    <div class="container">
+
         <div class="section-header center">
-          <span>DISTRIBUSI</span>
-
-          <h2>SUDAH TERDISTRIBUSI 50+ KOTA DI INDONESIA</h2>
+            <span>DISTRIBUSI</span>
+            <h2>SUDAH TERDISTRIBUSI 50+ KOTA DI INDONESIA</h2>
         </div>
 
         <div class="quality-grid">
-          <div class="quality-item">
-            <h3>PULAU JAWA</h3>
-          </div>
 
-          <div class="quality-item">
-            <h3>PULAU SUMATERA</h3>
-          </div>
+            <a href="/domestik" class="quality-item">
+                <h3>DOMESTIK</h3>
+            </a>
 
-          <div class="quality-item">
-            <h3>TIMOR LESTE</h3>
-          </div>
+            <a href="/internasional" class="quality-item">
+                <h3>INTERNASIONAL</h3>
+            </a>
 
-          <div class="quality-item">
-            <h3>DUBAI</h3>
-          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ================= WORKFLOW =================
+    </div>
 
-    <section class="workflow">
-      <div class="container">
-        <h2>ALUR PEMESANAN PRODUK</h2>
-
-        <div class="workflow-grid">
-          <div class="step">
-            <span>1</span>
-            <h4>Konsultasi</h4>
-          </div>
-
-          <div class="step">
-            <span>2</span>
-            <h4>Sertifikasi</h4>
-          </div>
-
-          <div class="step">
-            <span>3</span>
-            <h4>Produksi</h4>
-          </div>
-
-          <div class="step">
-            <span>4</span>
-            <h4>Pengiriman</h4>
-          </div>
-        </div>
-      </div>
-    </section> -->
+</section>
 
     <!-- ================= CONTACT ================= -->
 
@@ -358,73 +462,135 @@
       </div>
     </section>
 
-    <!-- ================= FAQ =================
+  <!-- ================= FOOTER ================= -->
 
-    <section class="faq">
-      <div class="container">
-        <div class="section-header">
-          <h2>Pertanyaan yang Sering Diajukan</h2>
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <!-- Logo -->
+        <div class="footer-logo">
+
+            <img src="{{ url_for('static', filename='image/maneraputih.png') }}"
+                 alt="Logo Manera"
+                 class="footer-logo-img">
+
+            <p>Produsen pangan terpercaya Indonesia.</p>
+
         </div>
 
-        <div class="faq-item">
-          <button class="faq-btn">Berapa MOQ minimum?</button>
-          <div class="faq-content">MOQ mulai dari 3000 pcs.</div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-btn">Berapa lama proses produksi?</button>
-          <div class="faq-content">Sekitar 30-60 hari.</div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-      <div class="container footer-grid">
+        <!-- Menu -->
         <div>
-          <h3>manera</h3>
-          <p>Produsen pangan terpercaya Indonesia.</p>
+
+            <h4>Perusahaan</h4>
+
+            <ul>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#services">Sertifikasi</a></li>
+                <li><a href="#products">Produk</a></li>
+            </ul>
+
         </div>
 
+        <!-- Kontak -->
         <div>
-          <h4>Perusahaan</h4>
-          <ul>
-            <li>Tentang Kami</li>
-            <li>Layanan</li>
-            <li>Produk</li>
-          </ul>
+
+            <h4>Kontak</h4>
+
+            <ul>
+                <li><a href="#contact">+62 823 2223 8885</a></li>
+                <li>manerapacific@gmail.com</li>
+            </ul>
+
         </div>
 
-        <div>
-          <h4>Kontak</h4>
-          <ul>
-            <li>+62 823 2223 8885</li>
-            <li>manerapacific@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    </div>
 
-    <a href="#" class="floating-wa">
-      <img src="{{url_for('static',filename='image/whatsapp.png')}}" alt="WhatsApp" />
-    </a>
-    <a href="https://www.instagram.com/bihunsipitung/" class="floating-ig">
-      <img src="{{url_for('static',filename='image/instagram.png')}}" alt="Instagram" />
-    </a>
-    <a href="https://www.tiktok.com/@bihunsipitung/"class="floating-tiktok">
-      <img src="{{url_for('static',filename='image/tiktok.png')}}" alt="TikTok" />
-    </a>
-    <a href="https://shopee.co.id/manera.store?uls_trackid=561e8a5s01p0&utm_content=2XU1rEPFmuAmt43L9SUXtZPo5ezb"class="floating-shopee">
-      <img src="{{url_for('static',filename='image/shopee.png')}}" alt="Shopee" />
-    </a>
-    <a href="https://www.youtube.com/@bihunsipitung"class="floating-youtube">
-      <img src="{{url_for('static',filename='image/youtube.png')}}"alt="Youtube"/>
+</footer>
+
+    <!-- ================= FLOATING SOCIAL ================= -->
+
+<div class="floating-social">
+
+    <a href="#" class="floating-btn" aria-label="WhatsApp">
+        <img src="{{ url_for('static', filename='image/whatsapp.png') }}" alt="WhatsApp">
     </a>
 
-    
+    <a href="https://www.instagram.com/bihunsipitung/"
+       class="floating-btn"
+       target="_blank"
+       aria-label="Instagram">
+        <img src="{{ url_for('static', filename='image/instagram.png') }}" alt="Instagram">
+    </a>
 
+    <a href="https://www.tiktok.com/@bihunsipitung/"
+       class="floating-btn"
+       target="_blank"
+       aria-label="TikTok">
+        <img src="{{ url_for('static', filename='image/tiktok.png') }}" alt="TikTok">
+    </a>
+
+    <a href="https://shopee.co.id/manera.store?uls_trackid=561e8a5s01p0&utm_content=2XU1rEPFmuAmt43L9SUXtZPo5ezb"
+       class="floating-btn"
+       target="_blank"
+       aria-label="Shopee">
+        <img src="{{ url_for('static', filename='image/shopee.png') }}" alt="Shopee">
+    </a>
+
+    <a href="https://www.youtube.com/@bihunsipitung"
+       class="floating-btn"
+       target="_blank"
+       aria-label="YouTube">
+        <img src="{{ url_for('static', filename='image/youtube.png') }}" alt="YouTube">
+    </a>
+
+</div>
+ 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-  </body>
-</html>
 
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("JS Berjalan");
+
+    new Swiper(".heroSwiper", {
+        loop: true,
+        speed: 1000,
+        effect: "fade",
+
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+});
+</script>
+
+<script>
+window.addEventListener("scroll", function(){
+
+    const navbar = document.querySelector(".navbar");
+
+    if(window.scrollY > 80){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+</script>
+
+</body>
+</html>
