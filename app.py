@@ -25,20 +25,5 @@ def saus():
 def mre():
     return render_template('Penyedap_Rasa_Sisuka.html')
 
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
-
 if __name__ == "__main__":
     app.run(debug=True)
-
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Hello Flask"
