@@ -10,6 +10,10 @@ def home():
 def Bihun_Jagung_Pion_Tunggal():
     return render_template('Bihun_Jagung_Pion_Tunggal.html')
 
+@app.route('/Bihun_Jagung_Pion_Tunggal_140gr')
+def Bihun_Jagung_Pion_Tunggal_140gr():
+    return render_template('Bihun_Jagung_Pion_Tunggal_140gr.html')
+
 
 @app.route('/Bihun_Jagung_Pitung')
 def granola():
