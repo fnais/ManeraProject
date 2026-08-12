@@ -153,36 +153,28 @@ ABOUT PRODUCT
                 </h2>
 
                 <p>
-                    Bihun jagung Pitung 300 gram terbuat dari 70.03% pati jagung berkualitas tinggi. Dengan
-                    proses dan teknologi tinggi yang higienis. Memiliki tekstur yang lembut cocok untuk bakso, soto,
-                    dan aneka masakan bihun lainnya. Teksturnya yang lembut serta tidak mudah putus bisa dimakan
-                    berbagai usia.
+                    Dijual secara eceran maupun grosir. Baik melalui toko offline dan online di e-commerce Manera
                 </p>
 
                 <div class="about-feature">
                     <div class="feature-item">
                         <i class="fas fa-circle-check"></i>
-                        <span>Gluten Free</span>
+                        <span>1 Pack berisi 300 gram</span>
 
                     </div>
 
                     <div class="feature-item">
                         <i class="fas fa-circle-check"></i>
-                        <span>Tekstur Lebih Lembut</span>
+                        <span>1 Pack berisi 4 keping</span>
 
                     </div>
 
                     <div class="feature-item">
                         <i class="fas fa-circle-check"></i>
-                        <span>Tidak Mudah Putus</span>
+                        <span>1 Bal berisi 10 pack</span>
 
                     </div>
 
-                    <div class="feature-item">
-                        <i class="fas fa-circle-check"></i>
-                        <span>Masak Cukup 2 Menit</span>
-
-                    </div>
                 </div>
 
                 <a href="#order" class="btn-primary">
@@ -315,7 +307,7 @@ INSPIRASI MENU
 
         <div class="menu-grid">
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/soto.jpg') }}">
+                <img src="{{ url_for('static', filename='image/ResepSotoAyam.png') }}">
 
                 <div class="menu-overlay">
                     <h3>Soto Ayam</h3>
@@ -323,15 +315,15 @@ INSPIRASI MENU
             </div>
 
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/bakso.jpg') }}">
+                <img src="{{ url_for('static', filename='image/ResepBaksoSapi.png') }}">
                 <div class="menu-overlay">
-                    <h3>Bakso</h3>
+                    <h3>Bakso Sapi</h3>
                 </div>
 
             </div>
 
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/bihungoreng.jpg') }}">
+                <img src="{{ url_for('static', filename='image/ResepBihunGorengPitung.png') }}">
                 <div class="menu-overlay">
                     <h3>Bihun Goreng</h3>
                 </div>
@@ -339,25 +331,25 @@ INSPIRASI MENU
             </div>
 
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/capcay.jpg') }}">
+                <img src="{{ url_for('static', filename='image/ResepSempol.png') }}">
                 <div class="menu-overlay">
-                    <h3>Capcay</h3>
+                    <h3>Sempol Ayam</h3>
                 </div>
 
             </div>
 
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/lumpia.jpg') }}">
+                <img src="{{ url_for('static', filename='image/ResepPangsitBihun.png') }}">
                 <div class="menu-overlay">
-                    <h3>Lumpia</h3>
+                    <h3>Pangsit Bihun</h3>
                 </div>
 
             </div>
 
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/miekuah.jpg') }}">
+                <img src="{{ url_for('static', filename='image/ResepVietnameseChickenPho.png') }}">
                 <div class="menu-overlay">
-                    <h3>Menu Favorit Lainnya</h3>
+                    <h3>Vietnamese Chicken Pho</h3>
                 </div>
 
             </div>
@@ -380,7 +372,7 @@ INSPIRASI MENU
 
         <p>
             Lihat pengalaman dan cerita mereka bersama
-            Bihun Jagung Pitung.
+            Bihun Jagung Pion Tunggal.
         </p>
 
     </div>
@@ -389,18 +381,13 @@ INSPIRASI MENU
     <div class="video-container">
 
 
-        <!-- VIDEO 1 -->
+      <!-- VIDEO 1  -->
 
         <div class="video-card">
 
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testi.mp4"
-                    type="video/mp4">
-
+                <source src="{{ url_for('static', filename='image/testi1.mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung video.
-
             </video>
 
             <h3>Testimoni Pelanggan 1</h3>
@@ -408,17 +395,14 @@ INSPIRASI MENU
         </div>
 
 
+
         <!-- VIDEO 2 -->
 
         <div class="video-card">
 
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testib.mp4"
-                    type="video/mp4">
-
-
+                <source src="{{ url_for('static', filename='image/testic.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
             </video>
 
             <h3>Testimoni Pelanggan 2</h3>
@@ -431,12 +415,8 @@ INSPIRASI MENU
         <div class="video-card">
 
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testic.mp4"
-                    type="video/mp4">
-
-
+                <source src="{{ url_for('static', filename='image/warunge.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
             </video>
 
             <h3>Testimoni Pelanggan 3</h3>
@@ -449,12 +429,8 @@ INSPIRASI MENU
         <div class="video-card">
 
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testia.mp4"
-                    type="video/mp4">
-
-
+                <source src="{{ url_for('static', filename='image/warungff.mp4') }}" type="video/mp4">
+                Browser Anda tidak mendukung video.
             </video>
 
             <h3>Testimoni Pelanggan 4</h3>
@@ -509,7 +485,7 @@ video.addEventListener("error", function () {
 
                 <h2>
                     Saatnya Hadirkan<br>
-                    <strong>Bihun Jagung Pion Tunggal</strong>
+                    <strong>Bihun Jagung Pitung</strong>
                     di Dapur Anda
                 </h2>
 
