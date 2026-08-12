@@ -165,15 +165,9 @@ nav a:hover{
 .hero-overlay{
     position:absolute;
     inset:0;
-    background:
-    linear-gradient(
-        90deg,
-        rgba(0,0,0,.75) 10%,
-        rgba(0,0,0,.45) 45%,
-        rgba(0,0,0,.15) 100%
-    );
+    background:rgba(0,0,0,.45);
+    z-index:1;
 }
-
 /* Container */
 
 .hero-container{
