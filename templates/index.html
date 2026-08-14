@@ -40,33 +40,135 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <header class="navbar">
-      <div class="container nav-wrapper">
+<header class="navbar">
+
+    <div class="container nav-wrapper">
+
+        <!-- LOGO -->
         <div class="logo">
-            <img
-                src="{{ url_for('static', filename='image/logo_manera.png') }}"
-                alt="Manera Pacific Indonesia"
-                class="logo-img"
-            >
-            <!-- <span>manera.co.id</span> -->
+
+            <a href="/">
+                <img
+                    src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                    alt="Manera Pacific Indonesia"
+                    class="logo-img">
+            </a>
+
         </div>
 
-        <nav>
-          <ul>
-            <li><a href="#about">Tentang Kami</a></li>
-            <li><a href="#services">Sertifikasi</a></li>
-            <li><a href="#products">Kategori Produk</a></li>
-            <li><a href="#quality">Distribusi</a></li>
-            <li><a href="#contact">Kontak</a></li>
-          </ul>
+
+        <!-- MENU DESKTOP -->
+        <nav class="desktop-nav">
+
+            <ul>
+
+                <li>
+                    <a href="#about">Tentang Kami</a>
+                </li>
+
+                <li>
+                    <a href="#services">Sertifikasi</a>
+                </li>
+
+                <li>
+                    <a href="#products">Kategori Produk</a>
+                </li>
+
+                <li>
+                    <a href="#quality">Distribusi</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Kontak</a>
+                </li>
+
+            </ul>
+
         </nav>
 
-        <a href="#contact" class="btn-wa">
-          <i class="fab fa-whatsapp"></i>
-          Konsultasi Gratis
+
+        <!-- BUTTON WHATSAPP DESKTOP -->
+        <a
+            href="https://wa.me/6282322238885"
+            class="btn-wa desktop-wa"
+            target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
         </a>
-      </div>
-    </header>
+
+
+        <!-- HAMBURGER MOBILE -->
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Buka menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <ul>
+
+            <li>
+                <a href="#about">
+                    Tentang Kami
+                </a>
+            </li>
+
+            <li>
+                <a href="#services">
+                    Sertifikasi
+                </a>
+            </li>
+
+            <li>
+                <a href="#products">
+                    Kategori Produk
+                </a>
+            </li>
+
+            <li>
+                <a href="#quality">
+                    Distribusi
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Kontak
+                </a>
+            </li>
+
+        </ul>
+
+
+        <a
+            href="https://wa.me/6282322238885"
+            class="mobile-wa"
+            target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
+        </a>
+
+    </div>
+
+</header>
 
     <!-- ================= HERO ================= -->
 
@@ -469,30 +571,125 @@
       </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
+    <!-- ================= DISTRIBUTOR ================= -->
 
-    <section class="contact" id="contact">
-      <div class="container">
+<section class="contact" id="contact">
+
+    <div class="container">
+
         <div class="contact-wrapper">
-          <div class="contact-info">
-            <h2>AYO JADI MITRA KAMI
 
-            <p>Hubungi tim kami sekarang.</p>
-          </div>
+            <div class="contact-info">
 
-          <form class="contact-form">
-            <input type="text" placeholder="Nama" />
+                <h2>AYO JADI MITRA KAMI</h2>
 
-            <input type="text" placeholder="WhatsApp" />
+                <p>
+                    Hubungi tim kami sekarang untuk informasi
+                    mengenai pendaftaran distributor.
+                </p>
 
-            <input type="text" placeholder="Nama Distributor"/>
+            </div>
 
 
-            <button type="submit">Kirim Melalui WhatsApp</button>
-          </form>
+            <form class="contact-form" id="distributorForm">
+
+                <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="whatsapp"
+                    placeholder="Nomor WhatsApp"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="distributor"
+                    placeholder="Nama Distributor / Toko"
+                    required
+                >
+
+
+                <button type="submit">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    Kirim Melalui WhatsApp
+
+                </button>
+
+            </form>
+
         </div>
-      </div>
-    </section>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHATSAPP SCRIPT ================= -->
+
+<script>
+
+document.getElementById("distributorForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+
+    /* Ambil data dari form */
+
+    const nama =
+        document.getElementById("nama").value;
+
+    const whatsapp =
+        document.getElementById("whatsapp").value;
+
+    const distributor =
+        document.getElementById("distributor").value;
+
+
+    /* Nomor WhatsApp Manera */
+
+    const nomorManera = "6282322238885";
+
+
+    /* Pesan WhatsApp */
+
+    const pesan =
+`Halo PT Manera Pacific Indonesia,
+
+Saya ingin mendaftar menjadi distributor.
+
+Nama: ${nama}
+Nomor WhatsApp: ${whatsapp}
+Nama Distributor / Toko: ${distributor}
+
+Mohon informasi lebih lanjut mengenai persyaratan dan proses pendaftaran distributor.
+
+Terima kasih.`;
+
+
+    /* Encode pesan */
+
+    const url =
+        "https://wa.me/" +
+        nomorManera +
+        "?text=" +
+        encodeURIComponent(pesan);
+
+
+    /* Buka WhatsApp */
+
+    window.open(url, "_blank");
+
+});
+
+</script>
 
 
   <!-- ================= FOOTER ================= -->
@@ -563,15 +760,21 @@
 
             <div class="footer-social">
 
-                <a href="#" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/bihunsipitung/"
+                   target="_blank"
+                   aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
 
-                <a href="#" target="_blank" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@bihunsipitung/"
+                   target="_blank"
+                   aria-label="TikTok">
                     <i class="fab fa-tiktok"></i>
                 </a>
 
-                <a href="#" target="_blank" aria-label="YouTube">
+                <a href="https://www.youtube.com/@bihunsipitung"
+                   target="_blank"
+                   aria-label="YouTube">
                     <i class="fab fa-youtube"></i>
                 </a>
 
@@ -588,15 +791,13 @@
 
             <div class="footer-marketplace">
 
-                <a href="#" target="_blank">
+                <a href="https://shopee.co.id/manera.store?uls_trackid=561e8a5s01p0&utm_content=2XU1rEPFmuAmt43L9SUXtZPo5ezb"
+                   target="_blank"
+                   aria-label="Shopee">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span>Shopee</span>
                 </a>
 
-                <a href="#" target="_blank">
-                    <i class="fa-solid fa-store"></i>
-                    <span>Tokopedia</span>
-                </a>
 
             </div>
 
