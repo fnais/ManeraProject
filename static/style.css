@@ -1400,12 +1400,11 @@ nav a.active{
    SECTION
 ========================================================= */
 
-.category-section{
-    position:relative;
-    width:100%;
-    background:#f8fafc;
-    padding:80px 0 90px;
-    overflow:hidden;
+.category-section {
+    width: 100%;
+    background: #f8fafc;
+    overflow: hidden;
+    padding: 80px 0;
 }
 
 
@@ -1447,24 +1446,22 @@ nav a.active{
    SLIDER VIEWPORT
 ========================================================= */
 
-.product-slider{
-    position:relative;
-    width:100%;
-    overflow:hidden;
-    touch-action:pan-y;
+.product-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
-
 
 /* =========================================================
    TRACK
 ========================================================= */
 
-.product-track{
-    display:flex;
-    width:max-content;
-    gap:0;
-    transition:transform .5s cubic-bezier(.4,0,.2,1);
-    will-change:transform;
+.product-track {
+    display: flex;
+    width: max-content;
+    gap: 0;
+    transition: transform .5s ease;
+    will-change: transform;
 }
 
 
@@ -1472,22 +1469,23 @@ nav a.active{
    CARD
 ========================================================= */
 
-.category-card{
-    position:relative;
-    flex:0 0 260px;
-    width:260px;
-    min-width:260px;
-    height:390px;
-    padding:0 15px;
-    box-sizing:border-box;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    background:transparent;
-    border:0;
-    box-shadow:none;
-    overflow:visible;
+.category-card {
+    flex: 0 0 280px;
+    width: 280px;
+    min-width: 280px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+    margin: 0;
+    position: relative;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    transform: none;
 }
 
 
@@ -1512,54 +1510,80 @@ nav a.active{
    PRODUCT VIEW
 ========================================================= */
 
-.product-viewport{
-    position:relative;
-    width:100%;
-    height:295px;
-    flex-shrink:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:visible;
+.product-viewport {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: visible;
+    flex-shrink: 0;
 }
+
 
 
 /* =========================================================
    PRODUCT IMAGE
 ========================================================= */
 
-.product-viewport .main-img{
-    display:block;
-    width:200px;
-    height:250px;
-    max-width:100%;
-    object-fit:contain;
-    margin:0 auto;
-    transform:translateZ(0);
-    transition:transform .35s ease;
+.product-viewport .main-img,
+.category-card .main-img {
+    display: block;
+    width: auto;
+    height: 230px;
+    max-width: 220px;
+    max-height: 250px;
+    object-fit: contain;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
 }
 
+.product-viewport .side-img.left {
+    left: 0;
+    top: 50%;
+    transform:
+        translate(-20px,-50%)
+        scale(.85);
+}
+
+
+.product-viewport .side-img.right {
+    right: 0;
+    top: 50%;
+    transform:
+        translate(20px,-50%)
+        scale(.85);
+}
 
 /* =========================================================
    PRODUCT NAME
 ========================================================= */
 
-.category-card h3{
-    display:block;
-    width:100%;
-    max-width:240px;
-    min-height:45px;
-    margin:12px auto 0;
-    padding:0;
-    color:#1C304E !important;
-    font-size:15px;
-    font-weight:700;
-    line-height:1.45;
-    text-align:center;
-    white-space:normal;
-    overflow:visible;
-    word-break:normal;
-    overflow-wrap:break-word;
+.category-card h3,
+.category-card .product-name {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 10px auto 0;
+    padding: 0;
+    color: #1C304E !important;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-align: center;
+    white-space: normal;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    z-index: 10;
 }
 
 
@@ -2154,10 +2178,8 @@ video {
     .container {
         width: 100% !important;
         max-width: 100% !important;
-
         padding-left: 20px !important;
         padding-right: 20px !important;
-
         margin-left: auto;
         margin-right: auto;
     }
@@ -2173,21 +2195,14 @@ video {
 
     .navbar {
         position: fixed !important;
-
         top: 0;
         left: 0;
-
         width: 100% !important;
-
         z-index: 9999;
-
         padding: 10px 0 !important;
-
         background: #ffffff !important;
-
         box-shadow:
-            0 4px 20px rgba(0,0,0,.08);
-
+           0 4px 20px rgba(0,0,0,.08);
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
     }
@@ -2195,15 +2210,10 @@ video {
 
     .nav-wrapper {
         width: 100% !important;
-
         min-height: 60px !important;
-
         display: flex !important;
-
         align-items: center;
-
         justify-content: space-between;
-
         padding-left: 20px !important;
         padding-right: 20px !important;
     }
@@ -2212,7 +2222,6 @@ video {
     .logo-img {
         width: auto !important;
         height: 42px !important;
-
         max-width: 190px;
     }
 
@@ -2229,12 +2238,9 @@ video {
 
     .menu-toggle {
         display: flex !important;
-
         flex-shrink: 0;
-
         width: 46px;
         height: 46px;
-
         margin-left: auto;
     }
 
@@ -2248,138 +2254,89 @@ video {
 @media (max-width: 768px) {
 
     .hero {
-
         width: 100% !important;
-
         min-height: auto !important;
         height: auto !important;
-
         padding:
             100px 0
             70px !important;
-
         overflow: hidden !important;
     }
 
 
     .hero-wrapper {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         align-items: center !important;
-
         justify-content: center !important;
-
         gap: 35px !important;
-
         padding:
             40px 0 20px !important;
-
         text-align: center !important;
     }
 
 
     .hero-left {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding: 0 !important;
-
         text-align: center !important;
     }
 
 
     .hero-left h1 {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         margin: 20px auto !important;
-
         padding: 0 !important;
-
         font-size:
             clamp(34px, 10vw, 46px) !important;
-
         line-height: 1.08 !important;
-
         word-break: normal !important;
-
         overflow-wrap: break-word !important;
     }
 
 
     .hero-left p {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         margin: 20px auto !important;
-
         font-size: 15px !important;
-
         line-height: 1.7 !important;
-
         padding: 0 !important;
     }
 
 
     .hero-buttons {
-
         width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         align-items: center !important;
-
         gap: 12px !important;
     }
 
 
     .hero-buttons a {
-
         width: 100% !important;
-
         max-width: 300px !important;
-
     }
 
 
     .hero-right {
-
         width: 100% !important;
-
         max-width: 320px !important;
-
         flex-basis: auto !important;
-
         margin: 0 auto !important;
-
     }
 
 
     .hero-right img {
-
         width: 100% !important;
-
         max-width: 280px !important;
-
         height: auto !important;
-
         margin: auto !important;
-
     }
 
 }
@@ -2392,24 +2349,17 @@ video {
 @media (max-width: 768px) {
 
     .hero-bg {
-
         position: absolute !important;
-
         width: 100% !important;
         height: 100% !important;
-
         object-fit: cover !important;
-
         object-position: center !important;
     }
 
 
     .hero-overlay {
-
         position: absolute !important;
-
         inset: 0 !important;
-
         background:
             linear-gradient(
                 to bottom,
@@ -2428,13 +2378,9 @@ video {
 @media (max-width: 768px) {
 
     .category-section {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         overflow: hidden !important;
-
         padding:
             70px 0 60px !important;
     }
@@ -2442,16 +2388,11 @@ video {
 
     .category-section .section-header,
     .category-section .section-title {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding:
             0 20px !important;
-
         text-align: center !important;
-
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -2459,19 +2400,13 @@ video {
 
     .category-section h2,
     .category-section .section-header h2 {
-
         width: 100% !important;
-
         font-size:
             clamp(32px, 9vw, 40px) !important;
-
         line-height: 1.15 !important;
-
         margin:
             20px auto 30px !important;
-
         word-break: normal !important;
-
         overflow-wrap: break-word !important;
     }
 
@@ -2480,85 +2415,53 @@ video {
 
     .product-slider,
     .product-viewport-wrapper {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         overflow: hidden !important;
-
         margin: 0 !important;
     }
 
 
     .product-track {
-
         display: flex !important;
-
         width: max-content !important;
-
         gap: 0 !important;
-
     }
 
 
     /* SATU PRODUK = SATU LAYAR */
 
     .category-card {
-
         flex:
             0 0 100vw !important;
-
         width: 100vw !important;
-
         min-width: 100vw !important;
-
         max-width: 100vw !important;
-
         height: 400px !important;
-
         min-height: 400px !important;
-
         padding:
             0 20px !important;
-
         margin: 0 !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         align-items: center !important;
-
         justify-content: flex-start !important;
-
         overflow: hidden !important;
-
         transform: none !important;
-
     }
 
 
     /* AREA GAMBAR */
 
     .product-viewport {
-
         width: 100% !important;
-
         height: 285px !important;
-
         min-height: 285px !important;
-
         max-height: 285px !important;
-
         display: flex !important;
-
         align-items: center !important;
-
         justify-content: center !important;
-
         overflow: hidden !important;
-
         flex-shrink: 0 !important;
     }
 
@@ -2566,17 +2469,11 @@ video {
     /* GAMBAR PRODUK */
 
     .product-viewport .main-img {
-
         width: auto !important;
-
         height: 230px !important;
-
         max-width: 72vw !important;
-
         object-fit: contain !important;
-
         margin: auto !important;
-
         transform: none !important;
     }
 
@@ -2584,11 +2481,8 @@ video {
     /* SEMBUNYIKAN GAMBAR SAMPING */
 
     .product-viewport .side-img {
-
         display: none !important;
-
         opacity: 0 !important;
-
         visibility: hidden !important;
     }
 
@@ -2597,40 +2491,24 @@ video {
 
     .category-card h3,
     .category-card .product-name {
-
         position: relative !important;
-
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
-
         width: 100% !important;
-
         max-width: 320px !important;
-
         min-height: auto !important;
-
         height: auto !important;
-
         margin:
             10px auto 0 !important;
-
         padding: 0 !important;
-
         color: #1C304E !important;
-
         font-size: 15px !important;
-
         font-weight: 700 !important;
-
         line-height: 1.4 !important;
-
         text-align: center !important;
-
         white-space: normal !important;
-
         overflow: visible !important;
-
         transform: none !important;
     }
 
@@ -2644,39 +2522,27 @@ video {
 @media (max-width: 480px) {
 
     .category-card {
-
         height: 390px !important;
-
         min-height: 390px !important;
-
     }
 
 
     .product-viewport {
-
         height: 275px !important;
-
         min-height: 275px !important;
-
     }
 
 
     .product-viewport .main-img {
-
         height: 215px !important;
-
         max-width: 70vw !important;
-
     }
 
 
     .category-card h3,
     .category-card .product-name {
-
         max-width: 280px !important;
-
         font-size: 14px !important;
-
     }
 
 }
@@ -2689,45 +2555,33 @@ video {
 @media (max-width: 768px) {
 
     .services {
-
         width: 100% !important;
-
         overflow: hidden !important;
-
         padding:
             70px 0 !important;
     }
 
 
     .services .container {
-
         width: 100% !important;
-
         padding:
             0 20px !important;
     }
 
 
     .services .section-header {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         margin:
             0 auto 40px !important;
-
         text-align: center !important;
     }
 
 
     .services .section-header h2 {
-
         font-size:
             clamp(30px, 8vw, 38px) !important;
-
         line-height: 1.2 !important;
-
         margin-top: 20px !important;
     }
 
@@ -2735,92 +2589,60 @@ video {
     /* CARD */
 
     .service-grid {
-
         display: flex !important;
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         gap: 20px !important;
-
         overflow-x: auto !important;
-
         overflow-y: hidden !important;
-
         scroll-snap-type: x mandatory !important;
-
         padding:
             10px 5px 30px !important;
-
         scrollbar-width: none;
     }
 
 
     .service-grid::-webkit-scrollbar {
-
         display: none;
-
     }
 
 
     .service-card {
-
         flex:
             0 0 calc(100vw - 55px) !important;
-
         width:
             calc(100vw - 55px) !important;
-
         max-width:
             calc(100vw - 55px) !important;
-
         min-width:
             calc(100vw - 55px) !important;
-
         min-height: 480px !important;
-
         padding:
             35px 25px !important;
-
         margin: 0 !important;
-
         scroll-snap-align: center !important;
-
         border-radius: 25px !important;
-
         text-align: center !important;
-
     }
 
 
     .service-card img {
-
         width: 180px !important;
-
         height: 180px !important;
-
         object-fit: contain !important;
-
         margin: 0 auto 25px !important;
     }
 
 
     .service-card h3 {
-
         font-size: 22px !important;
-
         line-height: 1.3 !important;
-
     }
 
 
     .service-card p {
-
         font-size: 15px !important;
-
         line-height: 1.6 !important;
-
     }
 
 }
@@ -2833,146 +2655,99 @@ video {
 @media (max-width: 768px) {
 
     .about {
-
         width: 100% !important;
-
         overflow: hidden !important;
-
         padding:
             70px 0 !important;
     }
 
 
     .about-wrapper {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         align-items: center !important;
-
         gap: 35px !important;
-
         text-align: center !important;
     }
 
 
     .about-image {
-
         width: 100% !important;
-
         max-width: 320px !important;
-
         margin: auto !important;
     }
 
 
     .about-image img {
-
         width: 100% !important;
-
         max-width: 300px !important;
-
         height: auto !important;
-
         margin: auto !important;
-
         border-radius: 25px !important;
     }
 
 
     .about-content {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding: 0 !important;
-
         text-align: center !important;
     }
 
 
     .about-content h2 {
-
         font-size:
             clamp(30px, 8vw, 38px) !important;
-
         line-height: 1.2 !important;
-
         margin-bottom: 20px !important;
     }
 
 
     .about-content p {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         font-size: 15px !important;
-
         line-height: 1.75 !important;
-
     }
 
 
     /* VISION / MISSION */
 
     .vision-grid {
-
         width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         gap: 25px !important;
-
         align-items: stretch !important;
     }
 
 
     .vision-grid > * {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         margin: 0 !important;
     }
 
 
     .vision-card {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding:
             30px 25px !important;
-
         border-radius: 25px !important;
     }
 
 
     .vision-card h3 {
-
         font-size: 24px !important;
-
     }
 
 
     .vision-card p {
-
         font-size: 16px !important;
-
         line-height: 1.75 !important;
-
     }
 
 }
@@ -2985,33 +2760,23 @@ video {
 @media (max-width: 768px) {
 
     .detail-grid {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         gap: 30px !important;
     }
 
 
     .detail-grid > * {
-
         width: 100% !important;
-
         max-width: 100% !important;
     }
 
 
     .feature-card {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding: 25px !important;
     }
 
@@ -3025,27 +2790,18 @@ video {
 @media (max-width: 768px) {
 
     .quality-grid {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         gap: 20px !important;
     }
 
 
     .quality-item {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         margin: 0 !important;
-
         padding: 25px !important;
     }
 
@@ -3060,37 +2816,27 @@ video {
 
     .section-header,
     .section-title {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         padding-left: 10px !important;
         padding-right: 10px !important;
-
         text-align: center !important;
     }
 
 
     .section-header h2,
     .section-title h2 {
-
         font-size:
             clamp(30px, 8vw, 38px) !important;
-
         line-height: 1.2 !important;
-
         overflow-wrap: break-word !important;
     }
 
 
     .section-header p,
     .section-title p {
-
         font-size: 15px !important;
-
         line-height: 1.7 !important;
-
         max-width: 100% !important;
     }
 
@@ -3104,63 +2850,45 @@ video {
 @media (max-width: 768px) {
 
     .contact {
-
         width: 100% !important;
-
         overflow: hidden !important;
-
         padding:
             70px 0 !important;
     }
 
 
     .contact-wrapper {
-
         width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         gap: 30px !important;
-
     }
 
 
     .contact-info,
     .contact-form {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
         min-width: 0 !important;
     }
 
 
     .contact-info h2 {
-
         font-size:
             clamp(30px, 8vw, 40px) !important;
-
         line-height: 1.2 !important;
     }
 
 
     .contact-form input,
     .contact-form textarea {
-
         width: 100% !important;
-
         max-width: 100% !important;
-
     }
 
 
     .contact-form button {
-
         width: 100% !important;
-
     }
 
 }
@@ -3173,52 +2901,36 @@ video {
 @media (max-width: 768px) {
 
     .footer {
-
         width: 100% !important;
-
         overflow: hidden !important;
-
         padding:
             55px 0 !important;
     }
 
 
     .footer-grid {
-
         width: 100% !important;
-
         display: flex !important;
-
         flex-direction: column !important;
-
         gap: 35px !important;
-
         text-align: center !important;
     }
 
 
     .footer-logo {
-
         align-items: center !important;
-
     }
 
 
     .footer-logo-img {
-
         width: 170px !important;
-
         max-width: 70vw !important;
-
     }
 
 
     .footer ul {
-
         padding: 0 !important;
-
         margin: 0 !important;
-
     }
 
 }
@@ -3234,27 +2946,19 @@ video {
     .service-card:hover,
     .feature-card:hover,
     .quality-item:hover {
-
         transform: none !important;
-
     }
 
 
     .category-card:hover .main-img {
-
         transform: none !important;
-
     }
 
 
     .category-card:hover .side-img {
-
         display: none !important;
-
         opacity: 0 !important;
-
         visibility: hidden !important;
-
     }
 
 }
@@ -3306,44 +3010,120 @@ video {
 @media (max-width: 380px) {
 
     .container {
-
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
 
 
     .logo-img {
-
         height: 34px !important;
-
     }
 
 
     .menu-toggle {
-
         width: 42px !important;
         height: 42px !important;
-
     }
 
 
     .hero-left h1 {
-
         font-size: 32px !important;
-
     }
 
 
     .product-viewport .main-img {
-
         height: 200px !important;
-
     }
 
 
     .category-card h3 {
-
         font-size: 13px !important;
+    }
+
+}
+/* =========================================================
+   FIX LOGO MANERA MOBILE - TIDAK GEPENG
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+        width: auto !important;
+        max-width: none !important;
+        flex-shrink: 0;
+    }
+
+    .navbar .logo-img {
+        display: block;
+        height: 42px !important;
+        width: auto !important;
+        max-width: none !important;
+        object-fit: contain !important;
+        object-position: center;
+        flex-shrink: 0;
+    }
+
+}
+
+
+/* HP KECIL */
+@media (max-width: 480px) {
+
+    .navbar .logo-img {
+        height: 36px !important;
+        width: auto !important;
+    }
+
+}
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .category-card {
+
+        height: 370px !important;
+
+        min-height: 370px !important;
+
+        padding:
+            0 15px !important;
+    }
+
+
+    .product-viewport {
+
+        height: 265px !important;
+
+        min-height: 265px !important;
+
+        max-height: 265px !important;
+    }
+
+
+    .product-viewport .main-img,
+    .category-card .main-img {
+
+        height: 205px !important;
+
+        max-width: 72vw !important;
+
+        max-height: 220px !important;
+    }
+
+
+    .category-card h3,
+    .category-card .product-name {
+
+        max-width: 280px !important;
+
+        font-size: 14px !important;
+
+        line-height: 1.4 !important;
 
     }
 
