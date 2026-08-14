@@ -546,144 +546,980 @@ nav a:hover{
     display:block;
 }
 
-/* ==========================
-   KATEGORI PRODUK
-========================== */
+/* =========================================================
+   PRODUCT CATALOG
+   FINAL CLEAN VERSION
+   Desktop + Tablet + HP
+========================================================= */
 
-.category-grid{
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:80px;          /* Jarak antar produk */
-    margin-top:60px;
-    flex-wrap:nowrap;  /* Tetap satu baris */
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.products_corousel {
+    position: relative;
+    width: 100%;
+    background: #f8fafc;
+    overflow: hidden;
+    padding: 90px 0 80px;
 }
 
-.category-card{
-    width:220px;
-    text-align:center;
-    background:transparent;
-    border:none;
-    box-shadow:none;
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.products_corousel .container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.category-link{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-decoration:none;
-    background:transparent;
-    isolation: isolate;
-}
 
-.main-img{
-    width:180px;
-    height:auto;
-    transition:.35s ease;
-}
+/* =========================================================
+   HEADER
+========================================================= */
 
-.products{
-    padding:100px 0 180px;   /* bawah diperbesar */
-}
-
-.category-card:hover .main-img{
-    transform:scale(1.1);
-}
-
-.category-card h3{
-    margin-top:25px;
-    color:#1C304E;
-    font-size:18px;
-    font-weight:700;
-    line-height:1.4;
-    transition:.3s;
-}
-
-.category-card:hover h3{
-    color:#0f8d41;
-}
-
-.category-card,
-.category-link{
-    background:transparent !important;
-    box-shadow:none !important;
-    border:none !important;
-}
-/*==========================================
-        FOTO PRODUK
-==========================================*/
-
-.main-img{
-    width: 180px;
-    height: auto;
-    transition: .4s;
-}
-
-/* Membesar saat hover */
-
-.category-card:hover .main-img{
-    transform:scale(1.12);
-}
-
-/*==========================================
-        GAMBAR KIRI & KANAN
-==========================================*/
-
-.side-img{
-    position:absolute;
-    width:180px;          /* sebelumnya 130px */
-    height:auto;
-    opacity:0;
-    pointer-events:none;
-    z-index:2;
-    transition:all .6s ease;
-}
-
-/* kiri */
-.left{
-    left:-80px;
-    top:50%;
-    transform:translateY(-50%) translateX(70px) scale(.75) rotate(-12deg);
-}
-
-/* kanan */
-.right{
-    right:-80px;
-    top:50%;
-    transform:translateY(-50%) translateX(-70px) scale(.75) rotate(12deg);
-}
-
-/*==========================================
-        ANIMASI HOVER
-==========================================*/
-
-.category-card:hover{
-    transform:translateY(-12px);
-}
-
-.category-card:hover .left{
-    opacity:1;
-    transform:translateY(-50%) translateX(-20px) scale(1.15) rotate(-8deg);
-}
-
-.category-card:hover .right{
-    opacity:1;
-    transform:translateY(-50%) translateX(20px) scale(1.15) rotate(8deg);
-}
-
-/*==========================================
-        JUDUL
-==========================================*/
-
-.category-card h3{
-    font-size: 18px;
-    line-height: 1.4;
+.products_corousel .section-header {
+    width: 100%;
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
-.category-card:hover h3{
-    color:#ff0000;
+
+.products_corousel .section-header span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding: 0 38px;
+
+    border-radius: 50px;
+
+    background: #1C304E;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.products_corousel .section-header h2 {
+    margin: 22px 0 0;
+
+    color: #1C304E;
+
+    font-size: 42px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.product-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.product-viewport {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+#productSlider {
+
+    display: flex !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 0 !important;
+
+    width: max-content !important;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    transform: translate3d(0, 0, 0);
+
+    transition:
+        transform .45s cubic-bezier(.4, 0, .2, 1);
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   CARD DESKTOP
+========================================================= */
+
+#productSlider .category-card {
+
+    position: relative;
+
+    flex: 0 0 280px;
+
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+
+    height: 390px;
+
+    margin: 0;
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    overflow: visible;
+
+    text-align: center;
+
+    transform: none;
+
+    transition: none;
+}
+
+
+/* =========================================================
+   LINK
+========================================================= */
+
+#productSlider .category-link {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    text-decoration: none;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   AREA GAMBAR
+========================================================= */
+
+#productSlider .category-link::before {
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 275px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   GAMBAR PRODUK UTAMA
+========================================================= */
+
+#productSlider .main-img {
+
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    width: auto;
+    height: 235px;
+
+    max-width: 220px;
+    max-height: 245px;
+
+    object-fit: contain;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    z-index: 10;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        transform .3s ease;
+}
+
+
+/* =========================================================
+   GAMBAR MAKANAN / SIDE IMAGE
+   DEFAULT = HIDDEN
+========================================================= */
+
+#productSlider .side-img {
+
+    position: absolute;
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: contain;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    z-index: 30;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+
+/* =========================================================
+   DESKTOP
+   MAKANAN MUNCUL SAAT HOVER
+========================================================= */
+
+@media (min-width: 769px) {
+
+    #productSlider .side-img.left {
+
+        left: 0;
+        top: 145px;
+
+        transform:
+            translateX(-10px)
+            scale(.9);
+    }
+
+
+    #productSlider .side-img.right {
+
+        right: 0;
+        top: 145px;
+
+        transform:
+            translateX(10px)
+            scale(.9);
+    }
+
+
+    #productSlider .category-card:hover .side-img {
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    #productSlider .category-card:hover .side-img.left {
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+
+    #productSlider .category-card:hover .side-img.right {
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+
+    #productSlider .category-card:hover .main-img {
+
+        transform:
+            translateX(-50%)
+            scale(1.05);
+    }
+
+}
+
+
+/* =========================================================
+   NAMA PRODUK
+========================================================= */
+
+#productSlider .category-card h3 {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 250px;
+
+    min-height: 45px;
+
+    margin: 10px auto 0;
+
+    padding: 0;
+
+    color: #1C304E;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    white-space: normal;
+
+    overflow: visible;
+
+    z-index: 50;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .products_corousel {
+
+        padding:
+            80px 0
+            70px;
+    }
+
+
+    .products_corousel .container {
+
+        width: 94%;
+    }
+
+
+    #productSlider .category-card {
+
+        flex: 0 0 250px;
+
+        width: 250px;
+        min-width: 250px;
+        max-width: 250px;
+
+        height: 360px;
+    }
+
+
+    #productSlider .main-img {
+
+        height: 220px;
+
+        max-width: 205px;
+    }
+
+
+    #productSlider .side-img {
+
+        width: 100px;
+        height: 100px;
+    }
+
+
+    #productSlider .side-img.left {
+
+        top: 140px;
+    }
+
+
+    #productSlider .side-img.right {
+
+        top: 140px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =====================================================
+       SECTION
+    ===================================================== */
+
+    .products_corousel {
+
+        width: 100%;
+
+        padding:
+            70px 0
+            50px;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .products_corousel .container {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 0;
+
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .products_corousel .section-header {
+
+        width: 100%;
+
+        padding:
+            0 20px;
+
+        margin:
+            0 0 35px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+
+    .products_corousel .section-header span {
+
+        min-height: 48px;
+
+        padding:
+            0 28px;
+
+        border-radius: 50px;
+
+        font-size: 14px;
+    }
+
+
+    .products_corousel .section-header h2 {
+
+        margin-top: 20px;
+
+        font-size: 34px;
+
+        line-height: 1.2;
+    }
+
+
+    /* =====================================================
+       SLIDER
+    ===================================================== */
+
+    .product-carousel {
+
+        width: 100vw;
+
+        max-width: 100vw;
+
+        overflow: hidden;
+    }
+
+
+    .product-viewport {
+
+        width: 100vw;
+
+        max-width: 100vw;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       TRACK
+    ===================================================== */
+
+    #productSlider {
+
+        display: flex !important;
+
+        flex-wrap: nowrap !important;
+
+        gap: 0 !important;
+
+        width: max-content !important;
+
+        margin: 0;
+
+        padding: 0;
+
+        transform:
+            translate3d(0, 0, 0);
+
+        transition:
+            transform .45s cubic-bezier(.4, 0, .2, 1);
+    }
+
+
+    /* =====================================================
+       CARD
+       1 PRODUK = 1 LAYAR HP
+    ===================================================== */
+
+    #productSlider .category-card {
+
+        flex:
+            0 0 100vw;
+
+        width: 100vw;
+
+        min-width: 100vw;
+
+        max-width: 100vw;
+
+        height: 380px;
+
+        margin: 0;
+
+        padding:
+            0 20px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        overflow: visible;
+
+        transform: none;
+    }
+
+
+    /* =====================================================
+       LINK
+    ===================================================== */
+
+    #productSlider .category-link {
+
+        width: 100%;
+
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        position: relative;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================================
+       AREA GAMBAR
+    ===================================================== */
+
+    #productSlider .category-link::before {
+
+        content: "";
+
+        display: block;
+
+        width: 100%;
+
+        height: 255px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =====================================================
+       PRODUK UTAMA HP
+    ===================================================== */
+
+    #productSlider .main-img {
+
+        position: absolute;
+
+        top: 20px;
+
+        left: 50%;
+
+        width: auto;
+
+        height: 205px;
+
+        max-width: 195px;
+
+        max-height: 215px;
+
+        object-fit: contain;
+
+        transform:
+            translateX(-50%);
+
+        margin: 0;
+
+        z-index: 10;
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    /* =====================================================
+       MAKANAN DI HP
+       SEPENUHNYA DISEMBUNYIKAN
+    ===================================================== */
+
+    #productSlider .side-img {
+
+        display: none !important;
+
+        opacity: 0 !important;
+
+        visibility: hidden !important;
+
+        pointer-events: none !important;
+    }
+
+
+    /* =====================================================
+       NAMA PRODUK HP
+    ===================================================== */
+
+    #productSlider .category-card h3 {
+
+        position: relative;
+
+        display: block;
+
+        width: 90%;
+
+        max-width: 290px;
+
+        min-height: 45px;
+
+        margin:
+            10px auto 0;
+
+        padding: 0;
+
+        color: #1C304E;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        line-height: 1.45;
+
+        text-align: center;
+
+        white-space: normal;
+
+        overflow: visible;
+
+        z-index: 50;
+
+        transform: none;
+    }
+
+
+    /* =====================================================
+       HILANGKAN HOVER DI HP
+    ===================================================== */
+
+    #productSlider .category-card:hover {
+
+        transform: none;
+    }
+
+
+    #productSlider .category-card:hover .main-img {
+
+        transform:
+            translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   HP KECIL
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .products_corousel {
+
+        padding:
+            60px 0
+            40px;
+    }
+
+
+    .products_corousel .section-header {
+
+        margin-bottom: 25px;
+    }
+
+
+    .products_corousel .section-header span {
+
+        min-height: 46px;
+
+        padding:
+            0 25px;
+
+        font-size: 13px;
+    }
+
+
+    .products_corousel .section-header h2 {
+
+        font-size: 30px;
+
+        margin-top: 18px;
+    }
+
+
+    /* CARD */
+
+    #productSlider .category-card {
+
+        height: 350px;
+
+        padding:
+            0 15px;
+    }
+
+
+    /* AREA GAMBAR */
+
+    #productSlider .category-link::before {
+
+        height: 235px;
+    }
+
+
+    /* PRODUK */
+
+    #productSlider .main-img {
+
+        top: 15px;
+
+        height: 190px;
+
+        max-width: 180px;
+
+        max-height: 200px;
+    }
+
+
+    /* NAMA */
+
+    #productSlider .category-card h3 {
+
+        width: 90%;
+
+        max-width: 270px;
+
+        margin-top: 8px;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+    }
+
+}
+
+
+/* =========================================================
+   SAFETY FIX
+   MENCEGAH CSS LAMA MENGACAU KATALOG
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .products_corousel
+    #productSlider
+    .category-card {
+
+        box-shadow: none !important;
+
+        border: none !important;
+    }
+
+
+    .products_corousel
+    #productSlider
+    .category-card::before,
+    .products_corousel
+    #productSlider
+    .category-card::after {
+
+        display: none !important;
+
+        content: none !important;
+    }
+
+}
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .products_corousel {
+
+        padding:
+            60px 0
+            40px;
+    }
+
+
+    .products_corousel .section-header {
+
+        margin-bottom: 25px;
+    }
+
+
+    .products_corousel .section-header span {
+
+        min-height: 46px;
+
+        padding:
+            0 25px;
+
+        font-size: 13px;
+    }
+
+
+    .products_corousel .section-header h2 {
+
+        font-size: 30px;
+
+        margin-top: 18px;
+    }
+
+
+    #productSlider .category-card {
+
+        height: 350px;
+
+        padding:
+            0 15px;
+    }
+
+
+    #productSlider .category-link::before {
+
+        height: 235px;
+    }
+
+
+    #productSlider .main-img {
+
+        top: 15px;
+
+        height: 190px;
+
+        max-width: 180px;
+
+        max-height: 200px;
+    }
+
+
+    #productSlider .side-img {
+
+        width: 78px;
+
+        height: 78px;
+    }
+
+
+    #productSlider .side-img.left {
+
+        left: 5px;
+
+        top: 130px;
+    }
+
+
+    #productSlider .side-img.right {
+
+        right: 5px;
+
+        top: 130px;
+    }
+
+
+    #productSlider .category-card h3 {
+
+        width: 90%;
+
+        max-width: 270px;
+
+        margin-top: 8px;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+    }
 
 }
 
@@ -1628,7 +2464,6 @@ nav a.active{
     display:none;
 }
 
-
 /* =========================================================
    RESPONSIVE — TABLET
    ========================================================= */
@@ -1656,7 +2491,7 @@ nav a.active{
     }
 
     .category-card{
-        flex-basis:230px;
+        flex:0 0 230px;
         width:230px;
         min-width:230px;
         height:360px;
@@ -1676,15 +2511,11 @@ nav a.active{
         max-width:210px;
         font-size:14px;
     }
-
-    .detail-grid{
-        gap:35px;
-    }
 }
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   MOBILE — FINAL FIX
    ========================================================= */
 
 @media (max-width:768px){
@@ -1693,17 +2524,7 @@ nav a.active{
     body{
         width:100%;
         max-width:100%;
-        overflow-x:hidden;
-    }
-
-    body{
-        font-size:15px;
-    }
-
-    img,
-    video,
-    iframe{
-        max-width:100%;
+        overflow-x:hidden !important;
     }
 
     .container{
@@ -1714,10 +2535,14 @@ nav a.active{
         margin:0 auto;
     }
 
+    img{
+        max-width:100%;
+    }
 
-    /* -------------------------
-       NAVBAR
-       ------------------------- */
+
+    /* =====================================================
+       1. NAVBAR
+       ===================================================== */
 
     .navbar{
         position:fixed;
@@ -1727,8 +2552,6 @@ nav a.active{
         padding:10px 0;
         background:#fff;
         box-shadow:0 4px 20px rgba(0,0,0,.08);
-        backdrop-filter:none;
-        -webkit-backdrop-filter:none;
         z-index:9999;
     }
 
@@ -1742,135 +2565,56 @@ nav a.active{
     }
 
     .navbar .logo{
+        width:auto !important;
+        max-width:none !important;
+        flex:0 0 auto;
         display:flex;
         align-items:center;
-        width:auto;
-        max-width:none;
-        flex:0 0 auto;
     }
 
     .navbar .logo-img{
         display:block;
-        width:auto;
-        height:42px;
-        max-width:190px;
-        object-fit:contain;
-        object-position:center;
+        width:auto !important;
+        height:42px !important;
+        max-width:190px !important;
+        object-fit:contain !important;
         flex-shrink:0;
     }
 
     .navbar nav,
     .navbar > .container > .btn-wa{
-        display:none;
+        display:none !important;
     }
 
     .menu-toggle{
-        display:flex;
+        display:flex !important;
         flex:0 0 46px;
         width:46px;
         height:46px;
         margin-left:auto;
     }
 
-    .mobile-menu{
-        display:block;
-        position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#fff;
-        padding:0 20px;
-        max-height:0;
-        overflow:hidden;
-        opacity:0;
-        visibility:hidden;
-        pointer-events:none;
-        box-shadow:0 15px 30px rgba(0,0,0,.10);
-        transition:max-height .35s ease, opacity .25s ease,
-                   padding .35s ease, visibility .35s ease;
-    }
 
-    .mobile-menu.active{
-        max-height:520px;
-        padding-top:10px;
-        padding-bottom:20px;
-        opacity:1;
-        visibility:visible;
-        pointer-events:auto;
-    }
-
-    .mobile-menu ul{
-        list-style:none;
-        padding:0;
-        margin:0;
-    }
-
-    .mobile-menu li{
-        border-bottom:1px solid #eef1f5;
-    }
-
-    .mobile-menu li:last-child{
-        border-bottom:0;
-    }
-
-    .mobile-menu a{
-        display:flex;
-        align-items:center;
-        width:100%;
-        min-height:50px;
-        color:#1C304E;
-        font-size:15px;
-        font-weight:600;
-    }
-
-    .mobile-wa{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        gap:10px;
-        width:100%;
-        min-height:48px;
-        margin-top:15px;
-        padding:0 20px;
-        border-radius:50px;
-        background:#25D366;
-        color:#fff;
-        font-weight:700;
-    }
-
-    .menu-toggle.active span:nth-child(1){
-        transform:translateY(8px) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2){
-        opacity:0;
-    }
-
-    .menu-toggle.active span:nth-child(3){
-        transform:translateY(-8px) rotate(-45deg);
-    }
-
-
-    /* -------------------------
-       HERO
-       ------------------------- */
+    /* =====================================================
+       2. HERO
+       ===================================================== */
 
     .hero{
         width:100%;
-        min-height:100svh;
         height:auto;
+        min-height:100svh;
         overflow:hidden;
     }
 
     .swiper-slide{
+        width:100%;
         min-height:100svh;
-        height:auto;
     }
 
     .hero-wrapper{
         width:100%;
         min-height:100svh;
-        padding:110px 20px 60px;
+        padding:110px 20px 55px;
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -1885,32 +2629,16 @@ nav a.active{
         text-align:center;
     }
 
-    .hero-badge{
-        padding:9px 16px;
-        margin-bottom:15px;
-        font-size:13px;
-        line-height:1.5;
-    }
-
     .hero-left h1{
         width:100%;
         max-width:100%;
-        margin:15px auto;
         font-size:clamp(34px,10vw,46px);
         line-height:1.08;
-        overflow-wrap:break-word;
-    }
-
-    .hero-left h1 span{
-        display:inline;
-        padding:4px 8px;
-        line-height:1.35;
     }
 
     .hero-left p{
         width:100%;
         max-width:100%;
-        margin:18px auto 0;
         font-size:15px;
         line-height:1.7;
     }
@@ -1920,7 +2648,6 @@ nav a.active{
         flex-direction:column;
         align-items:center;
         gap:12px;
-        margin-top:20px;
     }
 
     .hero-buttons a{
@@ -1928,64 +2655,26 @@ nav a.active{
         max-width:300px;
     }
 
-    .stats{
-        justify-content:center;
-        gap:25px;
-        margin-top:30px;
-    }
-
-    .stats h3{
-        font-size:25px;
-    }
-
     .hero-right{
         width:100%;
         max-width:320px;
         flex:0 0 auto;
-        margin:0 auto;
-    }
-
-    .feature-card{
-        padding:25px;
-        border-radius:22px;
-    }
-
-    .hero-bg{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        object-position:center;
-    }
-
-    .overlay{
-        background:linear-gradient(
-            to bottom,
-            rgba(0,0,0,.35),
-            rgba(0,0,0,.60)
-        );
     }
 
 
-    /* -------------------------
-       SECTION HEADERS
-       ------------------------- */
+    /* =====================================================
+       3. SECTION TITLE
+       ===================================================== */
 
     .section-header{
         width:100%;
         max-width:100%;
-        margin:0 auto 40px;
         padding:0 10px;
+        margin:0 auto 40px;
         text-align:center;
     }
 
-    .section-header span{
-        max-width:100%;
-        padding:10px 20px;
-        font-size:12px;
-    }
-
     .section-header h2{
-        margin-top:20px;
         font-size:clamp(30px,8vw,38px);
         line-height:1.2;
         overflow-wrap:break-word;
@@ -1997,14 +2686,290 @@ nav a.active{
     }
 
 
-    /* -------------------------
-       ABOUT
-       ------------------------- */
+    /* =====================================================
+       4. SERTIFIKAT — ATAS / BAWAH
+       ===================================================== */
+
+    .services{
+        width:100%;
+        padding:65px 0;
+        overflow:hidden !important;
+    }
+
+    .services .container{
+        width:100%;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .service-grid{
+        width:100% !important;
+        max-width:100% !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        gap:20px !important;
+        overflow:visible !important;
+        padding:0 !important;
+        margin:0 !important;
+        scroll-snap-type:none !important;
+    }
+
+    .service-card{
+        width:100% !important;
+        min-width:0 !important;
+        max-width:520px !important;
+        flex:0 0 auto !important;
+        min-height:0 !important;
+        height:auto !important;
+        padding:25px 20px !important;
+        margin:0 !important;
+        border-radius:22px !important;
+        text-align:center !important;
+        scroll-snap-align:none !important;
+    }
+
+    .service-card img{
+        display:block !important;
+        width:145px !important;
+        height:145px !important;
+        object-fit:contain !important;
+        margin:0 auto 18px !important;
+    }
+
+    .service-card h3{
+        margin-top:10px !important;
+        font-size:20px !important;
+        line-height:1.3 !important;
+    }
+
+    .service-card p{
+        font-size:14px !important;
+        line-height:1.65 !important;
+    }
+
+
+    /* =====================================================
+       5. PRODUK — FIX SUPAYA BENAR-BENAR TERLIHAT
+       ===================================================== */
+
+    .category-section{
+        width:100%;
+        padding:65px 0 50px;
+        overflow:hidden !important;
+    }
+
+    .category-section .section-header{
+        margin-bottom:25px;
+    }
+
+    .product-slider{
+        position:relative !important;
+        display:block !important;
+        width:100% !important;
+        max-width:100% !important;
+        height:auto !important;
+        overflow:hidden !important;
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+    /*
+       Track dibuat mengikuti lebar viewport.
+       Card menggunakan 100vw agar JS slider yang memakai
+       offsetWidth/viewport width tetap sinkron.
+    */
+    .product-track{
+        display:flex !important;
+        flex-wrap:nowrap !important;
+        width:max-content !important;
+        gap:0 !important;
+        margin:0 !important;
+        padding:0 !important;
+        transform:translate3d(0,0,0);
+        transition:transform .45s cubic-bezier(.4,0,.2,1);
+        will-change:transform;
+    }
+
+    .category-card{
+        position:relative !important;
+        flex:0 0 100vw !important;
+        width:100vw !important;
+        min-width:100vw !important;
+        max-width:100vw !important;
+        height:365px !important;
+        min-height:365px !important;
+        margin:0 !important;
+        padding:0 20px !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:flex-start !important;
+        overflow:visible !important;
+        transform:none !important;
+        box-sizing:border-box !important;
+    }
+
+    .category-link{
+        position:relative !important;
+        width:100% !important;
+        height:100% !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        justify-content:flex-start !important;
+        overflow:visible !important;
+    }
+
+    .product-viewport{
+        position:relative !important;
+        width:100% !important;
+        height:255px !important;
+        min-height:255px !important;
+        max-height:255px !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+        overflow:visible !important;
+        flex-shrink:0 !important;
+        box-sizing:border-box !important;
+    }
+
+    /*
+       Jangan memakai max-width:100% dari rule global untuk
+       membatasi gambar produk. Produk harus diberi ruang
+       sendiri agar tidak menjadi sangat kecil/hilang.
+    */
+    .product-viewport .main-img,
+    .category-card .main-img{
+        position:relative !important;
+        z-index:10 !important;
+        display:block !important;
+        visibility:visible !important;
+        opacity:1 !important;
+        width:auto !important;
+        height:215px !important;
+        max-width:220px !important;
+        max-height:225px !important;
+        object-fit:contain !important;
+        object-position:center !important;
+        margin:0 auto !important;
+        transform:none !important;
+        transition:none !important;
+    }
+
+    /* =====================================================
+       GAMBAR MAKANAN — DI ATAS PRODUK
+       ===================================================== */
+
+    .product-viewport .side-img{
+        display:block !important;
+        position:absolute !important;
+
+        width:105px !important;
+        height:105px !important;
+
+        object-fit:contain !important;
+
+        opacity:1 !important;
+        visibility:visible !important;
+
+        pointer-events:none !important;
+
+        /* makanan berada di atas kemasan */
+        z-index:30 !important;
+    }
+
+    .product-viewport .side-img.left{
+        left:5px !important;
+        top:55% !important;
+
+        transform:
+            translate(-5px,-50%)
+            scale(1) !important;
+    }
+
+    .product-viewport .side-img.right{
+        right:5px !important;
+        top:55% !important;
+
+        transform:
+            translate(5px,-50%)
+            scale(1) !important;
+    }
+
+    .category-card h3,
+    .category-card .product-name{
+        position:relative !important;
+        z-index:40 !important;
+        display:block !important;
+        width:100% !important;
+        max-width:300px !important;
+        min-height:40px !important;
+        height:auto !important;
+        margin:8px auto 0 !important;
+        padding:0 !important;
+        color:#1C304E !important;
+        font-size:15px !important;
+        font-weight:700 !important;
+        line-height:1.4 !important;
+        text-align:center !important;
+        white-space:normal !important;
+        overflow:visible !important;
+        overflow-wrap:break-word !important;
+        transform:none !important;
+        opacity:1 !important;
+        visibility:visible !important;
+    }
+
+    /*
+       Tombol dot tetap berada di luar card dan terlihat.
+    */
+    .product-dots{
+        position:relative !important;
+        z-index:20 !important;
+        display:flex !important;
+        justify-content:center !important;
+        align-items:center !important;
+        gap:8px !important;
+        margin:10px auto 0 !important;
+    }
+
+
+    /* =====================================================
+       6. HOVER PRODUK — JANGAN MEMBESAR DI HP
+       ===================================================== */
+
+    .category-card:hover{
+        transform:none !important;
+    }
+
+    .category-card:hover .main-img,
+    .category-card:hover .product-viewport .main-img,
+    .category-card:active .main-img,
+    .category-card:focus .main-img{
+        transform:none !important;
+        scale:1 !important;
+        width:auto !important;
+        height:215px !important;
+        max-width:220px !important;
+        max-height:225px !important;
+    }
+
+    .category-card:hover h3{
+        color:#1C304E !important;
+        transform:none !important;
+    }
+
+
+    /* =====================================================
+       7. ABOUT
+       ===================================================== */
 
     .about{
         width:100%;
+        padding:65px 0;
         overflow:hidden;
-        padding:70px 0;
     }
 
     .about-wrapper{
@@ -2012,7 +2977,7 @@ nav a.active{
         display:flex;
         flex-direction:column;
         align-items:center;
-        gap:35px;
+        gap:30px;
         text-align:center;
     }
 
@@ -2025,9 +2990,8 @@ nav a.active{
     .about-image img{
         width:100%;
         max-width:300px;
-        height:auto;
         margin:0 auto;
-        border-radius:25px;
+        border-radius:24px;
     }
 
     .about-content{
@@ -2039,12 +3003,9 @@ nav a.active{
     .about-content h2{
         font-size:clamp(30px,8vw,38px);
         line-height:1.2;
-        margin:20px 0;
     }
 
     .about-content p{
-        width:100%;
-        max-width:100%;
         font-size:15px;
         line-height:1.75;
     }
@@ -2054,221 +3015,24 @@ nav a.active{
         display:flex;
         flex-direction:column;
         gap:20px;
-        margin-top:25px;
-        align-items:stretch;
     }
 
     .vision-box{
         width:100%;
         max-width:100%;
-        flex:0 0 auto;
-        padding:25px 22px;
+        padding:24px 20px;
         border-radius:22px;
         text-align:left;
     }
 
-    .vision-box h4{
-        font-size:20px;
-    }
 
-    .vision-box p{
-        font-size:15px;
-        line-height:1.75;
-    }
-
-
-    /* -------------------------
-       CERTIFICATION
-       ------------------------- */
-
-    .services{
-        width:100%;
-        overflow:hidden;
-        padding:70px 0;
-    }
-
-    .service-grid{
-        display:flex;
-        width:100%;
-        max-width:none;
-        gap:18px;
-        overflow-x:auto;
-        overflow-y:hidden;
-        padding:5px 2px 25px;
-        scroll-snap-type:x mandatory;
-        scrollbar-width:none;
-    }
-
-    .service-grid::-webkit-scrollbar{
-        display:none;
-    }
-
-    .service-card{
-        flex:0 0 calc(100% - 20px);
-        width:calc(100% - 20px);
-        min-width:calc(100% - 20px);
-        max-width:calc(100% - 20px);
-        min-height:440px;
-        padding:30px 22px;
-        margin:0;
-        scroll-snap-align:center;
-        border-radius:24px;
-        text-align:center;
-    }
-
-    .service-card img{
-        width:170px;
-        height:170px;
-        object-fit:contain;
-        margin:0 auto 22px;
-    }
-
-    .service-card h3{
-        font-size:21px;
-        line-height:1.3;
-    }
-
-    .service-card p{
-        font-size:15px;
-        line-height:1.6;
-    }
-
-
-    /* -------------------------
-       PRODUCT SECTION
-       ------------------------- */
-
-    .category-section{
-        width:100%;
-        padding:65px 0 55px;
-        overflow:hidden;
-    }
-
-    .category-section .section-header{
-        margin-bottom:28px;
-    }
-
-    .category-section .section-header span{
-        min-width:0;
-        width:auto;
-        max-width:calc(100% - 40px);
-        padding:10px 20px;
-        font-size:12px;
-    }
-
-    .category-section .section-header h2{
-        margin-top:20px;
-        font-size:clamp(30px,8vw,38px);
-        line-height:1.15;
-    }
-
-    .product-slider{
-        width:100%;
-        max-width:100%;
-        overflow:hidden;
-    }
-
-    .product-track{
-        width:max-content;
-        gap:0;
-        transition:transform .45s cubic-bezier(.4,0,.2,1);
-    }
-
-    /* IMPORTANT:
-       Use 100% of the slider, not 100vw.
-       This prevents cards from becoming wider than the
-       actual viewport/container and disappearing. */
-    .category-card{
-        flex:0 0 100%;
-        width:100%;
-        min-width:100%;
-        max-width:100%;
-        height:365px;
-        min-height:365px;
-        padding:0 20px;
-        margin:0;
-        overflow:visible;
-        transform:none;
-    }
-
-    .category-link{
-        width:100%;
-        height:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:flex-start;
-    }
-
-    .product-viewport{
-        width:100%;
-        height:255px;
-        min-height:255px;
-        max-height:255px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        overflow:visible;
-        flex-shrink:0;
-    }
-
-    .product-viewport .main-img,
-    .category-card .main-img{
-        display:block;
-        width:auto;
-        height:210px;
-        max-width:75%;
-        max-height:220px;
-        object-fit:contain;
-        margin:0 auto;
-        opacity:1;
-        visibility:visible;
-        transform:none;
-    }
-
-    .product-viewport .side-img{
-        display:none;
-        opacity:0;
-        visibility:hidden;
-    }
-
-    .category-card h3,
-    .category-card .product-name{
-        display:block;
-        width:100%;
-        max-width:300px;
-        min-height:40px;
-        height:auto;
-        margin:8px auto 0;
-        padding:0;
-        color:#1C304E;
-        font-size:15px;
-        font-weight:700;
-        line-height:1.4;
-        text-align:center;
-        white-space:normal;
-        overflow:visible;
-        overflow-wrap:break-word;
-    }
-
-    .category-card:hover,
-    .category-card:hover .main-img,
-    .category-card:hover h3{
-        transform:none;
-    }
-
-    .product-dots{
-        margin-top:12px;
-    }
-
-
-    /* -------------------------
-       DISTRIBUTION
-       ------------------------- */
+    /* =====================================================
+       8. DISTRIBUSI
+       ===================================================== */
 
     .quality{
         width:100%;
-        padding:75px 0 55px;
+        padding:70px 0 50px;
         overflow:hidden;
     }
 
@@ -2286,95 +3050,26 @@ nav a.active{
         max-width:100%;
         min-width:0;
         height:auto;
-        min-height:75px;
+        min-height:72px;
         padding:18px 20px;
-        border-radius:18px;
-    }
-
-    .quality-item h3{
-        font-size:22px;
-        text-align:center;
     }
 
 
-    /* -------------------------
-       CALCULATOR / DETAIL
-       ------------------------- */
-
-    .calculator{
-        padding:65px 0;
-    }
-
-    .calculator-box{
-        flex-direction:column;
-        gap:25px;
-    }
-
-    .calculator-form,
-    .summary-card{
-        width:100%;
-        min-width:0;
-        max-width:100%;
-        flex:0 0 auto;
-    }
-
-    .summary-card{
-        padding:28px;
-    }
-
-    .detail-hero{
-        padding:125px 20px 70px;
-        min-height:380px;
-    }
-
-    .detail-grid{
-        display:flex;
-        flex-direction:column;
-        gap:30px;
-        padding:65px 0;
-    }
-
-    .detail-grid > *{
-        width:100%;
-        max-width:100%;
-    }
-
-    .spec-grid{
-        grid-template-columns:1fr;
-        gap:18px;
-        width:100%;
-        max-width:100%;
-        padding:0 20px;
-    }
-
-    .gallery{
-        padding:20px;
-    }
-
-    .gallery-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cta-section{
-        padding:70px 20px;
-    }
-
-
-    /* -------------------------
-       CONTACT
-       ------------------------- */
+    /* =====================================================
+       9. CONTACT
+       ===================================================== */
 
     .contact{
         width:100%;
+        padding:65px 0;
         overflow:hidden;
-        padding:70px 0;
     }
 
     .contact-wrapper{
         width:100%;
         display:flex;
         flex-direction:column;
-        gap:30px;
+        gap:25px;
     }
 
     .contact-info,
@@ -2385,16 +3080,10 @@ nav a.active{
         flex:0 0 auto;
     }
 
-    .contact-info h2{
-        font-size:clamp(30px,8vw,40px);
-        line-height:1.2;
-    }
-
     .contact-form input,
     .contact-form textarea{
         width:100%;
         max-width:100%;
-        font-size:16px;
     }
 
     .contact-form button{
@@ -2402,23 +3091,9 @@ nav a.active{
     }
 
 
-    /* -------------------------
-       FAQ
-       ------------------------- */
-
-    .faq{
-        padding:65px 0;
-    }
-
-    .faq-btn{
-        padding:20px;
-        font-size:16px;
-    }
-
-
-    /* -------------------------
-       FOOTER
-       ------------------------- */
+    /* =====================================================
+       10. FOOTER
+       ===================================================== */
 
     .footer{
         width:100%;
@@ -2447,47 +3122,31 @@ nav a.active{
         flex-direction:column;
         justify-content:center;
         text-align:center;
-        gap:25px;
-        padding:22px 18px;
-    }
-
-    .footer-channel{
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:10px;
-    }
-
-    .footer-social,
-    .footer-marketplace{
-        justify-content:center;
-        flex-wrap:wrap;
-    }
-
-    .footer-copyright p{
-        font-size:10px;
+        gap:20px;
     }
 
 
-    /* -------------------------
-       TOUCH DEVICES
-       ------------------------- */
+    /* =====================================================
+       11. MATIKAN SEMUA HOVER / TRANSFORM DI TOUCH
+       ===================================================== */
 
-    @media (hover:none) and (pointer:coarse){
-        .category-card:hover,
-        .service-card:hover,
-        .feature-card:hover,
-        .quality-item:hover,
-        .vision-box:hover{
-            transform:none;
-            box-shadow:inherit;
-        }
+    .category-card:hover,
+    .category-card:hover .main-img,
+    .service-card:hover,
+    .feature-card:hover,
+    .quality-item:hover,
+    .vision-box:hover{
+        transform:none !important;
+    }
+
+    .category-card:hover .main-img{
+        scale:1 !important;
     }
 }
 
 
 /* =========================================================
-   SMALL PHONES — 375px and below
+   SMALL PHONE
    ========================================================= */
 
 @media (max-width:480px){
@@ -2503,19 +3162,8 @@ nav a.active{
     }
 
     .navbar .logo-img{
-        height:36px;
-        width:auto;
-        max-width:175px;
-    }
-
-    .menu-toggle{
-        width:42px;
-        height:42px;
-        flex-basis:42px;
-    }
-
-    .menu-toggle span{
-        width:24px;
+        height:36px !important;
+        max-width:175px !important;
     }
 
     .hero-wrapper{
@@ -2526,55 +3174,59 @@ nav a.active{
         font-size:32px;
     }
 
-    .category-section{
-        padding:55px 0 50px;
+    /* Sertifikat lebih compact */
+    .service-card{
+        max-width:100% !important;
+        padding:22px 18px !important;
     }
 
+    .service-card img{
+        width:130px !important;
+        height:130px !important;
+    }
+
+    /* Produk */
     .category-card{
-        height:350px;
-        min-height:350px;
-        padding:0 15px;
+        height:350px !important;
+        min-height:350px !important;
+        padding:0 15px !important;
     }
 
     .product-viewport{
-        height:245px;
-        min-height:245px;
-        max-height:245px;
+        height:240px !important;
+        min-height:240px !important;
+        max-height:240px !important;
     }
 
     .product-viewport .main-img,
     .category-card .main-img{
-        height:200px;
-        max-height:210px;
-        max-width:72%;
+        height:200px !important;
+        max-height:210px !important;
+        max-width:220px !important;
+    }
+
+    .category-card:hover .main-img,
+    .category-card:active .main-img{
+        height:200px !important;
+        max-height:210px !important;
+        transform:none !important;
+        scale:1 !important;
     }
 
     .category-card h3,
     .category-card .product-name{
-        max-width:280px;
-        font-size:14px;
-        line-height:1.4;
-    }
-
-    .service-card{
-        min-height:420px;
-    }
-
-    .service-card img{
-        width:155px;
-        height:155px;
-    }
-
-    .vision-box{
-        padding:22px 20px;
+        max-width:280px !important;
+        font-size:14px !important;
+        line-height:1.4 !important;
     }
 }
+
 
 @media (max-width:380px){
 
     .navbar .logo-img{
-        height:34px;
-        max-width:165px;
+        height:34px !important;
+        max-width:165px !important;
     }
 
     .hero-left h1{
@@ -2582,35 +3234,44 @@ nav a.active{
     }
 
     .category-card{
-        height:340px;
-        min-height:340px;
+        height:340px !important;
+        min-height:340px !important;
     }
 
     .product-viewport{
-        height:235px;
-        min-height:235px;
-        max-height:235px;
+        height:230px !important;
+        min-height:230px !important;
+        max-height:230px !important;
     }
 
     .product-viewport .main-img,
     .category-card .main-img{
-        height:190px;
-        max-height:200px;
+        height:190px !important;
+        max-height:200px !important;
+    }
+
+    .category-card:hover .main-img,
+    .category-card:active .main-img{
+        height:190px !important;
+        max-height:200px !important;
+        transform:none !important;
+        scale:1 !important;
     }
 
     .category-card h3,
     .category-card .product-name{
-        font-size:13px;
-        max-width:270px;
+        max-width:270px !important;
+        font-size:13px !important;
     }
 }
 
 
 /* =========================================================
-   SAFETY: prevent accidental horizontal overflow
+   FINAL OVERFLOW SAFETY
    ========================================================= */
 
 @media (max-width:768px){
+
     .hero,
     .about,
     .services,
@@ -2619,16 +3280,59 @@ nav a.active{
     .calculator,
     .contact,
     .faq,
-    .footer,
-    .detail-hero,
-    .spec-section,
-    .gallery,
-    .cta-section{
-        max-width:100%;
-        overflow-x:hidden;
+    .footer{
+        max-width:100% !important;
     }
 
     h1,h2,h3,p{
         overflow-wrap:break-word;
+    }
+}
+/* =========================================================
+   FINAL MOBILE FOOD LAYER
+   Makanan berada di depan kemasan, tetapi judul tetap paling atas
+========================================================= */
+
+@media (max-width:768px){
+
+    .product-viewport .side-img{
+        display:block !important;
+        visibility:visible !important;
+        opacity:1 !important;
+        z-index:30 !important;
+    }
+
+    .product-viewport .main-img,
+    .category-card .main-img{
+        z-index:10 !important;
+    }
+
+    .category-card h3,
+    .category-card .product-name{
+        z-index:40 !important;
+    }
+
+    /* Tidak ada pembesaran saat disentuh */
+    .category-card:hover .side-img,
+    .category-card:active .side-img{
+        transform:inherit !important;
+    }
+}
+
+@media (max-width:480px){
+
+    .product-viewport .side-img{
+        width:92px !important;
+        height:92px !important;
+    }
+
+    .product-viewport .side-img.left{
+        left:3px !important;
+        top:55% !important;
+    }
+
+    .product-viewport .side-img.right{
+        right:3px !important;
+        top:55% !important;
     }
 }

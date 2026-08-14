@@ -901,5 +901,184 @@ window.addEventListener("scroll", function(){
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.getElementById("productSlider");
+
+    if (!slider) return;
+
+    const cards = slider.querySelectorAll(".category-card");
+
+    if (!cards.length) return;
+
+    let currentIndex = 0;
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+    let autoSlide = null;
+
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+
+    function moveSlider(index, animate = true) {
+
+        if (!isMobile()) {
+
+            slider.style.transform =
+                "translate3d(0,0,0)";
+
+            return;
+        }
+
+
+        if (index >= cards.length) {
+            index = 0;
+        }
+
+        if (index < 0) {
+            index = cards.length - 1;
+        }
+
+
+        currentIndex = index;
+
+
+        slider.style.transition = animate
+            ? "transform .45s cubic-bezier(.4,0,.2,1)"
+            : "none";
+
+
+        slider.style.transform =
+            `translate3d(-${currentIndex * window.innerWidth}px,0,0)`;
+    }
+
+
+    /* =====================================================
+       SWIPE
+    ===================================================== */
+
+    slider.addEventListener("touchstart", function (event) {
+
+        if (!isMobile()) return;
+
+        startX =
+            event.touches[0].clientX;
+
+        currentX = startX;
+
+        isDragging = true;
+
+        slider.style.transition = "none";
+
+        clearInterval(autoSlide);
+
+    }, { passive: true });
+
+
+    slider.addEventListener("touchmove", function (event) {
+
+        if (!isDragging || !isMobile()) return;
+
+        currentX =
+            event.touches[0].clientX;
+
+        const distance =
+            currentX - startX;
+
+        const position =
+            (-currentIndex * window.innerWidth)
+            + distance;
+
+
+        slider.style.transform =
+            `translate3d(${position}px,0,0)`;
+
+    }, { passive: true });
+
+
+    slider.addEventListener("touchend", function () {
+
+        if (!isDragging || !isMobile()) return;
+
+        const distance =
+            currentX - startX;
+
+        isDragging = false;
+
+
+        if (Math.abs(distance) > 50) {
+
+            if (distance < 0) {
+
+                moveSlider(currentIndex + 1);
+
+            } else {
+
+                moveSlider(currentIndex - 1);
+
+            }
+
+        } else {
+
+            moveSlider(currentIndex);
+
+        }
+
+
+        startAutoSlide();
+
+    });
+
+
+    /* =====================================================
+       AUTO SLIDE
+    ===================================================== */
+
+    function startAutoSlide() {
+
+        clearInterval(autoSlide);
+
+        if (!isMobile()) return;
+
+
+        autoSlide = setInterval(function () {
+
+            moveSlider(currentIndex + 1);
+
+        }, 4500);
+    }
+
+
+    /* =====================================================
+       RESIZE
+    ===================================================== */
+
+    window.addEventListener("resize", function () {
+
+        moveSlider(
+            currentIndex,
+            false
+        );
+
+        startAutoSlide();
+
+    });
+
+
+    /* =====================================================
+       START
+    ===================================================== */
+
+    moveSlider(0, false);
+
+    startAutoSlide();
+
+});
+</script>
+
 </body>
 </html>
