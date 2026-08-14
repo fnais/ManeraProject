@@ -900,16 +900,11 @@ nav a:hover{
 ===================================================== */
 
 .footer-grid{
-
     display:grid;
-
     grid-template-columns:
         repeat(3, minmax(220px,1fr));
-
     gap:40px;
-
     padding-bottom:40px;
-
 }
 
 
@@ -918,37 +913,24 @@ nav a:hover{
 ===================================================== */
 
 .footer-logo{
-
     display:flex;
-
     flex-direction:column;
-
     gap:15px;
-
 }
 
 
 .footer-logo-img{
-
     width:180px;
-
     height:auto;
-
     object-fit:contain;
-
 }
 
 
 .footer-logo p{
-
     margin:0;
-
     color:rgba(255,255,255,.6);
-
     font-size:14px;
-
     line-height:1.7;
-
 }
 
 
@@ -957,15 +939,10 @@ nav a:hover{
 ===================================================== */
 
 .footer-grid h4{
-
     margin:0 0 20px;
-
     color:#ffffff;
-
     font-size:16px;
-
     font-weight:700;
-
 }
 
 
@@ -974,44 +951,30 @@ nav a:hover{
 ===================================================== */
 
 .footer ul{
-
     list-style:none;
-
     padding:0;
-
     margin:0;
-
 }
 
 
 .footer li{
-
     margin-bottom:12px;
-
     color:rgba(255,255,255,.65);
-
     font-size:14px;
-
 }
 
 
 .footer a{
-
     color:#ffffff;
-
     text-decoration:none;
-
     transition:
         color .3s ease,
         transform .3s ease;
-
 }
 
 
 .footer a:hover{
-
     color:#ffc107;
-
 }
 
 
@@ -1020,38 +983,24 @@ nav a:hover{
 ===================================================== */
 
 .footer-channel-wrapper{
-
     margin-top:10px;
-
     padding:20px 25px;
-
     background:#ffffff;
-
     border-radius:12px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:40px;
-
 }
 
 
 /* Judul */
 
 .footer-channel h4{
-
     margin:0;
-
     color:#020b24;
-
     font-size:13px;
-
     font-weight:700;
-
 }
 
 
@@ -1060,47 +1009,30 @@ nav a:hover{
 ===================================================== */
 
 .footer-social{
-
     display:flex;
-
     align-items:center;
-
     gap:8px;
-
 }
 
 
 .footer-social a{
-
     width:34px;
     height:34px;
-
     display:flex;
-
     align-items:center;
     justify-content:center;
-
     border-radius:50%;
-
     background:#020b24;
-
     color:#ffffff;
-
     font-size:14px;
-
     transition:.3s;
-
 }
 
 
 .footer-social a:hover{
-
     background:#FFD200;
-
     color:#020b24;
-
     transform:translateY(-3px);
-
 }
 
 
@@ -1109,49 +1041,30 @@ nav a:hover{
 ===================================================== */
 
 .footer-marketplace{
-
     display:flex;
-
     align-items:center;
-
     gap:8px;
-
 }
 
 
 .footer-marketplace a{
-
     display:flex;
-
     align-items:center;
-
     gap:7px;
-
     padding:8px 14px;
-
     border-radius:8px;
-
     background:#020b24;
-
     color:#ffffff;
-
     font-size:11px;
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
 
 .footer-marketplace a:hover{
-
     background:#FFD200;
-
     color:#020b24;
-
     transform:translateY(-3px);
-
 }
 
 
@@ -1162,33 +1075,21 @@ nav a:hover{
 @media(max-width:768px){
 
     .footer-channel-wrapper{
-
         flex-direction:column;
-
         justify-content:center;
-
         gap:25px;
-
         padding:25px 20px;
-
     }
 
     .footer-channel{
-
         flex-direction:column;
-
         gap:10px;
-
         text-align:center;
-
     }
 
     .footer-marketplace{
-
         justify-content:center;
-
         flex-wrap:wrap;
-
     }
 
 }
@@ -1197,24 +1098,16 @@ nav a:hover{
 ===================================================== */
 
 .footer-copyright{
-
     padding-top:20px;
-
     border-top:1px solid rgba(255,255,255,.07);
-
     text-align:center;
-
 }
 
 
 .footer-copyright p{
-
     margin:0;
-
     color:rgba(255,255,255,.45);
-
     font-size:11px;
-
 }
 
 
@@ -1225,64 +1118,44 @@ nav a:hover{
 @media(max-width:768px){
 
     .footer{
-
         padding:55px 0 20px;
-
     }
 
 
     .footer-grid{
-
         grid-template-columns:
             repeat(2,1fr);
-
         gap:35px;
-
     }
 
 
     .footer-logo{
-
         grid-column:1 / -1;
-
     }
 
 
     .footer-channel-wrapper{
-
         flex-direction:column;
-
         justify-content:center;
-
         text-align:center;
-
         gap:30px;
-
     }
 
 
     .footer-channel{
-
         flex-direction:column;
-
         gap:12px;
-
     }
 
 
     .footer-social{
-
         justify-content:center;
-
     }
 
 
     .footer-marketplace{
-
         justify-content:center;
-
         flex-wrap:wrap;
-
     }
 
 }
@@ -1295,95 +1168,65 @@ nav a:hover{
 @media(max-width:480px){
 
     .footer{
-
         padding:45px 0 20px;
-
     }
 
 
     .footer-grid{
-
         grid-template-columns:1fr;
-
         gap:30px;
-
         text-align:center;
-
     }
 
 
     .footer-logo{
-
         grid-column:auto;
-
         align-items:center;
-
     }
 
 
     .footer-logo-img{
-
         width:150px;
-
     }
 
 
     .footer-logo p{
-
         font-size:13px;
-
     }
 
 
     .footer-grid h4{
-
         margin-bottom:15px;
-
     }
 
 
     .footer li{
-
         font-size:13px;
-
     }
 
 
     .footer-channel-wrapper{
-
         margin-top:5px;
-
         padding:25px 0;
-
         gap:25px;
-
     }
 
 
     .footer-social a{
-
         width:38px;
-
         height:38px;
-
         font-size:16px;
-
     }
 
 
     .footer-marketplace a{
-
         padding:9px 13px;
-
         font-size:11px;
-
     }
 
 
     .footer-copyright p{
-
         font-size:10px;
-
     }
 
 }
@@ -1545,6 +1388,64 @@ nav a.active{
 
 .cta-section p{
     font-size:clamp(16px,2vw,20px);
+}
+
+/* =====================================================
+   FIX KATEGORI PRODUK DI HP
+===================================================== */
+
+@media (max-width: 768px){
+
+    /* CARD PRODUK */
+    .category-card{
+        width:100%;
+        max-width:100%;
+        min-width:0;
+        overflow:hidden;
+        text-align:center;
+    }
+
+    /* AREA PRODUK */
+    .product-viewport{
+        width:100%;
+        max-width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow:hidden;
+    }
+
+    /* GAMBAR PRODUK UTAMA */
+    .product-viewport .main-img{
+        width:220px;
+        max-width:80vw;
+        height:auto;
+        object-fit:contain;
+    }
+
+    /* NAMA PRODUK */
+    .category-card h3,
+    .category-card .product-name{
+        display:block;
+
+        width:100%;
+        max-width:280px;
+
+        margin:15px auto 0;
+        padding:0 10px;
+
+        font-size:15px;
+        line-height:1.4;
+
+        text-align:center;
+
+        white-space:normal;
+        overflow-wrap:anywhere;
+        word-break:normal;
+
+        box-sizing:border-box;
+    }
+
 }
 
 /* ==========================
