@@ -192,6 +192,47 @@ p {
 }
 
 /* =========================================================
+   MOBILE HAMBURGER - FINAL
+========================================================= */
+
+.menu-toggle {
+    display: none;
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: #1C304E;
+    border-radius: 10px;
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================================
    3. HERO
    ========================================================= */
 
@@ -1381,6 +1422,136 @@ p {
         margin-left: auto;
     }
 
+    @media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .desktop-nav,
+    .desktop-wa {
+        display: none !important;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: block;
+        background: #ffffff;
+        padding: 0 25px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            max-height .35s ease,
+            opacity .25s ease,
+            padding .35s ease,
+            visibility .35s ease;
+        box-shadow: 0 15px 30px rgba(0,0,0,.08);
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+
+    /* MENU TERBUKA */
+
+    .mobile-menu.active {
+        max-height: 500px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    /* LIST */
+
+    .mobile-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .mobile-menu li {
+        border-bottom: 1px solid #eef1f5;
+    }
+
+
+    .mobile-menu li:last-child {
+        border-bottom: none;
+    }
+
+
+    /* LINK */
+
+    .mobile-menu a {
+        display: flex;
+        align-items: center;
+        min-height: 52px;
+        color: #1C304E;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+
+    /* WHATSAPP */
+
+    .mobile-menu .mobile-wa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        min-height: 48px;
+        margin-top: 15px;
+        padding: 0 20px;
+        border-radius: 50px;
+        background: #25D366;
+        color: #ffffff !important;
+        font-weight: 700;
+        box-sizing: border-box;
+    }
+
+
+    .mobile-menu .mobile-wa i {
+        font-size: 19px;
+    }
+
+
+    /* =========================
+       HAMBURGER → X
+    ========================= */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(8px)
+            rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+    }
+
+}
+
+
     /* ---------- Hero ---------- */
 
     .hero {
@@ -1855,6 +2026,16 @@ p {
     .navbar .logo-img {
         height: 36px;
         max-width: 175px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
     }
 
     .hero-wrapper {
