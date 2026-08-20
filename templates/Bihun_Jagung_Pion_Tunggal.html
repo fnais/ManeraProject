@@ -285,15 +285,17 @@ SECTION 3 - KEUNGGULAN PRODUK
 </section>
 
 <!-- =======================================================
-SECTION 4
-INSPIRASI MENU
+     INSPIRASI MENU
 ======================================================= -->
 
 <section class="menu-section">
 
     <div class="container">
+
         <div class="section-title">
+
             <span>INSPIRASI MENU</span>
+
             <h2>Satu Produk, Banyak Kreasi</h2>
 
             <p>
@@ -303,49 +305,98 @@ INSPIRASI MENU
 
         </div>
 
+
         <div class="menu-grid">
+
+            <!-- RESEP 1 -->
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepBihunGoreng.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepBihunGoreng.png') }}"
+                    alt="Resep Bihun Goreng"
+                    onclick="openRecipe(this.src)"
+                >
 
                 <div class="menu-overlay">
                     <h3>Bihun Goreng</h3>
                 </div>
+
             </div>
 
+
+            <!-- RESEP 2 -->
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepTahuIsiBihun.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepTahuIsiBihun.png') }}"
+                    alt="Resep Tahu Isi Bihun"
+                    onclick="openRecipe(this.src)"
+                >
+
                 <div class="menu-overlay">
                     <h3>Tahu Isi Bihun</h3>
                 </div>
 
             </div>
 
+
+            <!-- RESEP 3 -->
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepKimbabBihun.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepKimbabBihun.png') }}"
+                    alt="Resep Kimbab Bihun"
+                    onclick="openRecipe(this.src)"
+                >
+
                 <div class="menu-overlay">
                     <h3>Kimbab Bihun</h3>
                 </div>
 
             </div>
 
+
+            <!-- RESEP 4 -->
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepEsTelerBihun.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepEsTelerBihun.png') }}"
+                    alt="Resep Es Teler Bihun"
+                    onclick="openRecipe(this.src)"
+                >
+
                 <div class="menu-overlay">
-                    <h3>Es Teler Bihun</h3>
+                    <h3>Es Teler Bihun
                 </div>
 
             </div>
 
+
+            <!-- RESEP 5 -->
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepLumpiaBihun.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepLumpiaBihun.png') }}"
+                    alt="Lumpia Bihun"
+                    onclick="openRecipe(this.src)"
+                >
+
                 <div class="menu-overlay">
                     <h3>Lumpia Bihun</h3>
                 </div>
 
             </div>
 
+
+            <!-- RESEP 6 -->
             <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepDadarBihun.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepDadarBihun.png') }}"
+                    alt="Dadar Bihun"
+                    onclick="openRecipe(this.src)"
+                >
+
                 <div class="menu-overlay">
                     <h3>Dadar Bihun</h3>
                 </div>
@@ -357,6 +408,29 @@ INSPIRASI MENU
     </div>
 
 </section>
+
+
+<!-- =======================================================
+     POPUP RESEP
+======================================================= -->
+
+<div class="recipe-modal" id="recipeModal">
+
+    <button
+        class="recipe-close"
+        onclick="closeRecipe()"
+        aria-label="Tutup"
+    >
+        &times;
+    </button>
+
+    <img
+        id="recipeModalImage"
+        src=""
+        alt="Resep"
+    >
+
+</div>
 
 <!-- ================= VIDEO TESTIMONI ================= -->
 
