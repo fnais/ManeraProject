@@ -2045,3 +2045,61 @@ p {
         font-size: 13px;
     }
 }
+
+/* =========================================================
+   FIX KATALOG PRODUK - MOBILE
+   SIDE IMAGE / MAKANAN TIDAK BOLEH MUNCUL DI HP
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Sembunyikan semua gambar makanan/samping */
+    .category-card .side-img,
+    .product-viewport .side-img {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Matikan efek hover pada card */
+    .category-card:hover {
+        transform: none !important;
+        scale: 1 !important;
+    }
+
+    /* Matikan efek hover pada gambar utama */
+    .category-card:hover .main-img {
+        transform: none !important;
+        scale: 1 !important;
+    }
+
+    /* Pastikan link tidak memunculkan efek hover */
+    .category-card:hover .category-link {
+        transform: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .category-card .side-img,
+    .product-viewport .side-img {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .category-card:hover,
+    .category-card:hover .main-img,
+    .category-card:hover .category-link {
+        transform: none !important;
+        scale: 1 !important;
+    }
+
+}
