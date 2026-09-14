@@ -363,6 +363,18 @@ INSPIRASI MENU
 
 </section>
 
+<!-- ================= RECIPE POPUP ================= -->
+
+<div class="recipe-modal" id="recipeModal">
+
+    <button class="recipe-close" onclick="closeRecipe()">
+        &times;
+    </button>
+
+    <img id="recipeModalImage" src="" alt="Resep">
+
+</div>
+
 <!-- ================= VIDEO TESTIMONI ================= -->
 
 <section class="testimoni">
@@ -384,21 +396,16 @@ INSPIRASI MENU
     <div class="video-container">
 
 
-        <!-- VIDEO 1 -->
+        <!-- VIDEO 1  -->
 
         <div class="video-card">
 
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testi.mp4"
-                    type="video/mp4">
-
+                <source src="{{ url_for('static', filename='image/testibaksomojo.mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung video.
-
             </video>
 
-            <h3>Testimoni Pelanggan 1</h3>
+            <h3>Testimoni Warung 1</h3>
 
         </div>
 
@@ -408,54 +415,11 @@ INSPIRASI MENU
         <div class="video-card">
 
             <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testib.mp4"
-                    type="video/mp4">
-
+                <source src="{{ url_for('static', filename='image/testibaksosiwal.mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung video.
-
             </video>
 
-            <h3>Testimoni Pelanggan 2</h3>
-
-        </div>
-
-
-        <!-- VIDEO 3 -->
-
-        <div class="video-card">
-
-            <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testic.mp4"
-                    type="video/mp4">
-
-                Browser Anda tidak mendukung video.
-
-            </video>
-
-            <h3>Testimoni Pelanggan 3</h3>
-
-        </div>
-
-
-        <!-- VIDEO 4 -->
-
-        <div class="video-card">
-
-            <video controls playsinline preload="metadata">
-
-                <source
-                    src="../videos/testia.mp4"
-                    type="video/mp4">
-
-                Browser Anda tidak mendukung video.
-
-            </video>
-
-            <h3>Testimoni Pelanggan 4</h3>
+            <h3>Testimoni Warung 2</h3>
 
         </div>
 
@@ -612,6 +576,62 @@ window.addEventListener("scroll", function(){
     }
 
 });
+</script>
+
+<script>
+
+function openRecipe(card) {
+
+    const image = card.querySelector("img");
+
+    if (!image) return;
+
+    const modal = document.getElementById("recipeModal");
+    const modalImage = document.getElementById("recipeModalImage");
+
+    modalImage.src = image.src;
+
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeRecipe() {
+
+    const modal = document.getElementById("recipeModal");
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* Klik area gelap untuk menutup */
+
+document.getElementById("recipeModal").addEventListener("click", function(e) {
+
+    if (e.target === this) {
+
+        closeRecipe();
+
+    }
+
+});
+
+
+/* Tombol ESC */
+
+document.addEventListener("keydown", function(e) {
+
+    if (e.key === "Escape") {
+
+        closeRecipe();
+
+    }
+
+});
+
 </script>
 
 </body>
