@@ -12,75 +12,175 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- CSS Website -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='detail.css')}}">
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='detail.css') }}">
 
 </head>
 
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
-   <!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-    <header class="navbar">
-      <div class="container nav-wrapper">
-        <div class="logo">
+<header class="navbar" id="navbar">
+
+    <div class="nav-wrapper">
+
+        <!-- LOGO -->
+
+        <a href="#home" class="logo" aria-label="Manera Home">
+
             <img
                 src="{{ url_for('static', filename='image/logo_manera.png') }}"
-                alt="Manera Pacific Indonesia"
-                class="logo-img"
-            >
-            <!-- <span>manera.co.id</span> -->
-        </div>
+                alt="Manera"
+                class="logo-img">
 
-        <nav>
-          <ul>
-            <li><a href="#about">Tentang Kami</a></li>
-            <li><a href="#services">Sertifikasi</a></li>
-            <li><a href="#products">Kategori Produk</a></li>
-            <li><a href="#quality">Distribusi</a></li>
-            <li><a href="#contact">Kontak</a></li>
-          </ul>
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="main-nav" id="mainNav">
+
+            <ul>
+
+                <li>
+                    <a href="#about">
+                        Tentang Produk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#advantages">
+                        Keunggulan Produk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu">
+                        Resep
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Pemesanan
+                    </a>
+                </li>
+
+            </ul>
+
         </nav>
 
-        <a href="#contact" class="btn-wa">
-          <i class="fab fa-whatsapp"></i>
-          Konsultasi Gratis
+
+        <!-- WHATSAPP DESKTOP -->
+
+        <a
+            href="https://wa.me/6282322238885"
+            class="btn-wa desktop-wa"
+            target="_blank"
+            rel="noopener">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
         </a>
-      </div>
-    </header>
 
-<!-- =========================================
-HERO SECTION
-========================================= -->
 
-<section class="hero">
+        <!-- HAMBURGER -->
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu">
+
+        <a href="#about">
+            Tentang Produk
+        </a>
+
+        <a href="#advantages">
+            Keunggulan Produk
+        </a>
+
+        <a href="#menu">
+            Resep
+        </a>
+
+        <a href="#contact">
+            Pemesanan
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero" id="home">
 
     <!-- Background -->
-    <img src="{{ url_for('static', filename='image/landscape140gr.png') }}"
-         alt="Banner"
-         class="hero-bg">
+
+    <img
+        src="{{ url_for('static', filename='image/landscape140gr.png') }}"
+        alt="Bihun Jagung Pion Tunggal 140GR"
+        class="hero-bg">
+
 
     <!-- Overlay -->
+
     <div class="hero-overlay"></div>
+
 
     <div class="container hero-container">
 
-        <!-- ================= LEFT ================= -->
+
+        <!-- LEFT CONTENT -->
 
         <div class="hero-text">
 
@@ -88,154 +188,259 @@ HERO SECTION
                 HALAL • BPOM • GLUTEN FREE
             </span>
 
+
             <h1>
                 BIHUN JAGUNG <br>
                 PION TUNGGAL 140GR
             </h1>
 
+
             <p>
-                Bihun jagung Pion Tunggal 140 gram terbuat dari 99,8% pati jagung berkualitas tinggi. Dengan
-                proses dan teknologi tinggi yang higienis. Memiliki tekstur yang kenyal cocok untuk bakso, soto,
-                gorengan, snack, bihun goreng. Teksturnya yang kenyal serta tidak mudah putus akan membuat
-                setiap gigitan jadi lebih terasa nikmatnya.
+                Bihun jagung Pion Tunggal 140 gram terbuat dari 99,8% pati jagung berkualitas tinggi.
+                Dengan proses dan teknologi tinggi yang higienis. Memiliki tekstur yang kenyal cocok untuk
+                bakso, soto, gorengan, snack, bihun goreng. Teksturnya yang kenyal serta tidak mudah putus
+                akan membuat setiap gigitan jadi lebih terasa nikmatnya.
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#order" class="btn-primary">
+                <a
+                    href="#contact"
+                    class="btn-primary">
+
                     Pesan Sekarang
+
                 </a>
 
-                <a href="#detail" class="btn-outline">
+
+                <a
+                    href="#about"
+                    class="btn-outline">
+
                     Detail Produk
+
                 </a>
 
             </div>
 
         </div>
 
-        <!-- ================= RIGHT ================= -->
+
+
+        <!-- RIGHT PRODUCT -->
 
         <div class="hero-image">
 
-            <img src="{{ url_for('static', filename='image/140grpion.png') }}"
-                 alt="Bihun Pion">
+            <img
+                src="{{ url_for('static', filename='image/140grpion.png') }}"
+                alt="Bihun Jagung Pion Tunggal 140GR">
+
         </div>
+
     </div>
 
 </section>
 
-<!-- =========================================
-ABOUT PRODUCT
-========================================= -->
 
-<section class="about-product" id="detail">
+
+<!-- =====================================================
+     ABOUT PRODUCT
+===================================================== -->
+
+<section
+    class="about-product"
+    id="about">
 
     <div class="container">
+
         <div class="about-wrapper">
 
-            <!-- ================= LEFT ================= -->
+
+            <!-- IMAGE -->
 
             <div class="about-image">
-                <img src="{{ url_for('static', filename='image/140grpion.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/140grpion.png') }}"
+                    alt="Bihun Jagung Pion Tunggal 140GR">
+
             </div>
 
-            <!-- ================= RIGHT ================= -->
+
+
+            <!-- CONTENT -->
 
             <div class="about-content">
+
                 <span class="section-tag">
                     TENTANG PRODUK
                 </span>
+
 
                 <h2>
                     Bihun Jagung
                     Pion Tunggal 140 gram
                 </h2>
 
+
                 <p>
-                    Dijual secara eceran maupun grosir. Baik melalui toko offline dan online di e-commerce Manera
+                    Dijual secara eceran maupun grosir. Baik melalui toko offline dan online di e-commerce Manera.
                 </p>
 
+
+
                 <div class="about-feature">
+
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Pack berisi 140 gram</span>
+
+                        <span>
+                            1 Pack berisi 140 gram
+                        </span>
 
                     </div>
 
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Pack berisi 2 keping</span>
+
+                        <span>
+                            1 Pack berisi 2 keping
+                        </span>
 
                     </div>
 
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Bal berisi 24 pack</span>
+
+                        <span>
+                            1 Bal berisi 24 pack
+                        </span>
 
                     </div>
+
 
                 </div>
 
-                <a href="#order" class="btn-primary">
+
+                <a
+                    href="#contact"
+                    class="btn-primary">
+
                     Pesan Sekarang
+
                 </a>
 
             </div>
+
         </div>
+
     </div>
 
 </section>
 
 
+
 <!-- =====================================================
-SECTION 3 - KEUNGGULAN PRODUK
+     KEUNGGULAN PRODUK
 ===================================================== -->
 
-<section class="advantages">
+<section
+    class="advantages"
+    id="advantages">
 
     <div class="container">
+
+
         <div class="section-title">
-            <span>KENAPA MEMILIH KAMI</span>
-            <h2>Keunggulan Bihun Jagung Pion Tunggal</h2>
+
+            <span>
+                KENAPA MEMILIH KAMI
+            </span>
+
+
+            <h2>
+                Keunggulan Bihun Jagung Pion Tunggal
+            </h2>
+
+
             <p>
                 Dibuat dari bahan pilihan dan diproses dengan standar kualitas tinggi
                 sehingga menghasilkan bihun jagung yang disukai keluarga Indonesia.
             </p>
+
         </div>
 
+
+
         <div class="advantages-grid">
+
+
+            <!-- ADVANTAGE 1 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     🌽
                 </div>
 
-                <h3>100% Jagung Berkualitas</h3>
+
+                <h3>
+                    100% Jagung Berkualitas
+                </h3>
+
 
                 <p>
-                    Terbuat dari 99,8% pati jagung yang berkualitas tinggi, sehingga rendah kalori dan bebas gluten.
+                    Terbuat dari 99,8% pati jagung yang berkualitas tinggi,
+                    sehingga rendah kalori dan bebas gluten.
                 </p>
 
             </div>
 
+
+
+            <!-- ADVANTAGE 2 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     🍜
                 </div>
-                <h3>Tersertifikasi Halal & BPOM</h3>
+
+
+                <h3>
+                    Tersertifikasi Halal & BPOM
+                </h3>
+
 
                 <p>
-                    Bihun Jagung Pion Tunggal sudah tersertifikasi Halal Indonesia dan
-                    memiliki izin edar BPOM sehingga lebih terpercaya.
+                    Bihun Jagung Pion Tunggal sudah tersertifikasi Halal Indonesia
+                    dan memiliki izin edar BPOM sehingga lebih terpercaya.
                 </p>
 
             </div>
 
+
+
+            <!-- ADVANTAGE 3 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     ⚡
                 </div>
-                <h3>Waktu Masak Cukup 2 Menit</h3>
+
+
+                <h3>
+                    Waktu Masak Cukup 2 Menit
+                </h3>
+
 
                 <p>
                     Cukup dimasak selama 2 menit di air mendidih, atau dapat direndam
@@ -244,58 +449,107 @@ SECTION 3 - KEUNGGULAN PRODUK
 
             </div>
 
+
+
+            <!-- ADVANTAGE 4 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     🥗
                 </div>
 
-                <h3>Mekar atau Babar</h3>
+
+                <h3>
+                    Mekar atau Babar
+                </h3>
+
 
                 <p>
-                    Bihun Jagung Pion Tunggal dapat mekar sempurna saat dimasak hingga 3 kali lipat dari berat keringnya.
-                    Hal ini berarti bihun keringnya mengandung lebih sedikit kadar air.
+                    Bihun Jagung Pion Tunggal dapat mekar sempurna saat dimasak
+                    hingga 3 kali lipat dari berat keringnya. Hal ini berarti
+                    bihun keringnya mengandung lebih sedikit kadar air.
                 </p>
 
             </div>
+
+
+
+            <!-- ADVANTAGE 5 -->
 
             <div class="adv-card">
 
                 <div class="adv-icon">
                     🍲
                 </div>
-                <h3>Ketahanan Suhu 24 Jam</h3>
+
+
+                <h3>
+                    Ketahanan Suhu 24 Jam
+                </h3>
+
+
                 <p>
-                    Bihun yang sudah direbus tanpa bumbu dapat bertahan hingga 24 jam di suhu ruang,
-                    dan masih dapat dikonsumsi dengan aman.
+                    Bihun yang sudah direbus tanpa bumbu dapat bertahan hingga 24 jam
+                    di suhu ruang, dan masih dapat dikonsumsi dengan aman.
                 </p>
 
             </div>
 
+
+
+            <!-- ADVANTAGE 6 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     ✅
                 </div>
-                <h3>Tidak Mudah Putus</h3>
+
+
+                <h3>
+                    Tidak Mudah Putus
+                </h3>
+
+
                 <p>
-                    Dengan tekstur yang kenyal dan kuat, Bihun Jagung Pion Tunggal tidak mudah putus saat dimasak atau diolah.
+                    Dengan tekstur yang kenyal dan kuat, Bihun Jagung Pion Tunggal
+                    tidak mudah putus saat dimasak atau diolah.
                 </p>
+
             </div>
+
+
         </div>
+
     </div>
 
 </section>
 
-<!-- =======================================================
-SECTION 4
-INSPIRASI MENU
-======================================================= -->
 
-<section class="menu-section">
+
+<!-- =====================================================
+     INSPIRASI MENU
+===================================================== -->
+
+<section
+    class="menu-section"
+    id="menu">
 
     <div class="container">
+
+
         <div class="section-title">
-            <span>INSPIRASI MENU</span>
-            <h2>Satu Produk, Banyak Kreasi</h2>
+
+            <span>
+                INSPIRASI MENU
+            </span>
+
+
+            <h2>
+                Satu Produk, Banyak Kreasi
+            </h2>
+
 
             <p>
                 Bihun Jagung Pion Tunggal cocok digunakan untuk berbagai
@@ -304,54 +558,147 @@ INSPIRASI MENU
 
         </div>
 
+
+
         <div class="menu-grid">
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepBihunKuahPedas.png') }}">
+
+
+            <!-- MENU 1 -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepBihunKuahPedas.png') }}"
+                    alt="Bihun Kuah Pedas">
+
 
                 <div class="menu-overlay">
-                    <h3>Bihun Kuah Pedas</h3>
-                </div>
-            </div>
 
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepEsSarangBurung.png') }}">
-                <div class="menu-overlay">
-                    <h3>Es Sarang burung</h3>
-                </div>
+                    <h3>
+                        Bihun Kuah Pedas
+                    </h3>
 
-            </div>
-
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepGimmari.png') }}">
-                <div class="menu-overlay">
-                    <h3>Gimmari</h3>
-                </div>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepSupOyong.png') }}">
-                <div class="menu-overlay">
-                    <h3>Sup Oyong</h3>
                 </div>
 
             </div>
 
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepBihunTekTek.png') }}">
+
+
+            <!-- MENU 2 -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepEsSarangBurung.png') }}"
+                    alt="Es Sarang Burung">
+
+
                 <div class="menu-overlay">
-                    <h3>Bihun Tek-Tek Nyemek</h3>
+
+                    <h3>
+                        Es Sarang Burung
+                    </h3>
+
                 </div>
 
             </div>
 
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepSaladBihunRoll.png') }}">
+
+
+            <!-- MENU 3 -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepGimmari.png') }}"
+                    alt="Gimmari">
+
+
                 <div class="menu-overlay">
-                    <h3>Salad Bihun Roll</h3>
+
+                    <h3>
+                        Gimmari
+                    </h3>
+
                 </div>
 
             </div>
+
+
+
+            <!-- MENU 4 -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepSupOyong.png') }}"
+                    alt="Sup Oyong">
+
+
+                <div class="menu-overlay">
+
+                    <h3>
+                        Sup Oyong
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU 5 -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepBihunTekTek.png') }}"
+                    alt="Bihun Tek-Tek Nyemek">
+
+
+                <div class="menu-overlay">
+
+                    <h3>
+                        Bihun Tek-Tek Nyemek
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU 6 -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)">
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepSaladBihunRoll.png') }}"
+                    alt="Salad Bihun Roll">
+
+
+                <div class="menu-overlay">
+
+                    <h3>
+                        Salad Bihun Roll
+                    </h3>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -359,15 +706,57 @@ INSPIRASI MENU
 
 </section>
 
-<!-- ================= VIDEO TESTIMONI ================= -->
+
+
+<!-- =====================================================
+     RECIPE POPUP
+===================================================== -->
+
+<div
+    class="recipe-modal"
+    id="recipeModal">
+
+    <div class="recipe-modal-content">
+
+        <button
+            class="recipe-close"
+            type="button"
+            onclick="closeRecipe()"
+            aria-label="Tutup">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+
+        <img
+            id="recipeModalImage"
+            src=""
+            alt="Resep Bihun Jagung">
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     VIDEO TESTIMONI
+===================================================== -->
 
 <section class="testimoni">
 
     <div class="testimoni-title">
 
-        <span>TESTIMONI</span>
+        <span>
+            TESTIMONI
+        </span>
 
-        <h2>Apa Kata Mereka?</h2>
+
+        <h2>
+            Apa Kata Mereka?
+        </h2>
+
 
         <p>
             Lihat pengalaman dan cerita mereka bersama
@@ -377,47 +766,83 @@ INSPIRASI MENU
     </div>
 
 
+
     <div class="video-container">
 
 
-      <!-- VIDEO 1  -->
+        <!-- VIDEO 1 -->
 
         <div class="video-card">
 
-            <video controls playsinline preload="metadata">
-                <source src="{{ url_for('static', filename='image/testipion.mp4') }}" type="video/mp4">
+            <video
+                controls
+                playsinline
+                preload="metadata">
+
+                <source
+                    src="{{ url_for('static', filename='image/testipion.mp4') }}"
+                    type="video/mp4">
+
                 Browser Anda tidak mendukung video.
+
             </video>
 
-            <h3>Testimoni Pelanggan 1</h3>
+
+            <h3>
+                Testimoni Pelanggan 1
+            </h3>
 
         </div>
+
 
 
         <!-- VIDEO 2 -->
 
         <div class="video-card">
 
-            <video controls playsinline preload="metadata">
-                <source src="{{ url_for('static', filename='image/warungc.mp4') }}" type="video/mp4">
+            <video
+                controls
+                playsinline
+                preload="metadata">
+
+                <source
+                    src="{{ url_for('static', filename='image/warungc.mp4') }}"
+                    type="video/mp4">
+
                 Browser Anda tidak mendukung video.
+
             </video>
 
-            <h3>Testimoni Warung 1</h3>
+
+            <h3>
+                Testimoni Warung 1
+            </h3>
 
         </div>
+
 
 
         <!-- VIDEO 3 -->
 
         <div class="video-card">
 
-            <video controls playsinline preload="metadata">
-                <source src="{{ url_for('static', filename='image/warungd.mp4') }}" type="video/mp4">
+            <video
+                controls
+                playsinline
+                preload="metadata">
+
+                <source
+                    src="{{ url_for('static', filename='image/warungd.mp4') }}"
+                    type="video/mp4">
+
                 Browser Anda tidak mendukung video.
+
             </video>
 
-            <h3>Testimoni Warung 2</h3>
+
+            <h3>
+                Testimoni Warung 2
+            </h3>
 
         </div>
 
@@ -425,41 +850,31 @@ INSPIRASI MENU
     </div>
 
 </section>
-<script>
 
-const video = document.querySelector("video");
 
-video.addEventListener("loadedmetadata", function () {
-    console.log("VIDEO BERHASIL DIBACA");
-    console.log("Durasi:", video.duration);
-    console.log("Lebar:", video.videoWidth);
-    console.log("Tinggi:", video.videoHeight);
-});
 
-video.addEventListener("error", function () {
-    console.log("VIDEO ERROR");
-    console.log(video.error);
+<!-- =====================================================
+     CTA PEMBELIAN
+===================================================== -->
 
-    if (video.error) {
-        console.log("Code:", video.error.code);
-        console.log("Message:", video.error.message);
-    }
-});
-
-</script>
-
-<!-- =========================================
-     SECTION 6 — CTA PEMBELIAN
-========================================= -->
-
-<section class="purchase-cta" id="order">
+<section
+    class="purchase-cta"
+    id="contact">
 
     <div class="container">
+
         <div class="cta-box">
 
-            <!-- Background Decoration -->
+
+            <!-- BACKGROUND DECORATION -->
+
             <div class="cta-decoration cta-decoration-1"></div>
+
             <div class="cta-decoration cta-decoration-2"></div>
+
+
+
+            <!-- CTA CONTENT -->
 
             <div class="cta-content">
 
@@ -467,24 +882,37 @@ video.addEventListener("error", function () {
                     SIAP MENCOBA?
                 </span>
 
+
                 <h2>
+
                     Saatnya Hadirkan<br>
-                    <strong>Bihun Jagung Pion Tunggal</strong>
+
+                    <strong>
+                        Bihun Jagung Pion Tunggal
+                    </strong>
+
                     di Dapur Anda
+
                 </h2>
+
 
                 <p>
                     Cocok untuk soto, bakso, bihun goreng,
                     capcay, dan berbagai hidangan favorit keluarga.
                 </p>
 
+
+
                 <div class="cta-buttons">
 
-                    <!-- WhatsApp -->
+
+                    <!-- WHATSAPP -->
+
                     <a
                         href="https://wa.me/6282322238885?text=Halo%20PT%20Manera,%20saya%20ingin%20memesan%20Bihun%20Jagung%20Pion%20Tunggal%20140gr"
                         class="cta-primary"
-                        target="_blank">
+                        target="_blank"
+                        rel="noopener">
 
                         <i class="fab fa-whatsapp"></i>
 
@@ -492,89 +920,469 @@ video.addEventListener("error", function () {
 
                     </a>
 
-                    <!-- Kembali ke Produk -->
+
+
+                    <!-- KEMBALI KE PRODUK -->
+
                     <a
                         href="/"
                         class="cta-secondary">
+
                         <i class="fa-solid fa-arrow-left"></i>
 
                         Lihat Produk Lain
 
                     </a>
 
+
                 </div>
 
-                <!-- Trust -->
+
+
+                <!-- TRUST -->
+
                 <div class="cta-trust">
 
-                    <div class="trust-item">
-
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Halal Indonesia</span>
-                    </div>
 
                     <div class="trust-item">
 
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>Terdaftar BPOM</span>
+
+                        <span>
+                            Halal Indonesia
+                        </span>
+
                     </div>
 
+
                     <div class="trust-item">
+
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>Produk Berkualitas</span>
+
+                        <span>
+                            Terdaftar BPOM
+                        </span>
+
                     </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Produk Berkualitas
+                        </span>
+
+                    </div>
+
+
                 </div>
+
             </div>
 
-            <!-- Product Image -->
+
+
+            <!-- PRODUCT IMAGE -->
+
             <div class="cta-product">
+
                 <div class="product-glow"></div>
+
+
                 <img
                     src="{{ url_for('static', filename='image/bihun140gr.png') }}"
-                    alt="Bihun Jagung Pion Tunggal 140gr">
+                    alt="Bihun Jagung Pion Tunggal 140GR">
+
             </div>
+
+
         </div>
+
     </div>
 
 </section>
 
+
+
+<!-- =====================================================
+     SWIPER JS
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<!-- =====================================================
+     HERO SWIPER
+===================================================== -->
+
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("JS Berjalan");
+    const heroSwiper = document.querySelector(".heroSwiper");
 
-    new Swiper(".heroSwiper", {
-        loop: true,
-        speed: 1000,
-        effect: "fade",
+    if (heroSwiper && typeof Swiper !== "undefined") {
 
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
+        new Swiper(".heroSwiper", {
 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+            loop: true,
 
-});
-</script>
+            speed: 1000,
 
-<script>
-window.addEventListener("scroll", function(){
+            effect: "fade",
 
-    const navbar = document.querySelector(".navbar");
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
 
-    if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+
+        });
+
     }
 
 });
+
 </script>
+
+
+
+<!-- =====================================================
+     NAVBAR SCROLL
+===================================================== -->
+
+<script>
+
+window.addEventListener("scroll", function () {
+
+    const navbar = document.querySelector(".navbar");
+
+    if (!navbar) return;
+
+
+    if (window.scrollY > 80) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     HAMBURGER MOBILE
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hamburger =
+        document.getElementById("hamburger");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (!hamburger || !mobileMenu) return;
+
+
+
+    hamburger.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+
+        const isActive =
+            hamburger.classList.toggle("active");
+
+
+        mobileMenu.classList.toggle("active");
+
+
+        hamburger.setAttribute(
+            "aria-expanded",
+            isActive ? "true" : "false"
+        );
+
+    });
+
+
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            hamburger.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+
+
+    document.addEventListener("click", function (event) {
+
+        if (
+            !mobileMenu.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+
+            hamburger.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     RECIPE POPUP
+===================================================== -->
+
+<script>
+
+function openRecipe(card) {
+
+    const image =
+        card.querySelector("img");
+
+    const modal =
+        document.getElementById("recipeModal");
+
+    const modalImage =
+        document.getElementById("recipeModalImage");
+
+
+    if (!image || !modal || !modalImage) return;
+
+
+    modalImage.src = image.src;
+
+    modalImage.alt =
+        image.alt || "Resep Bihun Jagung";
+
+
+    modal.classList.add("active");
+
+    document.body.classList.add("recipe-modal-open");
+
+}
+
+
+
+function closeRecipe() {
+
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    if (!modal) return;
+
+
+    modal.classList.remove("active");
+
+    document.body.classList.remove("recipe-modal-open");
+
+}
+
+
+
+document.addEventListener("click", function (event) {
+
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    if (!modal) return;
+
+
+    if (event.target === modal) {
+
+        closeRecipe();
+
+    }
+
+});
+
+
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        closeRecipe();
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     VIDEO DEBUG
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const videos =
+        document.querySelectorAll("video");
+
+
+    videos.forEach(function (video) {
+
+        video.addEventListener(
+            "loadedmetadata",
+            function () {
+
+                console.log(
+                    "VIDEO BERHASIL DIBACA"
+                );
+
+                console.log(
+                    "Durasi:",
+                    video.duration
+                );
+
+                console.log(
+                    "Lebar:",
+                    video.videoWidth
+                );
+
+                console.log(
+                    "Tinggi:",
+                    video.videoHeight
+                );
+
+            }
+        );
+
+
+        video.addEventListener(
+            "error",
+            function () {
+
+                console.log(
+                    "VIDEO ERROR"
+                );
+
+                if (video.error) {
+
+                    console.log(
+                        "Code:",
+                        video.error.code
+                    );
+
+                    console.log(
+                        "Message:",
+                        video.error.message
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     SMOOTH SCROLL
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const links =
+        document.querySelectorAll('a[href^="#"]');
+
+
+    links.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+
 
 </body>
 </html>

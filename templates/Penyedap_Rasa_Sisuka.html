@@ -8,211 +8,447 @@
 
     <title>Penyedap Rasa Sisuka</title>
 
-    <!-- Google Font -->
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
 
-    <!-- CSS Website -->
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='detail.css')}}">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         SWIPER CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS WEBSITE
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='detail.css') }}"
+    >
 
 </head>
 
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
-   <!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-    <header class="navbar">
-      <div class="container nav-wrapper">
-        <div class="logo">
+<header class="navbar" id="navbar">
+
+    <div class="nav-wrapper">
+
+
+        <!-- ================= LOGO ================= -->
+
+        <a
+            href="#home"
+            class="logo"
+            aria-label="Manera Home"
+        >
+
             <img
                 src="{{ url_for('static', filename='image/logo_manera.png') }}"
-                alt="Manera Pacific Indonesia"
+                alt="Manera"
                 class="logo-img"
             >
-            <!-- <span>manera.co.id</span> -->
-        </div>
 
-        <nav>
-          <ul>
-            <li><a href="#about">Tentang Kami</a></li>
-            <li><a href="#services">Sertifikasi</a></li>
-            <li><a href="#products">Kategori Produk</a></li>
-            <li><a href="#quality">Distribusi</a></li>
-            <li><a href="#contact">Kontak</a></li>
-          </ul>
+        </a>
+
+
+        <!-- ================= DESKTOP NAVIGATION ================= -->
+
+        <nav
+            class="main-nav"
+            id="mainNav"
+        >
+
+            <ul>
+
+                <li>
+                    <a href="#about">
+                        Tentang Produk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#advantages">
+                        Keunggulan Produk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu">
+                        Resep
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Pemesanan
+                    </a>
+                </li>
+
+            </ul>
+
         </nav>
 
-        <a href="#contact" class="btn-wa">
-          <i class="fab fa-whatsapp"></i>
-          Konsultasi Gratis
+
+        <!-- ================= WHATSAPP ================= -->
+
+        <a
+            href="https://wa.me/6282322238885"
+            class="btn-wa desktop-wa"
+            target="_blank"
+            rel="noopener"
+        >
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
         </a>
-      </div>
-    </header>
 
-<!-- =========================================
-HERO SECTION
-========================================= -->
 
-<section class="hero">
+        <!-- ================= HAMBURGER ================= -->
 
-    <!-- Background -->
-    <img src="{{ url_for('static', filename='image/sisukalandscape.png') }}"
-         alt="Banner"
-         class="hero-bg">
+        <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
 
-    <!-- Overlay -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <a href="#about">
+            Tentang Produk
+        </a>
+
+        <a href="#advantages">
+            Keunggulan Produk
+        </a>
+
+        <a href="#menu">
+            Resep
+        </a>
+
+        <a href="#contact">
+            Pemesanan
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <!-- BACKGROUND -->
+
+    <img
+        src="{{ url_for('static', filename='image/sisukalandscape.png') }}"
+        alt="Banner Penyedap Rasa Sisuka"
+        class="hero-bg"
+    >
+
+
+    <!-- OVERLAY -->
+
     <div class="hero-overlay"></div>
 
+
     <div class="container hero-container">
+
 
         <!-- ================= LEFT ================= -->
 
         <div class="hero-text">
 
+
             <span class="hero-badge">
                 HALAL • BPOM • GLUTEN FREE
             </span>
 
+
             <h1>
-                PENYEDAP RASA <br>
+                PENYEDAP RASA
+                <br>
                 SISUKA
             </h1>
 
+
             <p>
-                Penyedap rasa berkualitas tinggi yang terbuat dari tetes tebu alami, melalui proses fermentasi
-                sehingga menghasilkan rasa gurih umami yang khas tanpa meninggalkan rasa pahit.
+                Penyedap rasa berkualitas tinggi yang terbuat dari tetes tebu alami,
+                melalui proses fermentasi sehingga menghasilkan rasa gurih umami
+                yang khas tanpa meninggalkan rasa pahit.
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#order" class="btn-primary">
+
+                <!-- PESAN SEKARANG -->
+
+                <a
+                    href="#contact"
+                    class="btn-primary"
+                >
                     Pesan Sekarang
                 </a>
 
-                <a href="#detail" class="btn-outline">
+
+                <!-- DETAIL PRODUK -->
+
+                <a
+                    href="#about"
+                    class="btn-outline"
+                >
                     Detail Produk
                 </a>
+
 
             </div>
 
         </div>
+
 
         <!-- ================= RIGHT ================= -->
 
         <div class="hero-image">
 
-            <img src="{{ url_for('static', filename='image/250grsisuka.png') }}"
-                 alt="Penyedap Rasa Sisuka">
+            <img
+                src="{{ url_for('static', filename='image/250grsisuka.png') }}"
+                alt="Penyedap Rasa Sisuka"
+            >
+
         </div>
+
     </div>
 
 </section>
 
-<!-- =========================================
-ABOUT PRODUCT
-========================================= -->
 
-<section class="about-product" id="detail">
+
+<!-- =====================================================
+     ABOUT PRODUCT
+===================================================== -->
+
+<section
+    class="about-product"
+    id="about"
+>
 
     <div class="container">
+
         <div class="about-wrapper">
+
 
             <!-- ================= LEFT ================= -->
 
             <div class="about-image">
-                <img src="{{ url_for('static', filename='image/250grsisuka.png') }}">
+
+                <img
+                    src="{{ url_for('static', filename='image/250grsisuka.png') }}"
+                    alt="Penyedap Rasa Sisuka"
+                >
+
             </div>
+
 
             <!-- ================= RIGHT ================= -->
 
+            <div class="about-content">
+
+
                 <span class="section-tag">
                     TENTANG PRODUK
-                </span> 
+                </span>
+
 
                 <h2>
                     Penyedap Rasa Sisuka
                 </h2>
 
+
                 <p>
-                    Dijual secara eceran maupun grosir. Baik melalui toko offline dan online di e-commerce Manera
+                    Dijual secara eceran maupun grosir. Baik melalui toko offline
+                    dan online di e-commerce Manera.
                 </p>
 
+
                 <div class="about-feature">
+
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Penyedap Rasa Sisuka 95gr & 250gr</span>
+
+                        <span>
+                            1 Penyedap Rasa Sisuka 95gr & 250gr
+                        </span>
 
                     </div>
 
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Pack Sisuka 95gr berisi 10 bungkus</span>
+
+                        <span>
+                            1 Pack Sisuka 95gr berisi 10 bungkus
+                        </span>
 
                     </div>
 
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Bal Sisuka 250gr berisi 24 bungkus</span>
+
+                        <span>
+                            1 Bal Sisuka 250gr berisi 24 bungkus
+                        </span>
 
                     </div>
 
+
                     <div class="feature-item">
+
                         <i class="fas fa-circle-check"></i>
-                        <span>1 Karton Sisuka 95gr berisi 12 Pack</span>
+
+                        <span>
+                            1 Karton Sisuka 95gr berisi 12 Pack
+                        </span>
 
                     </div>
+
 
                 </div>
 
-                <a href="#order" class="btn-primary">
+
+                <!-- PESAN SEKARANG -->
+
+                <a
+                    href="#contact"
+                    class="btn-primary"
+                >
                     Pesan Sekarang
                 </a>
 
+
             </div>
+
         </div>
+
     </div>
 
 </section>
 
 
+
 <!-- =====================================================
-SECTION 3 - KEUNGGULAN PRODUK
+     KEUNGGULAN PRODUK
 ===================================================== -->
 
-<section class="advantages">
+<section
+    class="advantages"
+    id="advantages"
+>
 
     <div class="container">
+
+
         <div class="section-title">
-            <span>KENAPA MEMILIH KAMI</span>
-            <h2>Keunggulan Penyedap Rasa Sisuka</h2>
+
+            <span>
+                KENAPA MEMILIH KAMI
+            </span>
+
+
+            <h2>
+                Keunggulan Penyedap Rasa Sisuka
+            </h2>
+
+
             <p>
                 Dibuat dari bahan pilihan dan diproses dengan standar kualitas tinggi
                 sehingga menghasilkan penyedap rasa yang disukai keluarga Indonesia.
             </p>
+
         </div>
 
+
         <div class="advantages-grid">
+
+
+            <!-- CARD 1 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     🌽
                 </div>
 
-                <h3>Tetes Tebu Berkualitas</h3>
+                <h3>
+                    Tetes Tebu Berkualitas
+                </h3>
 
                 <p>
                     Terbuat dari tetes tebu pilihan sehingga menghasilkan penyedap rasa
@@ -221,11 +457,18 @@ SECTION 3 - KEUNGGULAN PRODUK
 
             </div>
 
+
+            <!-- CARD 2 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     🍜
                 </div>
-                <h3>Tidak Pahit</h3>
+
+                <h3>
+                    Tidak Pahit
+                </h3>
 
                 <p>
                     Rasa gurih umami yang khas tanpa meninggalkan rasa pahit
@@ -234,11 +477,18 @@ SECTION 3 - KEUNGGULAN PRODUK
 
             </div>
 
+
+            <!-- CARD 3 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     ⚡
                 </div>
-                <h3>Mudah Larut Dalam Masakan</h3>
+
+                <h3>
+                    Mudah Larut Dalam Masakan
+                </h3>
 
                 <p>
                     Butir yang lembut dan mudah larut dalam masakan
@@ -247,12 +497,18 @@ SECTION 3 - KEUNGGULAN PRODUK
 
             </div>
 
+
+            <!-- CARD 4 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     🥗
                 </div>
 
-                <h3>Tidak Beraroma</h3>
+                <h3>
+                    Tidak Beraroma
+                </h3>
 
                 <p>
                     Tidak berbau menyengat sehingga tidak mengganggu aroma masakan
@@ -261,12 +517,19 @@ SECTION 3 - KEUNGGULAN PRODUK
 
             </div>
 
+
+            <!-- CARD 5 -->
+
             <div class="adv-card">
 
                 <div class="adv-icon">
                     🍲
                 </div>
-                <h3>Serbaguna</h3>
+
+                <h3>
+                    Serbaguna
+                </h3>
+
                 <p>
                     Bisa untuk semua masakan Indonesia maupun oriental,
                     baik kuah maupun tumisan.
@@ -274,32 +537,58 @@ SECTION 3 - KEUNGGULAN PRODUK
 
             </div>
 
+
+            <!-- CARD 6 -->
+
             <div class="adv-card">
+
                 <div class="adv-icon">
                     ✅
                 </div>
-                <h3>Halal & BPOM</h3>
+
+                <h3>
+                    Halal & BPOM
+                </h3>
+
                 <p>
                     Sudah memiliki izin edar BPOM dan Sertifikasi
                     Halal Indonesia sehingga lebih terpercaya.
                 </p>
+
             </div>
+
+
         </div>
+
     </div>
 
 </section>
 
-<!-- =======================================================
-SECTION 4
-INSPIRASI MENU
-======================================================= -->
 
-<section class="menu-section">
+
+<!-- =====================================================
+     INSPIRASI MENU
+===================================================== -->
+
+<section
+    class="menu-section"
+    id="menu"
+>
 
     <div class="container">
+
+
         <div class="section-title">
-            <span>INSPIRASI MENU</span>
-            <h2>Satu Produk, Banyak Kreasi</h2>
+
+            <span>
+                INSPIRASI MENU
+            </span>
+
+
+            <h2>
+                Satu Produk, Banyak Kreasi
+            </h2>
+
 
             <p>
                 Penyedap Rasa Sisuka cocok digunakan untuk berbagai
@@ -308,54 +597,153 @@ INSPIRASI MENU
 
         </div>
 
+
         <div class="menu-grid">
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepSupKentang.png') }}">
+
+
+            <!-- ================= MENU 1 ================= -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)"
+            >
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepSupKentang.png') }}"
+                    alt="Resep Sup Kentang"
+                >
+
 
                 <div class="menu-overlay">
-                    <h3>Sup Kentang</h3>
-                </div>
-            </div>
 
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepSayurLodeh.png') }}">
-                <div class="menu-overlay">
-                    <h3>Sayur Lodeh</h3>
-                </div>
+                    <h3>
+                        Sup Kentang
+                    </h3>
 
-            </div>
-
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepNasiGoreng.png') }}">
-                <div class="menu-overlay">
-                    <h3>Nasi Goreng</h3>
-                </div>
-
-            </div>
-
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepTumisKangkung.png') }}">
-                <div class="menu-overlay">
-                    <h3>Tumis Kangkung</h3>
                 </div>
 
             </div>
 
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepTumisBrokoli.png') }}">
+
+            <!-- ================= MENU 2 ================= -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)"
+            >
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepSayurLodeh.png') }}"
+                    alt="Resep Sayur Lodeh"
+                >
+
+
                 <div class="menu-overlay">
-                    <h3>Tumis Brokoli</h3>
+
+                    <h3>
+                        Sayur Lodeh
+                    </h3>
+
                 </div>
 
             </div>
 
-            <div class="menu-card">
-                <img src="{{ url_for('static', filename='image/ResepSeblak.png') }}">
+
+            <!-- ================= MENU 3 ================= -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)"
+            >
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepNasiGoreng.png') }}"
+                    alt="Resep Nasi Goreng"
+                >
+
+
                 <div class="menu-overlay">
-                    <h3>Seblak</h3>
+
+                    <h3>
+                        Nasi Goreng
+                    </h3>
+
                 </div>
 
             </div>
+
+
+            <!-- ================= MENU 4 ================= -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)"
+            >
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepTumisKangkung.png') }}"
+                    alt="Resep Tumis Kangkung"
+                >
+
+
+                <div class="menu-overlay">
+
+                    <h3>
+                        Tumis Kangkung
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MENU 5 ================= -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)"
+            >
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepTumisBrokoli.png') }}"
+                    alt="Resep Tumis Brokoli"
+                >
+
+
+                <div class="menu-overlay">
+
+                    <h3>
+                        Tumis Brokoli
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MENU 6 ================= -->
+
+            <div
+                class="menu-card"
+                onclick="openRecipe(this)"
+            >
+
+                <img
+                    src="{{ url_for('static', filename='image/ResepSeblak.png') }}"
+                    alt="Resep Seblak"
+                >
+
+
+                <div class="menu-overlay">
+
+                    <h3>
+                        Seblak
+                    </h3>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -363,27 +751,58 @@ INSPIRASI MENU
 
 </section>
 
-<!-- ================= RECIPE POPUP ================= -->
 
-<div class="recipe-modal" id="recipeModal">
 
-    <button class="recipe-close" onclick="closeRecipe()">
+<!-- =====================================================
+     RECIPE POPUP
+===================================================== -->
+
+<div
+    class="recipe-modal"
+    id="recipeModal"
+>
+
+
+    <button
+        class="recipe-close"
+        type="button"
+        onclick="closeRecipe()"
+        aria-label="Tutup resep"
+    >
+
         &times;
+
     </button>
 
-    <img id="recipeModalImage" src="" alt="Resep">
+
+    <img
+        id="recipeModalImage"
+        src=""
+        alt="Resep"
+    >
 
 </div>
 
-<!-- ================= VIDEO TESTIMONI ================= -->
+
+
+<!-- =====================================================
+     VIDEO TESTIMONI
+===================================================== -->
 
 <section class="testimoni">
 
+
     <div class="testimoni-title">
 
-        <span>TESTIMONI</span>
+        <span>
+            TESTIMONI
+        </span>
 
-        <h2>Apa Kata Mereka?</h2>
+
+        <h2>
+            Apa Kata Mereka?
+        </h2>
+
 
         <p>
             Lihat pengalaman dan cerita mereka bersama
@@ -396,30 +815,56 @@ INSPIRASI MENU
     <div class="video-container">
 
 
-        <!-- VIDEO 1  -->
+        <!-- ================= VIDEO 1 ================= -->
 
         <div class="video-card">
 
-            <video controls playsinline preload="metadata">
-                <source src="{{ url_for('static', filename='image/testibaksomojo.mp4') }}" type="video/mp4">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="{{ url_for('static', filename='image/testibaksomojo.mp4') }}"
+                    type="video/mp4"
+                >
+
                 Browser Anda tidak mendukung video.
+
             </video>
 
-            <h3>Testimoni Warung 1</h3>
+
+            <h3>
+                Testimoni Warung 1
+            </h3>
 
         </div>
 
 
-        <!-- VIDEO 2 -->
+        <!-- ================= VIDEO 2 ================= -->
 
         <div class="video-card">
 
-            <video controls playsinline preload="metadata">
-                <source src="{{ url_for('static', filename='image/testibaksosiwal.mp4') }}" type="video/mp4">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+            >
+
+                <source
+                    src="{{ url_for('static', filename='image/testibaksosiwal.mp4') }}"
+                    type="video/mp4"
+                >
+
                 Browser Anda tidak mendukung video.
+
             </video>
 
-            <h3>Testimoni Warung 2</h3>
+
+            <h3>
+                Testimoni Warung 2
+            </h3>
 
         </div>
 
@@ -427,66 +872,72 @@ INSPIRASI MENU
     </div>
 
 </section>
-<script>
 
-const video = document.querySelector("video");
 
-video.addEventListener("loadedmetadata", function () {
-    console.log("VIDEO BERHASIL DIBACA");
-    console.log("Durasi:", video.duration);
-    console.log("Lebar:", video.videoWidth);
-    console.log("Tinggi:", video.videoHeight);
-});
 
-video.addEventListener("error", function () {
-    console.log("VIDEO ERROR");
-    console.log(video.error);
+<!-- =====================================================
+     CTA PEMBELIAN
+===================================================== -->
 
-    if (video.error) {
-        console.log("Code:", video.error.code);
-        console.log("Message:", video.error.message);
-    }
-});
-
-</script>
-
-<!-- =========================================
-     SECTION 6 — CTA PEMBELIAN
-========================================= -->
-
-<section class="purchase-cta" id="order">
+<section
+    class="purchase-cta"
+    id="contact"
+>
 
     <div class="container">
+
+
         <div class="cta-box">
 
-            <!-- Background Decoration -->
+
+            <!-- ================= DECORATION ================= -->
+
             <div class="cta-decoration cta-decoration-1"></div>
+
             <div class="cta-decoration cta-decoration-2"></div>
 
+
+            <!-- ================= CTA CONTENT ================= -->
+
             <div class="cta-content">
+
 
                 <span class="cta-label">
                     SIAP MENCOBA?
                 </span>
 
+
                 <h2>
-                    Saatnya Hadirkan<br>
-                    <strong>Penyedap Rasa Sisuka</strong>
+
+                    Saatnya Hadirkan
+                    <br>
+
+                    <strong>
+                        Penyedap Rasa Sisuka
+                    </strong>
+
                     di Dapur Anda
+
                 </h2>
+
 
                 <p>
                     Cocok untuk semua menu Indonesia maupun oriental,
                     dan berbagai hidangan favorit keluarga.
                 </p>
 
+
                 <div class="cta-buttons">
 
-                    <!-- WhatsApp -->
+
+                    <!-- ================= WHATSAPP ================= -->
+
                     <a
-                        href="https://wa.me/6282322238885?text=Halo%20PT%20Manera,%20saya%20ingin%20memesan%20Bihun%20Jagung%20Pitung"
+                        href="https://wa.me/6282322238885?text=Halo%20PT%20Manera,%20saya%20ingin%20memesan%20Penyedap%20Rasa%20Sisuka"
                         class="cta-primary"
-                        target="_blank">
+                        target="_blank"
+                        rel="noopener"
+                    >
 
                         <i class="fab fa-whatsapp"></i>
 
@@ -494,137 +945,380 @@ video.addEventListener("error", function () {
 
                     </a>
 
-                    <!-- Kembali ke Produk -->
+
+                    <!-- ================= PRODUK LAIN ================= -->
+
                     <a
                         href="/"
-                        class="cta-secondary">
+                        class="cta-secondary"
+                    >
+
                         <i class="fa-solid fa-arrow-left"></i>
 
                         Lihat Produk Lain
 
                     </a>
 
+
                 </div>
 
-                <!-- Trust -->
+
+                <!-- ================= TRUST ================= -->
+
                 <div class="cta-trust">
 
-                    <div class="trust-item">
-
-                        <i class="fa-solid fa-circle-check"></i>
-                        <span>Halal Indonesia</span>
-                    </div>
 
                     <div class="trust-item">
 
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>Terdaftar BPOM</span>
+
+                        <span>
+                            Halal Indonesia
+                        </span>
+
                     </div>
 
+
                     <div class="trust-item">
+
                         <i class="fa-solid fa-circle-check"></i>
-                        <span>Produk Berkualitas</span>
+
+                        <span>
+                            Terdaftar BPOM
+                        </span>
+
                     </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Produk Berkualitas
+                        </span>
+
+                    </div>
+
+
                 </div>
+
             </div>
 
-            <!-- Product Image -->
+
+            <!-- ================= PRODUCT IMAGE ================= -->
+
             <div class="cta-product">
+
                 <div class="product-glow"></div>
+
+
                 <img
                     src="{{ url_for('static', filename='image/produksisuka.png') }}"
-                    alt="Penyedap Rasa Sisuka">
+                    alt="Penyedap Rasa Sisuka"
+                >
+
             </div>
+
+
         </div>
+
     </div>
 
 </section>
 
+
+
+<!-- =====================================================
+     SWIPER JS
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<!-- =====================================================
+     HERO SWIPER
+===================================================== -->
+
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("JS Berjalan");
 
-    new Swiper(".heroSwiper", {
-        loop: true,
-        speed: 1000,
-        effect: "fade",
 
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,
-        },
+    const heroSwiper =
+        document.querySelector(".heroSwiper");
 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
 
-});
-</script>
+    if (heroSwiper) {
 
-<script>
-window.addEventListener("scroll", function(){
+        new Swiper(".heroSwiper", {
 
-    const navbar = document.querySelector(".navbar");
+            loop: true,
 
-    if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
+            speed: 1000,
+
+            effect: "fade",
+
+            autoplay: {
+
+                delay: 4000,
+
+                disableOnInteraction: false
+
+            },
+
+            pagination: {
+
+                el: ".swiper-pagination",
+
+                clickable: true
+
+            }
+
+        });
+
     }
 
 });
+
 </script>
+
+
+
+<!-- =====================================================
+     NAVBAR SCROLL
+===================================================== -->
+
+<script>
+
+window.addEventListener("scroll", function () {
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    if (!navbar) return;
+
+
+    if (window.scrollY > 80) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     HAMBURGER MOBILE
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const hamburger =
+        document.getElementById("hamburger");
+
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (!hamburger || !mobileMenu) return;
+
+
+
+    /* =========================
+       BUKA / TUTUP MENU
+    ========================= */
+
+    hamburger.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+
+        const isActive =
+            hamburger.classList.toggle("active");
+
+
+        mobileMenu.classList.toggle("active");
+
+
+        hamburger.setAttribute(
+            "aria-expanded",
+            isActive ? "true" : "false"
+        );
+
+    });
+
+
+
+    /* =========================
+       LINK MOBILE
+       OTOMATIS TUTUP
+    ========================= */
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            hamburger.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+
+
+    /* =========================
+       KLIK DI LUAR MENU
+    ========================= */
+
+    document.addEventListener("click", function (event) {
+
+        if (
+            !mobileMenu.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+
+            hamburger.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     RECIPE POPUP
+===================================================== -->
 
 <script>
 
 function openRecipe(card) {
 
-    const image = card.querySelector("img");
+
+    const image =
+        card.querySelector("img");
+
 
     if (!image) return;
 
-    const modal = document.getElementById("recipeModal");
-    const modalImage = document.getElementById("recipeModalImage");
 
-    modalImage.src = image.src;
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    const modalImage =
+        document.getElementById("recipeModalImage");
+
+
+    if (!modal || !modalImage) return;
+
+
+    modalImage.src =
+        image.src;
+
 
     modal.classList.add("active");
 
-    document.body.style.overflow = "hidden";
+
+    document.body.style.overflow =
+        "hidden";
+
 }
+
 
 
 function closeRecipe() {
 
-    const modal = document.getElementById("recipeModal");
+
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    if (!modal) return;
+
 
     modal.classList.remove("active");
 
-    document.body.style.overflow = "";
+
+    document.body.style.overflow =
+        "";
+
 }
 
 
-/* Klik area gelap untuk menutup */
 
-document.getElementById("recipeModal").addEventListener("click", function(e) {
+<!-- KLIK AREA GELAP -->
 
-    if (e.target === this) {
+document.addEventListener("DOMContentLoaded", function () {
 
-        closeRecipe();
 
-    }
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    if (!modal) return;
+
+
+    modal.addEventListener("click", function (event) {
+
+
+        if (event.target === modal) {
+
+            closeRecipe();
+
+        }
+
+    });
 
 });
 
 
-/* Tombol ESC */
 
-document.addEventListener("keydown", function(e) {
+<!-- TOMBOL ESC -->
 
-    if (e.key === "Escape") {
+document.addEventListener("keydown", function (event) {
+
+
+    if (event.key === "Escape") {
 
         closeRecipe();
 
@@ -634,5 +1328,155 @@ document.addEventListener("keydown", function(e) {
 
 </script>
 
+
+
+<!-- =====================================================
+     VIDEO DEBUG
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const videos =
+        document.querySelectorAll("video");
+
+
+    videos.forEach(function (video) {
+
+
+        video.addEventListener(
+            "loadedmetadata",
+            function () {
+
+                console.log(
+                    "VIDEO BERHASIL DIBACA"
+                );
+
+
+                console.log(
+                    "Durasi:",
+                    video.duration
+                );
+
+
+                console.log(
+                    "Lebar:",
+                    video.videoWidth
+                );
+
+
+                console.log(
+                    "Tinggi:",
+                    video.videoHeight
+                );
+
+            }
+        );
+
+
+        video.addEventListener(
+            "error",
+            function () {
+
+                console.log(
+                    "VIDEO ERROR"
+                );
+
+
+                if (video.error) {
+
+                    console.log(
+                        "Code:",
+                        video.error.code
+                    );
+
+
+                    console.log(
+                        "Message:",
+                        video.error.message
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     SMOOTH SCROLL
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    const links =
+        document.querySelectorAll('a[href^="#"]');
+
+
+    links.forEach(function (link) {
+
+
+        link.addEventListener("click", function (event) {
+
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+
+                return;
+
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+
+                return;
+
+            }
+
+
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "start"
+
+            });
+
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+
 </body>
+
 </html>
