@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distribusi Produk - Manera</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS Distribusi -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='distribusi.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="distribution-navbar">
+
+    <div class="distribution-nav-wrapper">
+
+
+        <!-- LOGO -->
+
+        <a href="/" class="distribution-logo">
+
+            <img
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="distribution-nav">
+
+            <a href="/">
+                Beranda
+            </a>
+
+            <a href="/Katalog">
+                Katalog Produk
+            </a>
+
+            <a href="/Distribusi" class="active">
+                Distribusi
+            </a>
+
+        </nav>
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            href="https://wa.me/6282322238885"
+            class="distribution-wa"
+            target="_blank"
+            rel="noopener">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
+        </a>
+
+
+        <!-- HAMBURGER -->
+
+        <button
+            class="distribution-hamburger"
+            id="distributionHamburger"
+            type="button"
+            aria-label="Buka menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        class="distribution-mobile-menu"
+        id="distributionMobileMenu">
+
+        <a href="/">
+            Beranda
+        </a>
+
+        <a href="/Katalog">
+            Katalog Produk
+        </a>
+
+        <a href="/Distribusi">
+            Distribusi
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO DISTRIBUSI
+===================================================== -->
+
+<section class="distribution-hero">
+
+    <div class="distribution-hero-overlay"></div>
+
+    <div class="distribution-hero-content">
+
+        <span class="distribution-hero-label">
+            JANGKAUAN DISTRIBUSI
+        </span>
+
+        <h1>
+            Produk Manera
+            <br>
+            <strong>Hadir di Indonesia</strong>
+        </h1>
+
+        <p>
+            Temukan persebaran produk Manera di berbagai
+            provinsi, kota, dan kabupaten di Indonesia.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATISTIK DISTRIBUSI
+===================================================== -->
+
+<section class="distribution-stat-section">
+
+    <div class="distribution-container">
+
+
+        <div class="distribution-stat-grid">
+
+
+            <!-- STAT 1 -->
+
+            <div class="distribution-stat-card">
+
+                <div class="distribution-stat-icon">
+                    <i class="fas fa-location-dot"></i>
+                </div>
+
+                <div class="distribution-stat-content">
+
+                    <strong>
+                        150+
+                    </strong>
+
+                    <span>
+                        Kota & Kabupaten
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- STAT 2 -->
+
+            <div class="distribution-stat-card">
+
+                <div class="distribution-stat-icon">
+                    <i class="fas fa-map"></i>
+                </div>
+
+                <div class="distribution-stat-content">
+
+                    <strong>
+                        30+
+                    </strong>
+
+                    <span>
+                        Provinsi
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- STAT 3 -->
+
+            <div class="distribution-stat-card">
+
+                <div class="distribution-stat-icon">
+                    <i class="fas fa-truck-fast"></i>
+                </div>
+
+                <div class="distribution-stat-content">
+
+                    <strong>
+                        Indonesia
+                    </strong>
+
+                    <span>
+                        Jangkauan Distribusi
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSEBARAN DISTRIBUSI
+===================================================== -->
+
+<section class="distribution-area">
+
+    <div class="distribution-container">
+
+
+        <!-- HEADER -->
+
+        <div class="distribution-section-header">
+
+            <span>
+                PERSEBARAN WILAYAH
+            </span>
+
+            <h2>
+                Distribusi Produk di Indonesia
+            </h2>
+
+            <p>
+                Pilih wilayah untuk melihat provinsi dan kota
+                yang menjadi bagian dari jangkauan distribusi Manera.
+            </p>
+
+        </div>
+
+
+
+        <!-- FILTER -->
+
+        <div class="distribution-filter">
+
+            <button
+                class="distribution-filter-btn active"
+                data-filter="all">
+
+                Semua
+
+            </button>
+
+            <button
+                class="distribution-filter-btn"
+                data-filter="jawa">
+
+                Jawa
+
+            </button>
+
+            <button
+                class="distribution-filter-btn"
+                data-filter="sumatera">
+
+                Sumatera
+
+            </button>
+
+            <button
+                class="distribution-filter-btn"
+                data-filter="kalimantan">
+
+                Kalimantan
+
+            </button>
+
+            <button
+                class="distribution-filter-btn"
+                data-filter="sulawesi">
+
+                Sulawesi
+
+            </button>
+
+            <button
+                class="distribution-filter-btn"
+                data-filter="bali-nusa">
+
+                Bali & Nusa Tenggara
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROVINSI
+        ================================================== -->
+
+        <div class="distribution-province-grid">
+
+
+           <!-- ================= JAWA TENGAH ================= -->
+
+<div
+    class="province-card"
+    data-region="jawa"
+    data-province="Jawa Tengah"
+    data-cities="
+        Brebes|
+        Pemalang|
+        Tegal|
+        Pekalongan|
+        Batang|
+        Kendal|
+        Semarang|
+        Salatiga|
+        Grobogan|
+        Temanggung|
+        Kudus|
+        Jepara|
+        Pati|
+        Rembang|
+        Blora|
+        Karanganyar|
+        Solo|
+        Wonogiri|
+        Sukoharjo|
+        Klaten|
+        Magelang|
+        Wonosobo|
+        Purbalingga|
+        Kebumen|
+        Purwokerto|
+        Banyumas|
+    ">
+
+    <!-- PROVINCE HEADER -->
+
+    <div class="province-card-top">
+
+        <div class="province-icon">
+            <i class="fas fa-map-pin"></i>
+        </div>
+
+        <div>
+
+            <span>
+                PROVINSI
+            </span>
+
+            <h3>
+                Jawa Tengah
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROVINCE INFO -->
+
+    <div class="province-info">
+
+        <span>
+            Kota & Kabupaten
+        </span>
+
+        <strong>
+            20+
+        </strong>
+
+    </div>
+
+
+    <!-- PREVIEW CITY -->
+    <!-- HANYA 6 KOTA YANG DITAMPILKAN -->
+
+    <div class="province-cities">
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Brebes
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Pemalang
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Tegal
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Pekalongan
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Batang
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Kendal
+        </div>
+
+    </div>
+
+
+    <!-- DETAIL BUTTON -->
+
+    <button
+        class="province-detail-btn"
+        type="button"
+        onclick="openProvince(this)">
+
+        <span>
+            Lihat Detail
+        </span>
+
+        <i class="fas fa-arrow-right"></i>
+
+    </button>
+
+</div>
+
+
+
+            <!-- ================= JAWA BARAT ================= -->
+
+<div
+    class="province-card"
+    data-region="jawa"
+    data-province="Jawa Barat"
+    data-cities="
+        Bekasi|
+        Karawang|
+        Subang|
+        Indramayu|
+        Cirebon|
+        Majalengka|
+        Sumedang|
+        Purwakarta|
+        Depok|
+        Bogor|
+        Cianjur|
+        Cimahi|
+        Bandung|
+        Ciamis|
+        Sukabumi|
+        Tasikmalaya|
+        Garut|
+        Pangandaran
+    ">
+
+
+    <!-- ================= PROVINCE TOP ================= -->
+
+    <div class="province-card-top">
+
+        <div class="province-icon">
+
+            <i class="fas fa-map-pin"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                PROVINSI
+            </span>
+
+            <h3>
+                Jawa Barat
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROVINCE INFO ================= -->
+
+    <div class="province-info">
+
+        <span>
+            Kota & Kabupaten
+        </span>
+
+        <strong>
+            15+
+        </strong>
+
+    </div>
+
+
+    <!-- ================= CITY PREVIEW ================= -->
+    <!-- HANYA 6 KOTA DITAMPILKAN -->
+
+    <div class="province-cities">
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Bekasi
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Karawang
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Subang
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Indramayu
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Cirebon
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Majalengka
+        </div>
+
+    </div>
+
+
+    <!-- ================= DETAIL BUTTON ================= -->
+
+    <button
+        class="province-detail-btn"
+        type="button"
+        onclick="openProvince(this)">
+
+        <span>
+            Lihat Detail
+        </span>
+
+        <i class="fas fa-arrow-right"></i>
+
+    </button>
+
+</div>
+
+
+
+            <!-- ================= JAWA TIMUR ================= -->
+
+<div
+    class="province-card"
+    data-region="jawa"
+    data-province="Jawa Timur"
+    data-cities="
+        Madiun|
+        Ponorogo|
+        Ngawi|
+        Magetan|
+        Kediri|
+        Nganjuk|
+        Blitar|
+        Tulungagung|
+        Trenggalek|
+        Lamongan|
+        Tuban|
+        Bojonegoro|
+    ">
+
+
+    <!-- ================= PROVINCE TOP ================= -->
+
+    <div class="province-card-top">
+
+        <div class="province-icon">
+
+            <i class="fas fa-map-pin"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                PROVINSI
+            </span>
+
+            <h3>
+                Jawa Timur
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROVINCE INFO ================= -->
+
+    <div class="province-info">
+
+        <span>
+            Kota & Kabupaten
+        </span>
+
+        <strong>
+            10+
+        </strong>
+
+    </div>
+
+
+    <!-- ================= CITY PREVIEW ================= -->
+    <!-- HANYA 6 KOTA DITAMPILKAN -->
+
+    <div class="province-cities">
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Madiun
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Ponorogo
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Ngawi
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Magetan
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Kediri
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Nganjuk
+        </div>
+
+    </div>
+
+
+    <!-- ================= DETAIL BUTTON ================= -->
+
+    <button
+        class="province-detail-btn"
+        type="button"
+        onclick="openProvince(this)">
+
+        <span>
+            Lihat Detail
+        </span>
+
+        <i class="fas fa-arrow-right"></i>
+
+    </button>
+
+</div>
+
+<!-- ================= DKI JAKARTA================= -->
+
+<div
+    class="province-card"
+    data-region="jawa"
+    data-province="DKI Jakarta"
+    data-cities="
+        Kepulauan Seribu|
+        Jakarta Barat|
+        Jakarta Pusat|
+        Jakarta Selatan|
+        Jakarta Utara|
+        Jakarta Timur|
+    ">
+
+    <!-- ================= PROVINCE TOP ================= -->
+
+    <div class="province-card-top">
+
+        <div class="province-icon">
+
+            <i class="fas fa-map-pin"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                PROVINSI
+            </span>
+
+            <h3>
+                DKI Jakarta
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROVINCE INFO ================= -->
+
+    <div class="province-info">
+
+        <span>
+            Kota & Kabupaten
+        </span>
+
+        <strong>
+            6
+        </strong>
+
+    </div>
+
+
+    <!-- ================= CITY PREVIEW ================= -->
+    <!-- HANYA 6 KOTA DITAMPILKAN -->
+
+    <div class="province-cities">
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Kepulauan Seribu
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Jakarta Barat
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Jakarta Pusat
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Jakarta Selatan
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Jakarta Utara
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Jakarta Timur
+        </div>
+
+    </div>
+
+
+    <!-- ================= DETAIL BUTTON ================= -->
+
+    <button
+        class="province-detail-btn"
+        type="button"
+        onclick="openProvince(this)">
+
+        <span>
+            Lihat Detail
+        </span>
+
+        <i class="fas fa-arrow-right"></i>
+
+    </button>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROVINCE MODAL ================= -->
+
+<div
+    class="province-modal"
+    id="provinceModal">
+
+    <div
+        class="province-modal-overlay"
+        onclick="closeProvince()">
+    </div>
+
+
+    <div class="province-modal-content">
+
+
+        <!-- CLOSE -->
+
+        <button
+            type="button"
+            class="province-modal-close"
+            onclick="closeProvince()">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+
+        <!-- HEADER -->
+
+        <div class="province-modal-header">
+
+            <span>
+                PERSEBARAN PRODUK
+            </span>
+
+            <h2 id="provinceModalTitle">
+                Jawa Tengah
+            </h2>
+
+            <p id="provinceModalCount">
+                Kota & Kabupaten
+            </p>
+
+        </div>
+
+
+        <!-- ALL CITIES -->
+
+        <div
+            class="province-modal-cities"
+            id="provinceModalCities">
+        </div>
+
+
+    </div>
+
+    <!-- ================= BANTEN ================= -->
+
+<div
+    class="province-card"
+    data-region="jawa"
+    data-province="Banten"
+    data-cities="
+        Cilegon|
+        Serang|
+        Tangerang|
+        Lebak|
+        Pandeglang|
+    ">
+
+    <!-- ================= PROVINCE TOP ================= -->
+
+    <div class="province-card-top">
+
+        <div class="province-icon">
+
+            <i class="fas fa-map-pin"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                PROVINSI
+            </span>
+
+            <h3>
+                Banten
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROVINCE INFO ================= -->
+
+    <div class="province-info">
+
+        <span>
+            Kota & Kabupaten
+        </span>
+
+        <strong>
+            5
+        </strong>
+
+    </div>
+
+
+    <!-- ================= CITY PREVIEW ================= -->
+    <!-- HANYA 6 KOTA DITAMPILKAN -->
+
+    <div class="province-cities">
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Cilegon
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Serang
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Tangerang
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Lebak
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            Pandeglang
+        </div>
+
+    </div>
+
+
+    <!-- ================= DETAIL BUTTON ================= -->
+
+    <button
+        class="province-detail-btn"
+        type="button"
+        onclick="openProvince(this)">
+
+        <span>
+            Lihat Detail
+        </span>
+
+        <i class="fas fa-arrow-right"></i>
+
+    </button>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= PROVINCE MODAL ================= -->
+
+<div
+    class="province-modal"
+    id="provinceModal">
+
+    <div
+        class="province-modal-overlay"
+        onclick="closeProvince()">
+    </div>
+
+
+    <div class="province-modal-content">
+
+
+        <!-- CLOSE -->
+
+        <button
+            type="button"
+            class="province-modal-close"
+            onclick="closeProvince()">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+
+        <!-- HEADER -->
+
+        <div class="province-modal-header">
+
+            <span>
+                PERSEBARAN PRODUK
+            </span>
+
+            <h2 id="provinceModalTitle">
+                Banten
+            </h2>
+
+            <p id="provinceModalCount">
+                Kota & Kabupaten
+            </p>
+
+        </div>
+
+
+        <!-- ALL CITIES -->
+
+        <div
+            class="province-modal-cities"
+            id="provinceModalCities">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="distribution-footer">
+
+    <div class="distribution-footer-container">
+
+        <div>
+
+            <img
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera">
+
+            <p>
+                Produsen pangan terpercaya Indonesia.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Navigasi
+            </h4>
+
+            <a href="/">
+                Beranda
+            </a>
+
+            <a href="/Katalog">
+                Katalog Produk
+            </a>
+
+            <a href="/Distribusi">
+                Distribusi
+            </a>
+
+        </div>
+
+        <div>
+
+            <h4>
+                Kontak
+            </h4>
+
+            <a
+                href="https://wa.me/6282322238885"
+                target="_blank">
+
+                <i class="fab fa-whatsapp"></i>
+
+                +62 823 2223 8885
+
+            </a>
+
+            <a href="mailto:manerapacific@gmail.com">
+
+                manerapacific@gmail.com
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="distribution-footer-bottom">
+
+        © 2026 PT Manera Pacific Indonesia.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =========================================
+       FILTER WILAYAH
+    ========================================= */
+
+    const filterButtons =
+        document.querySelectorAll(".distribution-filter-btn");
+
+    const provinceCards =
+        document.querySelectorAll(".province-card");
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+
+            filterButtons.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
+
+
+            const filter =
+                button.getAttribute("data-filter");
+
+
+            provinceCards.forEach(function (card) {
+
+                const region =
+                    card.getAttribute("data-region");
+
+
+                if (
+                    filter === "all" ||
+                    region === filter
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    const hamburger =
+        document.getElementById(
+            "distributionHamburger"
+        );
+
+    const mobileMenu =
+        document.getElementById(
+            "distributionMobileMenu"
+        );
+
+
+    if (hamburger && mobileMenu) {
+
+        hamburger.addEventListener(
+            "click",
+            function () {
+
+                hamburger.classList.toggle("active");
+
+                mobileMenu.classList.toggle("active");
+
+            }
+        );
+
+    }
+
+
+
+    /* =========================================
+       TUTUP MODAL KLIK OVERLAY
+    ========================================= */
+
+    const modalOverlay =
+        document.querySelector(
+            ".province-modal-overlay"
+        );
+
+
+    if (modalOverlay) {
+
+        modalOverlay.addEventListener(
+            "click",
+            closeProvince
+        );
+
+    }
+
+
+});
+
+
+
+/* =========================================
+   DATA KOTA
+========================================= */
+
+const provinceCities = {
+
+    "Jawa Tengah": [
+
+        "Solo",
+        "Semarang",
+        "Klaten",
+        "Boyolali",
+        "Sukoharjo",
+        "Wonogiri"
+
+    ],
+
+
+    "Jawa Barat": [],
+
+    "Jawa Timur": [],
+
+    "Sumatera": [],
+
+    "Kalimantan": [],
+
+    "Sulawesi": []
+
+};
+
+
+
+/* =========================================
+   BUKA MODAL PROVINSI
+========================================= */
+
+function openProvince(button) {
+
+    const card = button.closest(".province-card");
+
+    if (!card) return;
+
+    const provinceName = card.dataset.province;
+
+    const cities = card.dataset.cities
+        .split("|")
+        .map(city => city.trim())
+        .filter(city => city !== "");
+
+    const modal = document.getElementById("provinceModal");
+
+    const modalTitle = document.getElementById("provinceModalTitle");
+
+    const modalCount = document.getElementById("provinceModalCount");
+
+    const modalCities = document.getElementById("provinceModalCities");
+
+
+    /* NAMA PROVINSI */
+
+    modalTitle.textContent = provinceName;
+
+
+    /* JUMLAH KOTA */
+
+    modalCount.textContent =
+        `${cities.length} Kota & Kabupaten`;
+
+
+    /* SEMUA KOTA */
+
+    modalCities.innerHTML = cities.map(city => {
+
+        return `
+            <div class="modal-city-item">
+
+                <i class="fas fa-location-dot"></i>
+
+                <span>
+                    ${city}
+                </span>
+
+            </div>
+        `;
+
+    }).join("");
+
+
+    /* BUKA MODAL */
+
+    modal.classList.add("active");
+
+    document.body.classList.add("modal-open");
+}
+
+function closeProvince() {
+
+    const modal = document.getElementById("provinceModal");
+
+    modal.classList.remove("active");
+
+    document.body.classList.remove("modal-open");
+}
+
+
+/* =========================================
+   TUTUP MODAL
+========================================= */
+
+function closeProvince() {
+
+    const modal =
+        document.getElementById(
+            "provinceModal"
+        );
+
+
+    modal.classList.remove("active");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+</script>
+
+
+</body>
+
+</html>

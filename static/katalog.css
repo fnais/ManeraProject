@@ -578,27 +578,392 @@ a {
 
 
 /* =====================================================
-   FOOTER
+   FOOTER KATALOG
 ===================================================== */
 
 .catalog-footer {
     width: 100%;
-
     background: #020d27;
-
-    padding: 25px 30px;
-
-    text-align: center;
+    color: #ffffff;
+    padding: 50px 0 0;
 }
 
 
-.catalog-footer p {
-    color: rgba(255, 255, 255, 0.5);
+.catalog-footer-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+
+/* =====================================================
+   FOOTER TOP
+===================================================== */
+
+.catalog-footer-top {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.6fr 1fr 1fr;
+
+    column-gap: 100px;
+
+    padding-bottom: 40px;
+}
+
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.catalog-footer-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.catalog-footer-brand img {
+    width: 130px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+
+    filter: brightness(0) invert(1);
+}
+
+
+.catalog-footer-brand p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
 
     font-size: 11px;
+
+    line-height: 1.6;
 }
 
 
+
+/* =====================================================
+   FOOTER COLUMN
+===================================================== */
+
+.catalog-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.catalog-footer-column h4 {
+    margin: 3px 0 16px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.catalog-footer-column a {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+
+.catalog-footer-column a:hover {
+    color: #FFD200;
+}
+
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.catalog-footer-wa {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.catalog-footer-wa i {
+    color: #FFD200;
+
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.catalog-footer-bottom {
+    width: 100%;
+
+    min-height: 75px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1.5fr;
+
+    align-items: center;
+
+    column-gap: 40px;
+}
+
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.catalog-footer-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.catalog-footer-social > span,
+.catalog-footer-shopping > span {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.catalog-social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.catalog-social-icons a {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #020d27;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+
+.catalog-social-icons a:hover {
+    background: #FFD200;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   SHOPEE
+===================================================== */
+
+.catalog-footer-shopping {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+}
+
+
+.catalog-shopee {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 8px 14px;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #020d27;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+
+.catalog-shopee:hover {
+    background: #FFD200;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.catalog-footer-copyright {
+    color: rgba(255, 255, 255, 0.40);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    text-align: right;
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .catalog-footer-top {
+        grid-template-columns: 1.3fr 1fr 1fr;
+
+        column-gap: 45px;
+    }
+
+
+    .catalog-footer-bottom {
+        grid-template-columns: 1fr 1fr;
+
+        row-gap: 15px;
+
+        padding: 18px 0;
+    }
+
+
+    .catalog-footer-copyright {
+        text-align: left;
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .catalog-footer {
+        padding-top: 40px;
+    }
+
+
+    .catalog-footer-container {
+        padding: 0 22px;
+    }
+
+
+    .catalog-footer-top {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding-bottom: 32px;
+    }
+
+
+    .catalog-footer-brand img {
+        width: 120px;
+    }
+
+
+    .catalog-footer-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 22px 0;
+    }
+
+
+    .catalog-footer-social {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+
+    .catalog-footer-shopping {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+
+    .catalog-footer-copyright {
+        text-align: left;
+    }
+
+}
 
 /* =====================================================
    TABLET

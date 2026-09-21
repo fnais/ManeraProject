@@ -628,35 +628,26 @@ p {
     width: 100%;
     max-width: 1100px;
     min-height: 230px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-decoration: none;
-
     background: #1C304E;
     border-radius: 24px;
-
     position: relative;
     overflow: hidden;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 90px;
 }
 
 .catalog-box::before {
     content: "";
     position: absolute;
-
     width: 300px;
     height: 300px;
-
     border-radius: 50%;
-
     background: #FFD200;
-
     opacity: 0.08;
-
     top: -150px;
     right: -80px;
 }
@@ -664,23 +655,17 @@ p {
 .catalog-box::after {
     content: "";
     position: absolute;
-
     width: 220px;
     height: 220px;
-
     border-radius: 50%;
-
     background: #FFD200;
-
     opacity: 0.06;
-
     bottom: -130px;
     left: -70px;
 }
 
 .catalog-box:hover {
     transform: translateY(-6px);
-
     box-shadow:
         0 18px 40px rgba(0, 0, 0, 0.18);
 }
@@ -688,60 +673,43 @@ p {
 .catalog-content {
     position: relative;
     z-index: 2;
-
     text-align: center;
 }
 
 .catalog-label {
     display: block;
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 2px;
-
     color: #FFD200;
-
     margin-bottom: 8px;
 }
 
 .catalog-content h3 {
     margin: 0;
-
     font-size: 48px;
     font-weight: 800;
-
     color: #ffffff;
-
     letter-spacing: 1px;
 }
 
 .catalog-content p {
     margin: 8px 0 20px;
-
     font-size: 16px;
-
     color: rgba(255, 255, 255, 0.8);
 }
 
 .catalog-arrow {
     width: 46px;
     height: 46px;
-
     margin: 0 auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #FFD200;
-
     color: #1C304E;
-
     font-size: 18px;
-
     transition: transform 0.3s ease;
 }
 
@@ -1026,15 +994,6 @@ p {
     background: #fff;
 }
 
-footer .container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding-left: 30px;
-    padding-right: 30px;
-    box-sizing: border-box;
-}
-
 .footer-channel h4 {
     margin: 0;
     color: #020b24;
@@ -1103,6 +1062,7 @@ footer .container {
     color: rgba(255, 255, 255, .45);
     font-size: 11px;
 }
+
 
 /* =========================================================
    13. PRODUCT DETAIL PAGE

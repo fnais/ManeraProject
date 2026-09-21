@@ -1,0 +1,1426 @@
+/* =====================================================
+   DISTRIBUSI PAGE
+   PT MANERA PACIFIC INDONESIA
+===================================================== */
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+    background: #f5f7fa;
+    color: #1C304E;
+    line-height: 1.6;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.distribution-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.distribution-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid rgba(28, 48, 78, 0.08);
+
+    box-shadow: 0 3px 15px rgba(28, 48, 78, 0.04);
+}
+
+.distribution-nav-wrapper {
+    width: min(1280px, 92%);
+    min-height: 76px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.distribution-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.distribution-logo img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.distribution-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 32px;
+    margin-left: auto;
+}
+
+.distribution-nav a {
+    position: relative;
+
+    color: #1C304E;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 28px 0;
+
+    transition: color 0.25s ease;
+}
+
+.distribution-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 20px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #FFD200;
+
+    transition: width 0.25s ease;
+}
+
+.distribution-nav a:hover,
+.distribution-nav a.active {
+    color: #1C304E;
+}
+
+.distribution-nav a:hover::after,
+.distribution-nav a.active::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.distribution-wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 150px;
+
+    padding: 12px 18px;
+
+    border-radius: 30px;
+
+    background: #18a957;
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+.distribution-wa i {
+    font-size: 14px;
+}
+
+.distribution-wa:hover {
+    background: #139149;
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.distribution-hamburger {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.distribution-hamburger span {
+    width: 23px;
+    height: 2px;
+
+    background: #1C304E;
+
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.distribution-mobile-menu {
+    display: none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.distribution-hero {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1C304E 0%,
+            #263f63 55%,
+            #162943 100%
+        );
+}
+
+.distribution-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -130px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 210, 0, 0.09);
+}
+
+.distribution-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: -130px;
+    bottom: -170px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.distribution-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.06),
+            transparent 55%
+        );
+}
+
+.distribution-hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, 90%);
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.distribution-hero-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #FFD200;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.distribution-hero-content h1 {
+    margin: 0;
+
+    font-size: clamp(36px, 5vw, 62px);
+
+    line-height: 1.1;
+
+    font-weight: 700;
+}
+
+.distribution-hero-content h1 strong {
+    color: #FFD200;
+    font-weight: 800;
+}
+
+.distribution-hero-content p {
+    max-width: 620px;
+
+    margin: 22px auto 0;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.distribution-stat-section {
+    position: relative;
+
+    margin-top: -55px;
+
+    padding-bottom: 35px;
+
+    z-index: 5;
+}
+
+.distribution-stat-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.distribution-stat-card {
+    min-height: 115px;
+
+    padding: 22px 24px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(28, 48, 78, 0.07);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 12px 35px rgba(28, 48, 78, 0.09);
+}
+
+.distribution-stat-icon {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #1C304E;
+
+    color: #FFD200;
+
+    font-size: 18px;
+}
+
+.distribution-stat-content strong {
+    display: block;
+
+    color: #1C304E;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.distribution-stat-content span {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #718096;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   DISTRIBUTION AREA
+===================================================== */
+
+.distribution-area {
+    padding: 65px 0 100px;
+
+    background: #f5f7fa;
+}
+
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.distribution-section-header {
+    max-width: 720px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.distribution-section-header > span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #18a957;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.distribution-section-header h2 {
+    margin-bottom: 13px;
+
+    color: #1C304E;
+
+    font-size: clamp(28px, 4vw, 42px);
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.distribution-section-header p {
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    color: #718096;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FILTER
+===================================================== */
+
+.distribution-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.distribution-filter-btn {
+    border: 1px solid rgba(28, 48, 78, 0.09);
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.distribution-filter-btn:hover {
+    border-color: #1C304E;
+
+    color: #1C304E;
+
+    transform: translateY(-1px);
+}
+
+.distribution-filter-btn.active {
+    border-color: #1C304E;
+
+    background: #1C304E;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   PROVINCE GRID
+===================================================== */
+
+.distribution-province-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   PROVINCE CARD
+===================================================== */
+
+.province-card {
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(28, 48, 78, 0.07);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 28px rgba(28, 48, 78, 0.045);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.province-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(28, 48, 78, 0.14);
+
+    box-shadow:
+        0 15px 35px rgba(28, 48, 78, 0.09);
+}
+
+
+/* =====================================================
+   PROVINCE TOP
+===================================================== */
+
+.province-card-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.province-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 210, 0, 0.20);
+
+    color: #1C304E;
+
+    font-size: 15px;
+}
+
+.province-card-top span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #18a957;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.province-card-top h3 {
+    color: #1C304E;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   PROVINCE INFO
+===================================================== */
+
+.province-info {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 0 12px;
+}
+
+.province-info span {
+    color: #718096;
+
+    font-size: 9px;
+}
+
+.province-info strong {
+    color: #1C304E;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   CITY PREVIEW
+   HANYA 6 KOTA DI CARD
+===================================================== */
+
+.province-cities,
+.province-city-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 6px;
+}
+
+
+/*
+   Jika semua kota dirender di dalam card,
+   hanya 6 kota pertama yang terlihat.
+*/
+
+.province-cities > div:nth-child(n + 7),
+.province-city-list > div:nth-child(n + 7) {
+    display: none;
+}
+
+
+/* KOTA */
+
+.province-cities > div,
+.province-city {
+    min-height: 32px;
+
+    padding: 7px 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    border-radius: 7px;
+
+    background: #f6f8fa;
+
+    color: #475569;
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+.province-cities i,
+.province-city i {
+    color: #18a957;
+
+    font-size: 7px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   EMPTY / COMING SOON
+===================================================== */
+
+.province-coming {
+    grid-column: 1 / -1;
+
+    justify-content: center;
+
+    min-height: 55px;
+
+    color: #94a3b8;
+
+    font-weight: 500;
+}
+
+.province-coming i {
+    color: #94a3b8;
+}
+
+
+/* =====================================================
+   DETAIL BUTTON
+===================================================== */
+
+.province-detail-btn {
+    width: 100%;
+
+    margin-top: 13px;
+
+    padding: 9px 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 1px solid #dfe4e8;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #1C304E;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.province-detail-btn:hover {
+    background: #1C304E;
+
+    color: #ffffff;
+
+    border-color: #1C304E;
+
+    transform: translateY(-1px);
+}
+
+.province-detail-btn i {
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   PROVINCE DETAIL MODAL
+===================================================== */
+
+.province-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.province-modal.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* MODAL BACKGROUND */
+
+.province-modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(15, 25, 40, 0.65);
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* MODAL BOX */
+
+.province-modal-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(720px, 100%);
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.20);
+
+    transform:
+        translateY(20px)
+        scale(0.97);
+
+    transition:
+        transform 0.25s ease;
+}
+
+.province-modal.active .province-modal-content {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* MODAL CLOSE */
+
+.province-modal-close {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #f3f5f7;
+
+    color: #1C304E;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.province-modal-close:hover {
+    background: #1C304E;
+
+    color: #ffffff;
+}
+
+
+/* MODAL HEADER */
+
+.province-modal-header {
+    padding-right: 45px;
+
+    margin-bottom: 22px;
+}
+
+.province-modal-header span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #18a957;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.province-modal-header h2 {
+    margin: 0 0 3px;
+
+    color: #1C304E;
+
+    font-size: 26px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.province-modal-header p {
+    margin: 0;
+
+    color: #7b8490;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   ALL CITIES INSIDE MODAL
+===================================================== */
+
+.province-modal-cities {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+}
+
+.modal-city-item {
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 10px;
+
+    background: #f6f8fa;
+
+    border-radius: 7px;
+
+    color: #374151;
+
+    font-size: 9px;
+
+    font-weight: 600;
+}
+
+.modal-city-item i {
+    color: #18a957;
+
+    font-size: 7px;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   MODAL SCROLLBAR
+===================================================== */
+
+.province-modal-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.province-modal-content::-webkit-scrollbar-track {
+    background: #f4f6f8;
+
+    border-radius: 10px;
+}
+
+.province-modal-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.distribution-footer {
+    background: #020d27;
+
+    color: #ffffff;
+
+    padding: 50px 0 0;
+}
+
+.distribution-footer-container {
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 80px;
+
+    padding-bottom: 40px;
+}
+
+.distribution-footer-container > div {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.distribution-footer-container img {
+    width: 130px;
+
+    height: auto;
+
+    margin-bottom: 10px;
+
+    filter: brightness(0) invert(1);
+}
+
+.distribution-footer-container p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 10px;
+}
+
+.distribution-footer-container h4 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+.distribution-footer-container a {
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 10px;
+
+    transition: color 0.25s ease;
+}
+
+.distribution-footer-container a:hover {
+    color: #FFD200;
+}
+
+.distribution-footer-container a i {
+    margin-right: 5px;
+
+    color: #FFD200;
+}
+
+.distribution-footer-bottom {
+    width: min(1180px, 92%);
+
+    margin: 0 auto;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .distribution-nav {
+        gap: 20px;
+    }
+
+    .distribution-wa {
+        min-width: auto;
+
+        padding: 11px 15px;
+    }
+
+    .distribution-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .distribution-province-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .distribution-footer-container {
+        gap: 45px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE NAVBAR
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .distribution-nav {
+        display: none;
+    }
+
+    .distribution-wa {
+        display: none;
+    }
+
+    .distribution-hamburger {
+        display: flex;
+    }
+
+    .distribution-mobile-menu {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 15px 5% 20px;
+
+        background: #ffffff;
+
+        border-top: 1px solid rgba(28, 48, 78, 0.07);
+
+        box-shadow:
+            0 12px 25px rgba(28, 48, 78, 0.08);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition: all 0.25s ease;
+    }
+
+    .distribution-mobile-menu.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+    .distribution-mobile-menu a {
+        padding: 12px 10px;
+
+        border-radius: 8px;
+
+        color: #1C304E;
+
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .distribution-mobile-menu a:hover {
+        background: #f4f6f8;
+
+        color: #1C304E;
+    }
+
+    .distribution-hero {
+        min-height: 380px;
+    }
+
+    .distribution-stat-section {
+        margin-top: -40px;
+    }
+
+    .distribution-stat-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .distribution-stat-card {
+        min-height: 90px;
+    }
+
+    .distribution-footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    /* MODAL */
+
+    .province-modal {
+        padding: 15px;
+    }
+
+    .province-modal-content {
+        max-height: 88vh;
+
+        padding: 24px 18px;
+
+        border-radius: 16px;
+    }
+
+    .province-modal-cities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PREVIEW CITY */
+
+    .province-cities,
+    .province-city-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .distribution-nav-wrapper {
+        min-height: 65px;
+    }
+
+    .distribution-logo img {
+        width: 120px;
+    }
+
+    .distribution-hero {
+        min-height: 350px;
+    }
+
+    .distribution-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .distribution-hero-content p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    .distribution-area {
+        padding: 55px 0 70px;
+    }
+
+    .distribution-section-header {
+        margin-bottom: 30px;
+    }
+
+    .distribution-section-header h2 {
+        font-size: 27px;
+    }
+
+    .distribution-section-header p {
+        font-size: 11px;
+    }
+
+    .distribution-filter {
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding-bottom: 8px;
+
+        margin-bottom: 25px;
+
+        scrollbar-width: none;
+    }
+
+    .distribution-filter::-webkit-scrollbar {
+        display: none;
+    }
+
+    .distribution-filter-btn {
+        flex-shrink: 0;
+    }
+
+    .province-card {
+        padding: 17px;
+    }
+
+    .province-card-top h3 {
+        font-size: 15px;
+    }
+
+    .province-info {
+        padding: 12px 0 10px;
+    }
+
+    .province-info strong {
+        font-size: 17px;
+    }
+
+    .province-cities,
+    .province-city-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .province-cities > div,
+    .province-city {
+        min-height: 31px;
+
+        padding: 6px 7px;
+
+        font-size: 8px;
+    }
+
+    /* MODAL */
+
+    .province-modal {
+        padding: 12px;
+    }
+
+    .province-modal-content {
+        padding: 25px 16px;
+
+        border-radius: 16px;
+    }
+
+    .province-modal-header h2 {
+        font-size: 23px;
+    }
+
+    .province-modal-cities {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-city-item {
+        min-height: 36px;
+
+        padding: 8px;
+
+        font-size: 8px;
+    }
+
+    .distribution-footer {
+        padding-top: 40px;
+    }
+}
