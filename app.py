@@ -41,20 +41,36 @@ def penyedap_rasa_sisuka():
     return render_template('Penyedap_Rasa_Sisuka.html')
 
 
+# =====================================================
+# KATALOG
+# =====================================================
+
 @app.route('/Katalog')
 def katalog():
     return render_template('Katalog.html')
 
+
+# =====================================================
+# DISTRIBUSI
+# =====================================================
 
 @app.route('/Distribusi')
 def distribusi():
     return render_template('Distribusi.html')
 
 
+# =====================================================
+# DOMESTIK
+# =====================================================
+
 @app.route('/domestik')
 def domestik():
     return render_template('Domestik.html')
 
+
+# =====================================================
+# RUN SERVER
+# =====================================================
 
 if __name__ == '__main__':
     app.run(debug=True)
