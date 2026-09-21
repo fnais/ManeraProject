@@ -2,7 +2,6 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -25,7 +24,6 @@
     <link
         rel="stylesheet"
         href="{{ url_for('static', filename='distribusi.css') }}">
-
 </head>
 
 
@@ -43,11 +41,9 @@
         <!-- LOGO -->
 
         <a href="/" class="distribution-logo">
-
             <img
                 src="{{ url_for('static', filename='image/logo_manera.png') }}"
                 alt="Manera">
-
         </a>
 
 
@@ -79,7 +75,6 @@
             rel="noopener">
 
             <i class="fab fa-whatsapp"></i>
-
             Konsultasi Gratis
 
         </a>
@@ -91,7 +86,8 @@
             class="distribution-hamburger"
             id="distributionHamburger"
             type="button"
-            aria-label="Buka menu">
+            aria-label="Buka menu"
+            aria-expanded="false">
 
             <span></span>
             <span></span>
@@ -183,15 +179,13 @@
             <div class="distribution-stat-card">
 
                 <div class="distribution-stat-icon">
-
                     <i class="fas fa-location-dot"></i>
-
                 </div>
 
                 <div class="distribution-stat-content">
 
                     <strong>
-                        150+
+                        50+
                     </strong>
 
                     <span>
@@ -208,15 +202,13 @@
             <div class="distribution-stat-card">
 
                 <div class="distribution-stat-icon">
-
                     <i class="fas fa-map"></i>
-
                 </div>
 
                 <div class="distribution-stat-content">
 
                     <strong>
-                        30+
+                        10+
                     </strong>
 
                     <span>
@@ -233,9 +225,7 @@
             <div class="distribution-stat-card">
 
                 <div class="distribution-stat-icon">
-
                     <i class="fas fa-truck-fast"></i>
-
                 </div>
 
                 <div class="distribution-stat-content">
@@ -331,30 +321,12 @@
 
             </button>
 
-            <button
-                type="button"
-                class="distribution-filter-btn"
-                data-filter="sulawesi">
-
-                Sulawesi
-
-            </button>
-
-            <button
-                type="button"
-                class="distribution-filter-btn"
-                data-filter="bali-nusa">
-
-                Bali & Nusa Tenggara
-
-            </button>
-
         </div>
 
 
 
         <!-- =================================================
-             PROVINSI
+             SEMUA PROVINSI / WILAYAH
         ================================================== -->
 
         <div class="distribution-province-grid">
@@ -370,13 +342,10 @@
                 data-province="Jawa Tengah"
                 data-cities="Brebes|Pemalang|Tegal|Pekalongan|Batang|Kendal|Semarang|Salatiga|Grobogan|Temanggung|Kudus|Jepara|Pati|Rembang|Blora|Karanganyar|Solo|Wonogiri|Sukoharjo|Klaten|Magelang|Wonosobo|Purbalingga|Kebumen|Purwokerto|Banyumas">
 
-
                 <div class="province-card-top">
 
                     <div class="province-icon">
-
                         <i class="fas fa-map-pin"></i>
-
                     </div>
 
                     <div>
@@ -401,13 +370,11 @@
                     </span>
 
                     <strong>
-                        20+
+                        26+
                     </strong>
 
                 </div>
 
-
-                <!-- PREVIEW -->
 
                 <div class="province-cities">
 
@@ -471,13 +438,10 @@
                 data-province="Jawa Barat"
                 data-cities="Bekasi|Karawang|Subang|Indramayu|Cirebon|Majalengka|Sumedang|Purwakarta|Depok|Bogor|Cianjur|Cimahi|Bandung|Ciamis|Sukabumi|Tasikmalaya|Garut|Pangandaran">
 
-
                 <div class="province-card-top">
 
                     <div class="province-icon">
-
                         <i class="fas fa-map-pin"></i>
-
                     </div>
 
                     <div>
@@ -502,7 +466,7 @@
                     </span>
 
                     <strong>
-                        15+
+                        18
                     </strong>
 
                 </div>
@@ -570,13 +534,10 @@
                 data-province="Jawa Timur"
                 data-cities="Madiun|Ponorogo|Ngawi|Magetan|Kediri|Nganjuk|Blitar|Tulungagung|Trenggalek|Lamongan|Tuban|Bojonegoro">
 
-
                 <div class="province-card-top">
 
                     <div class="province-icon">
-
                         <i class="fas fa-map-pin"></i>
-
                     </div>
 
                     <div>
@@ -601,7 +562,7 @@
                     </span>
 
                     <strong>
-                        10+
+                        12
                     </strong>
 
                 </div>
@@ -669,13 +630,10 @@
                 data-province="DKI Jakarta"
                 data-cities="Kepulauan Seribu|Jakarta Barat|Jakarta Pusat|Jakarta Selatan|Jakarta Utara|Jakarta Timur">
 
-
                 <div class="province-card-top">
 
                     <div class="province-icon">
-
                         <i class="fas fa-map-pin"></i>
-
                     </div>
 
                     <div>
@@ -768,13 +726,10 @@
                 data-province="Banten"
                 data-cities="Cilegon|Serang|Tangerang|Lebak|Pandeglang">
 
-
                 <div class="province-card-top">
 
                     <div class="province-icon">
-
                         <i class="fas fa-map-pin"></i>
-
                     </div>
 
                     <div>
@@ -851,9 +806,177 @@
             </div>
 
 
-        </div>
 
-    </div>
+            <!-- =================================================
+                 SUMATERA
+            ================================================== -->
+
+            <div
+                class="province-card"
+                data-region="sumatera"
+                data-province="Sumatera"
+                data-cities="Riau|Bangka Belitung|Palembang|Lampung">
+
+                <div class="province-card-top">
+
+                    <div class="province-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WILAYAH
+                        </span>
+
+                        <h3>
+                            Sumatera
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="province-info">
+
+                    <span>
+                        Area Distribusi
+                    </span>
+
+                    <strong>
+                        4
+                    </strong>
+
+                </div>
+
+
+                <div class="province-cities">
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Riau
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Bangka Belitung
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Palembang
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Lampung
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="province-detail-btn"
+                    type="button"
+                    onclick="openProvince(this)">
+
+                    <span>
+                        Lihat Detail
+                    </span>
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 KALIMANTAN
+            ================================================== -->
+
+            <div
+                class="province-card"
+                data-region="kalimantan"
+                data-province="Kalimantan"
+                data-cities="Banjarmasin|Pontianak|Samarinda|Balikpapan">
+
+                <div class="province-card-top">
+
+                    <div class="province-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WILAYAH
+                        </span>
+
+                        <h3>
+                            Kalimantan
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="province-info">
+
+                    <span>
+                        Area Distribusi
+                    </span>
+
+                    <strong>
+                        4
+                    </strong>
+
+                </div>
+
+
+                <div class="province-cities">
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Banjarmasin
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Pontianak
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Samarinda
+                    </div>
+
+                    <div>
+                        <i class="fas fa-location-dot"></i>
+                        Balikpapan
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="province-detail-btn"
+                    type="button"
+                    onclick="openProvince(this)">
+
+                    <span>
+                        Lihat Detail
+                    </span>
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
 
 </section>
 
@@ -1027,21 +1150,19 @@
 
 <script>
 
-/* =====================================================
-   FILTER WILAYAH
-===================================================== */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    const filterButtons =
-        document.querySelectorAll(
-            ".distribution-filter-btn"
-        );
+    /* =====================================================
+       FILTER WILAYAH
+    ===================================================== */
 
-    const provinceCards =
-        document.querySelectorAll(
-            ".province-card"
-        );
+    const filterButtons = document.querySelectorAll(
+        ".distribution-filter-btn"
+    );
+
+    const provinceCards = document.querySelectorAll(
+        ".province-card"
+    );
 
 
     filterButtons.forEach(function (button) {
@@ -1049,24 +1170,17 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
 
             filterButtons.forEach(function (item) {
-
                 item.classList.remove("active");
-
             });
-
 
             button.classList.add("active");
 
-
-            const filter =
-                button.getAttribute("data-filter");
+            const filter = button.dataset.filter;
 
 
             provinceCards.forEach(function (card) {
 
-                const region =
-                    card.getAttribute("data-region");
-
+                const region = card.dataset.region;
 
                 if (
                     filter === "all" ||
@@ -1089,30 +1203,87 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* =================================================
+    /* =====================================================
        MOBILE MENU
-    ================================================= */
+    ===================================================== */
 
-    const hamburger =
-        document.getElementById(
-            "distributionHamburger"
-        );
+    const hamburger = document.getElementById(
+        "distributionHamburger"
+    );
 
-    const mobileMenu =
-        document.getElementById(
-            "distributionMobileMenu"
-        );
+    const mobileMenu = document.getElementById(
+        "distributionMobileMenu"
+    );
 
 
     if (hamburger && mobileMenu) {
 
         hamburger.addEventListener(
             "click",
-            function () {
+            function (event) {
+
+                event.stopPropagation();
 
                 hamburger.classList.toggle("active");
 
                 mobileMenu.classList.toggle("active");
+
+                const isActive =
+                    hamburger.classList.contains("active");
+
+                hamburger.setAttribute(
+                    "aria-expanded",
+                    isActive ? "true" : "false"
+                );
+
+            }
+        );
+
+
+        const mobileLinks =
+            mobileMenu.querySelectorAll("a");
+
+
+        mobileLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    hamburger.classList.remove("active");
+
+                    mobileMenu.classList.remove("active");
+
+                    hamburger.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !mobileMenu.contains(event.target) &&
+                    !hamburger.contains(event.target)
+                ) {
+
+                    hamburger.classList.remove("active");
+
+                    mobileMenu.classList.remove("active");
+
+                    hamburger.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
 
             }
         );
@@ -1121,18 +1292,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* =================================================
+    /* =====================================================
        ESC UNTUK TUTUP MODAL
-    ================================================= */
+    ===================================================== */
 
     document.addEventListener(
         "keydown",
         function (event) {
 
             if (event.key === "Escape") {
-
                 closeProvince();
-
             }
 
         }
@@ -1141,14 +1310,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
 /* =====================================================
    BUKA MODAL PROVINSI
 ===================================================== */
 
 function openProvince(button) {
 
-    const card =
-        button.closest(".province-card");
+    const card = button.closest(
+        ".province-card"
+    );
 
 
     if (!card) {
@@ -1157,46 +1328,30 @@ function openProvince(button) {
 
 
     const provinceName =
-        card.dataset.province;
+        card.dataset.province || "Wilayah Distribusi";
 
 
-    const cities =
-        card.dataset.cities
-            .split("|")
-            .map(function (city) {
-
-                return city.trim();
-
-            })
-            .filter(function (city) {
-
-                return city !== "";
-
-            });
+    const cities = (card.dataset.cities || "")
+        .split("|")
+        .map(function (city) {
+            return city.trim();
+        })
+        .filter(function (city) {
+            return city !== "";
+        });
 
 
     const modal =
-        document.getElementById(
-            "provinceModal"
-        );
-
+        document.getElementById("provinceModal");
 
     const modalTitle =
-        document.getElementById(
-            "provinceModalTitle"
-        );
-
+        document.getElementById("provinceModalTitle");
 
     const modalCount =
-        document.getElementById(
-            "provinceModalCount"
-        );
-
+        document.getElementById("provinceModalCount");
 
     const modalCities =
-        document.getElementById(
-            "provinceModalCities"
-        );
+        document.getElementById("provinceModalCities");
 
 
     if (
@@ -1209,22 +1364,34 @@ function openProvince(button) {
     }
 
 
-    /* NAMA PROVINSI */
+    /* NAMA WILAYAH */
 
     modalTitle.textContent =
         provinceName;
 
 
-    /* JUMLAH KOTA */
+    /* JUMLAH DATA */
 
-    modalCount.textContent =
-        `${cities.length} Kota & Kabupaten`;
+    if (
+        cities.length === 1 &&
+        cities[0].toLowerCase().includes("akan diperbarui")
+    ) {
+
+        modalCount.textContent =
+            "Informasi akan diperbarui";
+
+    } else {
+
+        modalCount.textContent =
+            `${cities.length} Area Distribusi`;
+
+    }
 
 
-    /* SEMUA KOTA */
+    /* SEMUA KOTA / WILAYAH */
 
-    modalCities.innerHTML =
-        cities.map(function (city) {
+    modalCities.innerHTML = cities.map(
+        function (city) {
 
             return `
                 <div class="modal-city-item">
@@ -1238,7 +1405,8 @@ function openProvince(button) {
                 </div>
             `;
 
-        }).join("");
+        }
+    ).join("");
 
 
     /* BUKA MODAL */
@@ -1258,6 +1426,7 @@ function openProvince(button) {
 }
 
 
+
 /* =====================================================
    TUTUP MODAL
 ===================================================== */
@@ -1265,9 +1434,7 @@ function openProvince(button) {
 function closeProvince() {
 
     const modal =
-        document.getElementById(
-            "provinceModal"
-        );
+        document.getElementById("provinceModal");
 
 
     if (!modal) {

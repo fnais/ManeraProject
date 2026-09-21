@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distribusi Internasional - Manera</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS Distribusi -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='distribusi.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="distribution-navbar">
+
+    <div class="distribution-nav-wrapper">
+
+        <!-- LOGO -->
+        <a
+            href="/"
+            class="distribution-logo"
+            aria-label="Manera">
+
+            <img
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera">
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="distribution-nav">
+
+            <a href="/">
+                Beranda
+            </a>
+
+            <a href="/Katalog">
+                Katalog Produk
+            </a>
+
+            <a
+                href="/Distribusi"
+                class="active">
+
+                Distribusi
+
+            </a>
+
+        </nav>
+
+
+        <!-- WHATSAPP -->
+        <a
+            href="https://wa.me/6282322238885"
+            class="distribution-wa"
+            target="_blank"
+            rel="noopener">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
+        </a>
+
+
+        <!-- HAMBURGER -->
+        <button
+            class="distribution-hamburger"
+            id="distributionHamburger"
+            type="button"
+            aria-label="Buka menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div
+        class="distribution-mobile-menu"
+        id="distributionMobileMenu">
+
+        <a href="/">
+            Beranda
+        </a>
+
+        <a href="/Katalog">
+            Katalog Produk
+        </a>
+
+        <a href="/Distribusi">
+            Distribusi
+        </a>
+
+        <a
+            href="https://wa.me/6282322238885"
+            target="_blank"
+            rel="noopener">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO INTERNASIONAL
+===================================================== -->
+
+<section class="distribution-hero">
+
+    <div class="distribution-hero-overlay"></div>
+
+    <div class="distribution-hero-content">
+
+        <span class="distribution-hero-label">
+            JANGKAUAN DISTRIBUSI INTERNASIONAL
+        </span>
+
+        <h1>
+            Produk Manera
+            <br>
+            <strong>Hadir di Luar Negeri</strong>
+        </h1>
+
+        <p>
+            Produk Manera telah menjangkau pasar internasional
+            melalui jaringan distribusi dan kerja sama bisnis.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATISTIK INTERNASIONAL
+===================================================== -->
+
+<section class="distribution-stat-section">
+
+    <div class="distribution-container">
+
+        <div class="distribution-stat-grid">
+
+
+            <!-- STAT 1 -->
+            <div class="distribution-stat-card">
+
+                <div class="distribution-stat-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+
+                <div class="distribution-stat-content">
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        Area Internasional
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- STAT 2 -->
+            <div class="distribution-stat-card">
+
+                <div class="distribution-stat-icon">
+                    <i class="fas fa-earth-asia"></i>
+                </div>
+
+                <div class="distribution-stat-content">
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        Kawasan
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- STAT 3 -->
+            <div class="distribution-stat-card">
+
+                <div class="distribution-stat-icon">
+                    <i class="fas fa-plane-departure"></i>
+                </div>
+
+                <div class="distribution-stat-content">
+
+                    <strong>
+                        Global
+                    </strong>
+
+                    <span>
+                        Jangkauan Produk
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSEBARAN INTERNASIONAL
+===================================================== -->
+
+<section class="distribution-area">
+
+    <div class="distribution-container">
+
+
+        <!-- HEADER -->
+        <div class="distribution-section-header">
+
+            <span>
+                PERSEBARAN INTERNASIONAL
+            </span>
+
+            <h2>
+                Distribusi Produk di Luar Negeri
+            </h2>
+
+            <p>
+                Produk Manera telah menjangkau beberapa wilayah
+                internasional melalui jaringan distribusi dan kerja sama bisnis.
+            </p>
+
+        </div>
+
+
+
+        <!-- FILTER -->
+        <div class="distribution-filter">
+
+            <button
+                type="button"
+                class="distribution-filter-btn active"
+                data-filter="all">
+
+                Semua
+
+            </button>
+
+
+            <button
+                type="button"
+                class="distribution-filter-btn"
+                data-filter="asia-tenggara">
+
+                Asia Tenggara
+
+            </button>
+
+
+            <button
+                type="button"
+                class="distribution-filter-btn"
+                data-filter="timur-tengah">
+
+                Timur Tengah
+
+            </button>
+
+        </div>
+
+
+
+        <!-- KARTU DISTRIBUSI -->
+        <div class="distribution-province-grid">
+
+
+            <!-- =================================================
+                 TIMOR-LESTE
+            ================================================== -->
+
+            <div
+                class="province-card"
+                data-region="asia-tenggara"
+                data-province="Timor-Leste"
+                data-cities="Timor-Leste">
+
+
+                <!-- CARD TOP -->
+                <div class="province-card-top">
+
+                    <div class="province-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            NEGARA
+                        </span>
+
+                        <h3>
+                            Timor-Leste
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INFO -->
+                <div class="province-info">
+
+                    <span>
+                        Negara Tujuan
+                    </span>
+
+                    <strong>
+                        1
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PREVIEW -->
+                <div class="province-cities">
+
+                    <div>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        Timor-Leste
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DETAIL -->
+                <button
+                    class="province-detail-btn"
+                    type="button"
+                    onclick="openProvince(this)">
+
+                    <span>
+                        Lihat Detail
+                    </span>
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DUBAI
+            ================================================== -->
+
+            <div
+                class="province-card"
+                data-region="timur-tengah"
+                data-province="Dubai, Uni Emirat Arab"
+                data-cities="Dubai, Uni Emirat Arab">
+
+
+                <!-- CARD TOP -->
+                <div class="province-card-top">
+
+                    <div class="province-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            KOTA / EMIRAT
+                        </span>
+
+                        <h3>
+                            Dubai
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INFO -->
+                <div class="province-info">
+
+                    <span>
+                        Wilayah Tujuan
+                    </span>
+
+                    <strong>
+                        1
+                    </strong>
+
+                </div>
+
+
+
+                <!-- PREVIEW -->
+                <div class="province-cities">
+
+                    <div>
+
+                        <i class="fas fa-location-dot"></i>
+
+                        Dubai, Uni Emirat Arab
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DETAIL -->
+                <button
+                    class="province-detail-btn"
+                    type="button"
+                    onclick="openProvince(this)">
+
+                    <span>
+                        Lihat Detail
+                    </span>
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MODAL DETAIL
+===================================================== -->
+
+<div
+    class="province-modal"
+    id="provinceModal"
+    aria-hidden="true">
+
+
+    <!-- OVERLAY -->
+    <div
+        class="province-modal-overlay"
+        onclick="closeProvince()">
+    </div>
+
+
+
+    <!-- MODAL CONTENT -->
+    <div
+        class="province-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="provinceModalTitle">
+
+
+        <!-- CLOSE -->
+        <button
+            type="button"
+            class="province-modal-close"
+            onclick="closeProvince()"
+            aria-label="Tutup">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+
+
+        <!-- HEADER -->
+        <div class="province-modal-header">
+
+            <span>
+                PERSEBARAN INTERNASIONAL
+            </span>
+
+            <h2 id="provinceModalTitle">
+                Timor-Leste
+            </h2>
+
+            <p id="provinceModalCount">
+                Wilayah Tujuan
+            </p>
+
+        </div>
+
+
+
+        <!-- LIST -->
+        <div
+            class="province-modal-cities"
+            id="provinceModalCities">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="distribution-footer">
+
+    <div class="distribution-footer-container">
+
+
+        <!-- BRAND -->
+        <div class="distribution-footer-brand">
+
+            <img
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera">
+
+            <p>
+                Produsen pangan terpercaya Indonesia.
+            </p>
+
+        </div>
+
+
+
+        <!-- NAVIGASI -->
+        <div class="distribution-footer-column">
+
+            <h4>
+                Navigasi
+            </h4>
+
+            <a href="/">
+                Beranda
+            </a>
+
+            <a href="/Katalog">
+                Katalog Produk
+            </a>
+
+            <a href="/Distribusi">
+                Distribusi
+            </a>
+
+        </div>
+
+
+
+        <!-- KONTAK -->
+        <div class="distribution-footer-column">
+
+            <h4>
+                Kontak
+            </h4>
+
+            <a
+                href="https://wa.me/6282322238885"
+                target="_blank"
+                rel="noopener">
+
+                <i class="fab fa-whatsapp"></i>
+
+                +62 823 2223 8885
+
+            </a>
+
+
+            <a href="mailto:manerapacific@gmail.com">
+
+                <i class="fas fa-envelope"></i>
+
+                manerapacific@gmail.com
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- COPYRIGHT -->
+    <div class="distribution-footer-bottom">
+
+        © 2026 PT Manera Pacific Indonesia.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   FILTER WILAYAH
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filterButtons =
+        document.querySelectorAll(".distribution-filter-btn");
+
+    const provinceCards =
+        document.querySelectorAll(".province-card");
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            /* AKTIFKAN BUTTON */
+
+            filterButtons.forEach(function (item) {
+
+                item.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+
+            /* AMBIL FILTER */
+
+            const filter =
+                button.dataset.filter;
+
+
+            /* FILTER CARD */
+
+            provinceCards.forEach(function (card) {
+
+                const region =
+                    card.dataset.region;
+
+
+                if (
+                    filter === "all" ||
+                    region === filter
+                ) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    const hamburger =
+        document.getElementById("distributionHamburger");
+
+    const mobileMenu =
+        document.getElementById("distributionMobileMenu");
+
+
+    if (hamburger && mobileMenu) {
+
+        hamburger.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
+
+            hamburger.classList.toggle("active");
+
+            mobileMenu.classList.toggle("active");
+
+
+            const isActive =
+                hamburger.classList.contains("active");
+
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                isActive ? "true" : "false"
+            );
+
+        });
+
+
+
+        /* CLOSE MENU SETELAH LINK DIKLIK */
+
+        const mobileLinks =
+            mobileMenu.querySelectorAll("a");
+
+
+        mobileLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                hamburger.classList.remove("active");
+
+                mobileMenu.classList.remove("active");
+
+                hamburger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+
+        /* CLOSE KETIKA KLIK DI LUAR */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !mobileMenu.contains(event.target) &&
+                !hamburger.contains(event.target)
+            ) {
+
+                hamburger.classList.remove("active");
+
+                mobileMenu.classList.remove("active");
+
+                hamburger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        });
+
+    }
+
+
+
+    /* =================================================
+       ESC UNTUK MENUTUP MODAL
+    ================================================= */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            closeProvince();
+
+        }
+
+    });
+
+});
+
+
+
+/* =====================================================
+   BUKA MODAL DETAIL
+===================================================== */
+
+function openProvince(button) {
+
+    const card =
+        button.closest(".province-card");
+
+
+    if (!card) {
+        return;
+    }
+
+
+    /* NAMA WILAYAH */
+
+    const provinceName =
+        card.dataset.province ||
+        "Wilayah Internasional";
+
+
+    /* DATA WILAYAH */
+
+    const cities =
+        (card.dataset.cities || "")
+            .split("|")
+            .map(function (city) {
+
+                return city.trim();
+
+            })
+            .filter(function (city) {
+
+                return city !== "";
+
+            });
+
+
+    /* ELEMENT MODAL */
+
+    const modal =
+        document.getElementById("provinceModal");
+
+    const modalTitle =
+        document.getElementById("provinceModalTitle");
+
+    const modalCount =
+        document.getElementById("provinceModalCount");
+
+    const modalCities =
+        document.getElementById("provinceModalCities");
+
+
+    if (
+        !modal ||
+        !modalTitle ||
+        !modalCount ||
+        !modalCities
+    ) {
+
+        return;
+
+    }
+
+
+
+    /* SET JUDUL */
+
+    modalTitle.textContent =
+        provinceName;
+
+
+
+    /* SET JUMLAH */
+
+    modalCount.textContent =
+        `${cities.length} Wilayah Tujuan`;
+
+
+
+    /* SET DAFTAR */
+
+    modalCities.innerHTML =
+        cities.map(function (city) {
+
+            return `
+                <div class="modal-city-item">
+
+                    <i class="fas fa-location-dot"></i>
+
+                    <span>
+                        ${city}
+                    </span>
+
+                </div>
+            `;
+
+        }).join("");
+
+
+
+    /* BUKA MODAL */
+
+    modal.classList.add("active");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    document.body.classList.add("modal-open");
+
+}
+
+
+
+/* =====================================================
+   TUTUP MODAL
+===================================================== */
+
+function closeProvince() {
+
+    const modal =
+        document.getElementById("provinceModal");
+
+
+    if (!modal) {
+        return;
+    }
+
+
+    modal.classList.remove("active");
+
+    modal.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    document.body.classList.remove("modal-open");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

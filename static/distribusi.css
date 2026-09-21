@@ -1,12 +1,12 @@
-/* =====================================================
+/* =========================================================
    DISTRIBUSI PAGE
    PT MANERA PACIFIC INDONESIA
-===================================================== */
+========================================================= */
 
 
-/* =====================================================
+/* =========================================================
    GLOBAL
-===================================================== */
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -30,22 +30,27 @@ body.modal-open {
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 }
 
 button {
-    font-family: inherit;
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
 }
 
 .distribution-container {
     width: min(1180px, 92%);
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 
-/* =====================================================
+/* =========================================================
    NAVBAR
-===================================================== */
+========================================================= */
 
 .distribution-navbar {
     position: sticky;
@@ -55,7 +60,6 @@ button {
     width: 100%;
 
     background: #ffffff;
-
     border-bottom: 1px solid rgba(28, 48, 78, 0.08);
 
     box-shadow: 0 3px 15px rgba(28, 48, 78, 0.04);
@@ -64,7 +68,8 @@ button {
 .distribution-nav-wrapper {
     width: min(1280px, 92%);
     min-height: 76px;
-    margin: 0 auto;
+
+    margin-inline: auto;
 
     display: flex;
     align-items: center;
@@ -74,9 +79,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    LOGO
-===================================================== */
+========================================================= */
 
 .distribution-logo {
     display: flex;
@@ -85,15 +90,15 @@ button {
 }
 
 .distribution-logo img {
+    display: block;
     width: 145px;
     height: auto;
-    display: block;
 }
 
 
-/* =====================================================
-   NAVIGATION
-===================================================== */
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
 
 .distribution-nav {
     display: flex;
@@ -107,12 +112,12 @@ button {
 .distribution-nav a {
     position: relative;
 
+    padding: 28px 0;
+
     color: #1C304E;
 
     font-size: 11px;
     font-weight: 600;
-
-    padding: 28px 0;
 
     transition: color 0.25s ease;
 }
@@ -121,7 +126,6 @@ button {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: 20px;
 
@@ -135,31 +139,26 @@ button {
     transition: width 0.25s ease;
 }
 
-.distribution-nav a:hover,
-.distribution-nav a.active {
-    color: #1C304E;
-}
-
 .distribution-nav a:hover::after,
 .distribution-nav a.active::after {
     width: 100%;
 }
 
 
-/* =====================================================
-   WHATSAPP
-===================================================== */
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
 
 .distribution-wa {
+    min-width: 150px;
+
+    padding: 12px 18px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     gap: 8px;
-
-    min-width: 150px;
-
-    padding: 12px 18px;
 
     border-radius: 30px;
 
@@ -169,7 +168,9 @@ button {
     font-size: 10px;
     font-weight: 700;
 
-    transition: all 0.25s ease;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
 .distribution-wa i {
@@ -182,9 +183,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    HAMBURGER
-===================================================== */
+========================================================= */
 
 .distribution-hamburger {
     display: none;
@@ -192,42 +193,44 @@ button {
     width: 40px;
     height: 40px;
 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 5px;
+
     border: 0;
     background: transparent;
 
     cursor: pointer;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 5px;
 }
 
 .distribution-hamburger span {
     width: 23px;
     height: 2px;
 
-    background: #1C304E;
-
     border-radius: 10px;
 
-    transition: all 0.25s ease;
+    background: #1C304E;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE MENU
-===================================================== */
+========================================================= */
 
 .distribution-mobile-menu {
     display: none;
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .distribution-hero {
     position: relative;
@@ -249,34 +252,33 @@ button {
         );
 }
 
-.distribution-hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 420px;
-    height: 420px;
-
-    right: -130px;
-    top: -180px;
-
-    border-radius: 50%;
-
-    background: rgba(255, 210, 0, 0.09);
-}
-
+.distribution-hero::before,
 .distribution-hero::after {
     content: "";
 
     position: absolute;
 
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.distribution-hero::before {
+    width: 420px;
+    height: 420px;
+
+    top: -180px;
+    right: -130px;
+
+    background: rgba(255, 210, 0, 0.09);
+}
+
+.distribution-hero::after {
     width: 300px;
     height: 300px;
 
     left: -130px;
     bottom: -170px;
-
-    border-radius: 50%;
 
     background: rgba(255, 255, 255, 0.06);
 }
@@ -299,9 +301,9 @@ button {
 
     width: min(760px, 90%);
 
-    text-align: center;
-
     color: #ffffff;
+
+    text-align: center;
 }
 
 .distribution-hero-label {
@@ -320,11 +322,12 @@ button {
 .distribution-hero-content h1 {
     margin: 0;
 
+    color: #ffffff;
+
     font-size: clamp(36px, 5vw, 62px);
+    font-weight: 700;
 
     line-height: 1.1;
-
-    font-weight: 700;
 }
 
 .distribution-hero-content h1 strong {
@@ -344,23 +347,20 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    STATISTICS
-===================================================== */
+========================================================= */
 
 .distribution-stat-section {
     position: relative;
+    z-index: 5;
 
     margin-top: -55px;
-
     padding-bottom: 35px;
-
-    z-index: 5;
 }
 
 .distribution-stat-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
 
     gap: 18px;
@@ -379,7 +379,6 @@ button {
     background: #ffffff;
 
     border: 1px solid rgba(28, 48, 78, 0.07);
-
     border-radius: 17px;
 
     box-shadow:
@@ -399,7 +398,6 @@ button {
     border-radius: 13px;
 
     background: #1C304E;
-
     color: #FFD200;
 
     font-size: 18px;
@@ -428,9 +426,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    DISTRIBUTION AREA
-===================================================== */
+========================================================= */
 
 .distribution-area {
     padding: 65px 0 100px;
@@ -439,9 +437,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    SECTION HEADER
-===================================================== */
+========================================================= */
 
 .distribution-section-header {
     max-width: 720px;
@@ -470,50 +468,46 @@ button {
     color: #1C304E;
 
     font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
 
     line-height: 1.2;
-
-    font-weight: 800;
 }
 
 .distribution-section-header p {
     max-width: 620px;
 
-    margin: 0 auto;
+    margin-inline: auto;
 
     color: #718096;
 
     font-size: 13px;
-
     line-height: 1.8;
 }
 
 
-/* =====================================================
+/* =========================================================
    FILTER
-===================================================== */
+========================================================= */
 
 .distribution-filter {
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    gap: 8px;
+    justify-content: center;
 
     flex-wrap: wrap;
+
+    gap: 8px;
 
     margin-bottom: 35px;
 }
 
 .distribution-filter-btn {
-    border: 1px solid rgba(28, 48, 78, 0.09);
-
     padding: 10px 18px;
 
+    border: 1px solid rgba(28, 48, 78, 0.09);
     border-radius: 30px;
 
     background: #ffffff;
-
     color: #64748b;
 
     font-size: 10px;
@@ -530,7 +524,6 @@ button {
 
 .distribution-filter-btn:hover {
     border-color: #1C304E;
-
     color: #1C304E;
 
     transform: translateY(-1px);
@@ -540,14 +533,13 @@ button {
     border-color: #1C304E;
 
     background: #1C304E;
-
     color: #ffffff;
 }
 
 
-/* =====================================================
-   PROVINCE GRID
-===================================================== */
+/* =========================================================
+   PROVINCE / REGION GRID
+========================================================= */
 
 .distribution-province-grid {
     display: grid;
@@ -558,9 +550,9 @@ button {
 }
 
 
-/* =====================================================
-   PROVINCE CARD
-===================================================== */
+/* =========================================================
+   PROVINCE / REGION CARD
+========================================================= */
 
 .province-card {
     padding: 20px;
@@ -568,7 +560,6 @@ button {
     background: #ffffff;
 
     border: 1px solid rgba(28, 48, 78, 0.07);
-
     border-radius: 16px;
 
     box-shadow:
@@ -581,22 +572,21 @@ button {
 }
 
 .province-card:hover {
-    transform: translateY(-3px);
-
     border-color: rgba(28, 48, 78, 0.14);
 
     box-shadow:
         0 15px 35px rgba(28, 48, 78, 0.09);
+
+    transform: translateY(-3px);
 }
 
 
-/* =====================================================
-   PROVINCE TOP
-===================================================== */
+/* =========================================================
+   CARD TOP
+========================================================= */
 
 .province-card-top {
     display: flex;
-
     align-items: center;
 
     gap: 11px;
@@ -613,14 +603,12 @@ button {
     flex-shrink: 0;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     border-radius: 10px;
 
     background: rgba(255, 210, 0, 0.20);
-
     color: #1C304E;
 
     font-size: 15px;
@@ -649,13 +637,12 @@ button {
 }
 
 
-/* =====================================================
-   PROVINCE INFO
-===================================================== */
+/* =========================================================
+   CARD INFO
+========================================================= */
 
 .province-info {
     display: flex;
-
     align-items: center;
     justify-content: space-between;
 
@@ -676,10 +663,9 @@ button {
 }
 
 
-/* =====================================================
-   CITY PREVIEW
-   HANYA 6 KOTA DI CARD
-===================================================== */
+/* =========================================================
+   CITY / COUNTRY PREVIEW
+========================================================= */
 
 .province-cities,
 .province-city-list {
@@ -690,19 +676,10 @@ button {
     gap: 6px;
 }
 
-
-/*
-   Jika semua kota dirender di dalam card,
-   hanya 6 kota pertama yang terlihat.
-*/
-
 .province-cities > div:nth-child(n + 7),
 .province-city-list > div:nth-child(n + 7) {
     display: none;
 }
-
-
-/* KOTA */
 
 .province-cities > div,
 .province-city {
@@ -711,7 +688,6 @@ button {
     padding: 7px 8px;
 
     display: flex;
-
     align-items: center;
 
     gap: 5px;
@@ -719,34 +695,34 @@ button {
     border-radius: 7px;
 
     background: #f6f8fa;
-
     color: #475569;
 
     font-size: 8px;
-
     font-weight: 600;
 }
 
 .province-cities i,
 .province-city i {
+    flex-shrink: 0;
+
     color: #18a957;
 
     font-size: 7px;
-
-    flex-shrink: 0;
 }
 
 
-/* =====================================================
+/* =========================================================
    EMPTY / COMING SOON
-===================================================== */
+========================================================= */
 
 .province-coming {
     grid-column: 1 / -1;
 
-    justify-content: center;
-
     min-height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     color: #94a3b8;
 
@@ -758,30 +734,26 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    DETAIL BUTTON
-===================================================== */
+========================================================= */
 
 .province-detail-btn {
     width: 100%;
 
     margin-top: 13px;
-
     padding: 9px 12px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     gap: 5px;
 
     border: 1px solid #dfe4e8;
-
     border-radius: 7px;
 
     background: #ffffff;
-
     color: #1C304E;
 
     font-size: 9px;
@@ -797,11 +769,10 @@ button {
 }
 
 .province-detail-btn:hover {
-    background: #1C304E;
-
-    color: #ffffff;
-
     border-color: #1C304E;
+
+    background: #1C304E;
+    color: #ffffff;
 
     transform: translateY(-1px);
 }
@@ -811,23 +782,21 @@ button {
 }
 
 
-/* =====================================================
-   PROVINCE DETAIL MODAL
-===================================================== */
+/* =========================================================
+   MODAL
+========================================================= */
 
 .province-modal {
     position: fixed;
-
     inset: 0;
 
     z-index: 9999;
 
-    display: flex;
+    padding: 24px;
 
+    display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 24px;
 
     opacity: 0;
     visibility: hidden;
@@ -840,18 +809,17 @@ button {
 
 .province-modal.active {
     opacity: 1;
-
     visibility: visible;
-
     pointer-events: auto;
 }
 
 
-/* MODAL BACKGROUND */
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
 
 .province-modal-overlay {
     position: absolute;
-
     inset: 0;
 
     background: rgba(15, 25, 40, 0.65);
@@ -860,15 +828,15 @@ button {
 }
 
 
-/* MODAL BOX */
+/* =========================================================
+   MODAL CONTENT
+========================================================= */
 
 .province-modal-content {
     position: relative;
-
     z-index: 2;
 
     width: min(720px, 100%);
-
     max-height: 85vh;
 
     overflow-y: auto;
@@ -897,7 +865,9 @@ button {
 }
 
 
-/* MODAL CLOSE */
+/* =========================================================
+   MODAL CLOSE
+========================================================= */
 
 .province-modal-close {
     position: absolute;
@@ -909,16 +879,13 @@ button {
     height: 34px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     border: 0;
-
     border-radius: 50%;
 
     background: #f3f5f7;
-
     color: #1C304E;
 
     cursor: pointer;
@@ -932,12 +899,13 @@ button {
 
 .province-modal-close:hover {
     background: #1C304E;
-
     color: #ffffff;
 }
 
 
-/* MODAL HEADER */
+/* =========================================================
+   MODAL HEADER
+========================================================= */
 
 .province-modal-header {
     padding-right: 45px;
@@ -953,36 +921,32 @@ button {
     color: #18a957;
 
     font-size: 9px;
-
     font-weight: 800;
 
     letter-spacing: 1.5px;
 }
 
 .province-modal-header h2 {
-    margin: 0 0 3px;
+    margin-bottom: 3px;
 
     color: #1C304E;
 
     font-size: 26px;
+    font-weight: 800;
 
     line-height: 1.2;
-
-    font-weight: 800;
 }
 
 .province-modal-header p {
-    margin: 0;
-
     color: #7b8490;
 
     font-size: 11px;
 }
 
 
-/* =====================================================
-   ALL CITIES INSIDE MODAL
-===================================================== */
+/* =========================================================
+   MODAL CITY / COUNTRY LIST
+========================================================= */
 
 .province-modal-cities {
     display: grid;
@@ -995,37 +959,34 @@ button {
 .modal-city-item {
     min-height: 38px;
 
-    display: flex;
+    padding: 9px 10px;
 
+    display: flex;
     align-items: center;
 
     gap: 7px;
 
-    padding: 9px 10px;
-
-    background: #f6f8fa;
-
     border-radius: 7px;
 
+    background: #f6f8fa;
     color: #374151;
 
     font-size: 9px;
-
     font-weight: 600;
 }
 
 .modal-city-item i {
+    flex-shrink: 0;
+
     color: #18a957;
 
     font-size: 7px;
-
-    flex-shrink: 0;
 }
 
 
-/* =====================================================
+/* =========================================================
    MODAL SCROLLBAR
-===================================================== */
+========================================================= */
 
 .province-modal-content::-webkit-scrollbar {
     width: 5px;
@@ -1044,43 +1005,38 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
 .distribution-footer {
+    padding-top: 50px;
+
     background: #020d27;
-
     color: #ffffff;
-
-    padding: 50px 0 0;
 }
 
 .distribution-footer-container {
     width: min(1180px, 92%);
 
-    margin: 0 auto;
+    margin-inline: auto;
+    padding-bottom: 40px;
 
     display: grid;
 
     grid-template-columns: 1.5fr 1fr 1fr;
 
     gap: 80px;
-
-    padding-bottom: 40px;
 }
 
 .distribution-footer-container > div {
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-start;
 }
 
 .distribution-footer-container img {
     width: 130px;
-
     height: auto;
 
     margin-bottom: 10px;
@@ -1127,8 +1083,7 @@ button {
 .distribution-footer-bottom {
     width: min(1180px, 92%);
 
-    margin: 0 auto;
-
+    margin-inline: auto;
     padding: 20px 0;
 
     border-top: 1px solid rgba(255, 255, 255, 0.10);
@@ -1141,9 +1096,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -1153,12 +1108,7 @@ button {
 
     .distribution-wa {
         min-width: auto;
-
         padding: 11px 15px;
-    }
-
-    .distribution-stat-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .distribution-province-grid {
@@ -1171,11 +1121,13 @@ button {
 }
 
 
-/* =====================================================
-   MOBILE NAVBAR
-===================================================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
+
+    /* NAVBAR */
 
     .distribution-nav {
         display: none;
@@ -1189,15 +1141,22 @@ button {
         display: flex;
     }
 
+
+    /* MOBILE MENU */
+
     .distribution-mobile-menu {
         position: absolute;
-
         top: 100%;
         left: 0;
 
         width: 100%;
 
         padding: 15px 5% 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 4px;
 
         background: #ffffff;
 
@@ -1206,23 +1165,19 @@ button {
         box-shadow:
             0 12px 25px rgba(28, 48, 78, 0.08);
 
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 4px;
-
         opacity: 0;
         visibility: hidden;
 
         transform: translateY(-10px);
 
-        transition: all 0.25s ease;
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.25s ease;
     }
 
     .distribution-mobile-menu.active {
         opacity: 1;
-
         visibility: visible;
 
         transform: translateY(0);
@@ -1241,13 +1196,17 @@ button {
 
     .distribution-mobile-menu a:hover {
         background: #f4f6f8;
-
-        color: #1C304E;
     }
+
+
+    /* HERO */
 
     .distribution-hero {
         min-height: 380px;
     }
+
+
+    /* STATISTICS */
 
     .distribution-stat-section {
         margin-top: -40px;
@@ -1263,11 +1222,15 @@ button {
         min-height: 90px;
     }
 
+
+    /* FOOTER */
+
     .distribution-footer-container {
         grid-template-columns: 1fr;
 
         gap: 30px;
     }
+
 
     /* MODAL */
 
@@ -1287,7 +1250,8 @@ button {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* PREVIEW CITY */
+
+    /* CITY PREVIEW */
 
     .province-cities,
     .province-city-list {
@@ -1296,11 +1260,13 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    SMALL MOBILE
-===================================================== */
+========================================================= */
 
 @media (max-width: 600px) {
+
+    /* NAVBAR */
 
     .distribution-nav-wrapper {
         min-height: 65px;
@@ -1309,6 +1275,9 @@ button {
     .distribution-logo img {
         width: 120px;
     }
+
+
+    /* HERO */
 
     .distribution-hero {
         min-height: 350px;
@@ -1320,9 +1289,11 @@ button {
 
     .distribution-hero-content p {
         font-size: 12px;
-
         line-height: 1.7;
     }
+
+
+    /* AREA */
 
     .distribution-area {
         padding: 55px 0 70px;
@@ -1340,6 +1311,9 @@ button {
         font-size: 11px;
     }
 
+
+    /* FILTER */
+
     .distribution-filter {
         justify-content: flex-start;
 
@@ -1348,7 +1322,6 @@ button {
         overflow-x: auto;
 
         padding-bottom: 8px;
-
         margin-bottom: 25px;
 
         scrollbar-width: none;
@@ -1361,6 +1334,9 @@ button {
     .distribution-filter-btn {
         flex-shrink: 0;
     }
+
+
+    /* CARD */
 
     .province-card {
         padding: 17px;
@@ -1392,6 +1368,7 @@ button {
         font-size: 8px;
     }
 
+
     /* MODAL */
 
     .province-modal {
@@ -1419,6 +1396,9 @@ button {
 
         font-size: 8px;
     }
+
+
+    /* FOOTER */
 
     .distribution-footer {
         padding-top: 40px;

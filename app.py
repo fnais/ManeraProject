@@ -68,6 +68,10 @@ def domestik():
     return render_template('Domestik.html')
 
 
+@app.route('/internasional')
+def internasional():
+    return render_template('Internasional.html')
+
 # =====================================================
 # RUN SERVER
 # =====================================================
