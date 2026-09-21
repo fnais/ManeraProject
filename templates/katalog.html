@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katalog Produk | PT Manera Pacific Indonesia</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS Katalog -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='katalog.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="catalog-navbar">
+
+    <div class="catalog-nav-wrapper">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="/"
+            class="catalog-logo"
+            aria-label="Manera">
+
+            <img
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera">
+
+        </a>
+
+
+        <!-- BACK -->
+
+        <a
+            href="/"
+            class="catalog-back">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Kembali
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO KATALOG
+===================================================== -->
+
+<section class="catalog-hero">
+
+    <div class="catalog-hero-content">
+
+        <span class="catalog-label">
+            PRODUK MANERA
+        </span>
+
+
+        <h1>
+            KATALOG PRODUK
+        </h1>
+
+
+        <p>
+            Temukan berbagai produk berkualitas dari
+            PT Manera Pacific Indonesia untuk kebutuhan
+            rumah tangga maupun bisnis Anda.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCT CATALOG
+===================================================== -->
+
+<section class="catalog-section">
+
+    <div class="catalog-container">
+
+
+        <div class="catalog-section-header">
+
+            <span>
+                PILIH PRODUK
+            </span>
+
+            <h2>
+                Produk Kami
+            </h2>
+
+        </div>
+
+
+
+        <div class="catalog-grid">
+
+
+            <!-- =================================================
+                 PRODUK 1 — PION 280GR
+            ================================================== -->
+
+            <a
+                href="/Bihun_Jagung_Pion_Tunggal"
+                class="catalog-card">
+
+                <div class="catalog-image">
+
+                    <img
+                        src="{{ url_for('static', filename='image/280grpion.png') }}"
+                        alt="Bihun Jagung Pion Tunggal 280GR">
+
+                </div>
+
+
+                <div class="catalog-content">
+
+                    <span class="catalog-category">
+                        BIHUN JAGUNG
+                    </span>
+
+
+                    <h3>
+                        Bihun Jagung Pion Tunggal 280GR
+                    </h3>
+
+
+                    <p>
+                        Bihun jagung dengan tekstur kenyal
+                        dan cocok untuk berbagai olahan.
+                    </p>
+
+
+                    <div class="catalog-button">
+
+                        Lihat Produk
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PRODUK 2 — PION 140GR
+            ================================================== -->
+
+            <a
+                href="/Bihun_Jagung_Pion_Tunggal_140gr"
+                class="catalog-card">
+
+                <div class="catalog-image">
+
+                    <img
+                        src="{{ url_for('static', filename='image/140grpion.png') }}"
+                        alt="Bihun Jagung Pion Tunggal 140GR">
+
+                </div>
+
+
+                <div class="catalog-content">
+
+                    <span class="catalog-category">
+                        BIHUN JAGUNG
+                    </span>
+
+
+                    <h3>
+                        Bihun Jagung Pion Tunggal 140GR
+                    </h3>
+
+
+                    <p>
+                        Kemasan praktis dan ekonomis untuk
+                        kebutuhan rumah tangga.
+                    </p>
+
+
+                    <div class="catalog-button">
+
+                        Lihat Produk
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PRODUK 3 — PITUNG 300GR
+            ================================================== -->
+
+            <a
+                href="/Bihun_Jagung_Pitung"
+                class="catalog-card">
+
+                <div class="catalog-image">
+
+                    <img
+                        src="{{ url_for('static', filename='image/300grpitung.png') }}"
+                        alt="Bihun Jagung Pitung 300GR">
+
+                </div>
+
+
+                <div class="catalog-content">
+
+                    <span class="catalog-category">
+                        BIHUN JAGUNG
+                    </span>
+
+
+                    <h3>
+                        Bihun Jagung Pitung 300GR
+                    </h3>
+
+
+                    <p>
+                        Bihun jagung dengan tekstur lembut
+                        untuk berbagai hidangan.
+                    </p>
+
+
+                    <div class="catalog-button">
+
+                        Lihat Produk
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PRODUK 4 — SOHUN IYON
+            ================================================== -->
+
+            <a
+                href="/Sohun_Iyon"
+                class="catalog-card">
+
+                <div class="catalog-image">
+
+                    <img
+                        src="{{ url_for('static', filename='image/50griyon.png') }}"
+                        alt="Sohun Iyon 50GR">
+
+                </div>
+
+
+                <div class="catalog-content">
+
+                    <span class="catalog-category">
+                        SOHUN
+                    </span>
+
+
+                    <h3>
+                        Sohun Iyon 50GR
+                    </h3>
+
+
+                    <p>
+                        Sohun berbahan pati jagung dengan
+                        kemasan ekonomis untuk keluarga.
+                    </p>
+
+
+                    <div class="catalog-button">
+
+                        Lihat Produk
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PRODUK 5 — SISUKA
+            ================================================== -->
+
+            <a
+                href="/Penyedap_Rasa_Sisuka"
+                class="catalog-card">
+
+                <div class="catalog-image">
+
+                    <img
+                        src="{{ url_for('static', filename='image/250grsisuka.png') }}"
+                        alt="Penyedap Rasa Sisuka">
+
+                </div>
+
+
+                <div class="catalog-content">
+
+                    <span class="catalog-category">
+                        PENYEDAP RASA
+                    </span>
+
+
+                    <h3>
+                        Penyedap Rasa Sisuka
+                    </h3>
+
+
+                    <p>
+                        Penyedap rasa untuk menambah cita rasa
+                        berbagai masakan.
+                    </p>
+
+
+                    <div class="catalog-button">
+
+                        Lihat Produk
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <div class="catalog-bottom">
+
+            <div class="catalog-bottom-content">
+
+                <h2>
+                    Butuh Informasi Produk?
+                </h2>
+
+
+                <p>
+                    Hubungi tim Manera untuk informasi produk,
+                    pemesanan maupun kebutuhan bisnis Anda.
+                </p>
+
+
+                <a
+                    href="https://wa.me/6282322238885"
+                    target="_blank"
+                    rel="noopener"
+                    class="catalog-wa">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    Hubungi Kami
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="catalog-footer">
+
+    <p>
+        © 2026 PT Manera Pacific Indonesia. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

@@ -237,11 +237,18 @@ p {
    ========================================================= */
 
 .hero {
+    height: 68vh;
+    min-height: 480px;
+    max-height: 600px;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    min-height: 650px;
     overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .heroSwiper {
@@ -607,253 +614,139 @@ p {
     margin: auto;
 }
 
-/* =========================================================
-   7. PRODUCT CATALOG
-   HTML utama: .products_corousel #productSlider
-   ========================================================= */
 
-.products_corousel,
-.category-section {
-    position: relative;
+/* ================= KATALOG BOX ================= */
+
+.catalog-box-wrapper {
     width: 100%;
-    padding: 90px 0 80px;
-    background: #f8fafc;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.products_corousel .container,
-.category-section .container {
-    width: 92%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.products_corousel .section-header,
-.category-section .section-header {
+.catalog-box {
     width: 100%;
-    margin: 0 auto 50px;
-    text-align: center;
-}
+    max-width: 1100px;
+    min-height: 230px;
 
-.products_corousel .section-header span,
-.category-section .section-header span {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 52px;
-    padding: 0 38px;
-    border-radius: 50px;
-    background: #1c304e;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-}
 
-.products_corousel .section-header h2,
-.category-section .section-header h2 {
-    margin: 22px 0 0;
-    color: #1c304e;
-    font-size: 42px;
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-.product-carousel,
-.product-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.product-viewport {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-#productSlider,
-.product-track {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 0;
-    width: max-content;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    transform: translate3d(0, 0, 0);
-    transition: transform .45s cubic-bezier(.4, 0, .2, 1);
-    will-change: transform;
-}
-
-#productSlider .category-card,
-.product-track .category-card,
-.category-section .category-card {
-    position: relative;
-    flex: 0 0 280px;
-    width: 280px;
-    min-width: 280px;
-    max-width: 280px;
-    height: 390px;
-    margin: 0;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    overflow: visible;
-    text-align: center;
-}
-
-#productSlider .category-link,
-.product-track .category-link,
-.category-section .category-link {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    color: inherit;
     text-decoration: none;
-    overflow: visible;
-}
 
-#productSlider .category-link::before,
-.category-section .category-link::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 275px;
-    flex: 0 0 275px;
-}
+    background: #1C304E;
+    border-radius: 24px;
 
-#productSlider .main-img,
-.product-track .main-img,
-.category-section .main-img {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    z-index: 10;
-    display: block;
-    width: auto;
-    height: 235px;
-    max-width: 220px;
-    max-height: 245px;
-    margin: 0;
-    object-fit: contain;
-    transform: translateX(-50%);
-    opacity: 1;
-    visibility: visible;
-    transition: transform .3s ease;
-}
-
-#productSlider .side-img,
-.product-track .side-img,
-.category-section .side-img {
-    position: absolute;
-    z-index: 30;
-    width: 115px;
-    height: 115px;
-    object-fit: contain;
-    pointer-events: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s ease, transform .3s ease;
-}
-
-#productSlider .side-img.left,
-.product-track .side-img.left,
-.category-section .side-img.left {
-    left: 0;
-    top: 145px;
-    transform: translateX(-10px) scale(.9);
-}
-
-#productSlider .side-img.right,
-.product-track .side-img.right,
-.category-section .side-img.right {
-    right: 0;
-    top: 145px;
-    transform: translateX(10px) scale(.9);
-}
-
-#productSlider .category-card h3,
-#productSlider .category-card .product-name,
-.product-track .category-card h3,
-.product-track .category-card .product-name,
-.category-section .category-card h3,
-.category-section .category-card .product-name {
     position: relative;
-    z-index: 50;
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    min-height: 45px;
-    margin: 10px auto 0;
-    padding: 0;
-    color: #1c304e;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.4;
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-box::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: #FFD200;
+
+    opacity: 0.08;
+
+    top: -150px;
+    right: -80px;
+}
+
+.catalog-box::after {
+    content: "";
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: #FFD200;
+
+    opacity: 0.06;
+
+    bottom: -130px;
+    left: -70px;
+}
+
+.catalog-box:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.catalog-content {
+    position: relative;
+    z-index: 2;
+
     text-align: center;
-    white-space: normal;
-    overflow: visible;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    #productSlider .category-card:hover .main-img,
-    .product-track .category-card:hover .main-img,
-    .category-section .category-card:hover .main-img {
-        transform: translateX(-50%) scale(1.05);
-    }
+.catalog-label {
+    display: block;
 
-    #productSlider .category-card:hover .side-img,
-    .product-track .category-card:hover .side-img,
-    .category-section .category-card:hover .side-img {
-        opacity: 1;
-        visibility: visible;
-    }
+    font-size: 13px;
+    font-weight: 700;
 
-    #productSlider .category-card:hover .side-img.left,
-    .product-track .category-card:hover .side-img.left,
-    .category-section .category-card:hover .side-img.left {
-        transform: translateX(0) scale(1);
-    }
+    letter-spacing: 2px;
 
-    #productSlider .category-card:hover .side-img.right,
-    .product-track .category-card:hover .side-img.right,
-    .category-section .category-card:hover .side-img.right {
-        transform: translateX(0) scale(1);
-    }
+    color: #FFD200;
+
+    margin-bottom: 8px;
 }
 
-.product-dots {
+.catalog-content h3 {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    color: #ffffff;
+
+    letter-spacing: 1px;
+}
+
+.catalog-content p {
+    margin: 8px 0 20px;
+
+    font-size: 16px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.catalog-arrow {
+    width: 46px;
+    height: 46px;
+
+    margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 25px;
-}
 
-.product-dot {
-    width: 8px;
-    height: 8px;
-    padding: 0;
-    border: 0;
     border-radius: 50%;
-    background: #cbd5e1;
-    cursor: pointer;
-    transition: width .3s ease, background .3s ease;
+
+    background: #FFD200;
+
+    color: #1C304E;
+
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
 }
 
-.product-dot.active {
-    width: 25px;
-    border-radius: 20px;
-    background: #1c304e;
+.catalog-box:hover .catalog-arrow {
+    transform: translateX(6px);
 }
 
 /* =========================================================
@@ -1131,6 +1024,15 @@ p {
     gap: 40px;
     border-radius: 12px;
     background: #fff;
+}
+
+footer .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
 
 .footer-channel h4 {
@@ -1958,6 +1860,7 @@ p {
         width: 100%;
     }
 
+
     /* ---------- Detail Page ---------- */
 
     .detail-hero {
@@ -2005,6 +1908,7 @@ p {
         justify-content: center;
         flex-wrap: wrap;
     }
+
 }
 
 /* =========================================================
