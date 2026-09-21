@@ -47,7 +47,7 @@ def penyedap_rasa_sisuka():
 
 @app.route('/Katalog')
 def katalog():
-    return "KATALOG ROUTE BERHASIL!"
+    return render_template('Katalog.html')
 
 
 # =====================================================
