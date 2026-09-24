@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bihun Instan Ayam Bawang</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS Website -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='detail.css') }}">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar" id="navbar">
+
+    <div class="nav-wrapper">
+
+        <!-- LOGO -->
+
+        <a href="#home" class="logo" aria-label="Manera Home">
+
+            <img
+                src="{{ url_for('static', filename='image/logo_manera.png') }}"
+                alt="Manera"
+                class="logo-img">
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="main-nav" id="mainNav">
+
+            <ul>
+
+                <li>
+                    <a href="#about">
+                        Tentang Produk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#advantages">
+                        Keunggulan Produk
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu">
+                        Resep
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Pemesanan
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- WHATSAPP DESKTOP -->
+
+        <a
+            href="https://wa.me/6282322238885"
+            class="btn-wa desktop-wa"
+            target="_blank"
+            rel="noopener">
+
+            <i class="fab fa-whatsapp"></i>
+
+            Konsultasi Gratis
+
+        </a>
+
+
+        <!-- HAMBURGER -->
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            type="button"
+            aria-label="Buka menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu">
+
+        <a href="#about">
+            Tentang Produk
+        </a>
+
+        <a href="#advantages">
+            Keunggulan Produk
+        </a>
+
+        <a href="#menu">
+            Resep
+        </a>
+
+        <a href="#contact">
+            Pemesanan
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <!-- Background -->
+
+    <img
+        src="{{ url_for('static', filename='image/landscapesoto.png') }}"
+        alt="Bihun Instan Soto"
+        class="hero-bg">
+
+
+    <!-- Overlay -->
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="container hero-container">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="hero-text">
+
+            <span class="hero-badge">
+                HALAL • BPOM • GLUTEN FREE
+            </span>
+
+
+            <h1>
+                BIHUN INSTAN <br>
+                SOTO
+            </h1>
+
+
+            <p>
+                “Praktisnya bihun instan, nikmatnya rasa soto.”
+                Bihun jagung dengan cita rasa soto yang gurih dan berbumbu,
+                praktis disajikan dan mudah dikreasikan dengan berbagai topping favorit.    
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#contact"
+                    class="btn-primary">
+
+                    Pesan Sekarang
+
+                </a>
+
+
+                <a
+                    href="#about"
+                    class="btn-outline">
+
+                    Detail Produk
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT PRODUCT -->
+
+        <div class="hero-image">
+
+            <img
+                src="{{ url_for('static', filename='image/InstanSoto.png') }}"
+                alt="Bihun Instan Soto">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT PRODUCT
+===================================================== -->
+
+<section
+    class="about-product"
+    id="about">
+
+    <div class="container">
+
+        <div class="about-wrapper">
+
+
+            <!-- IMAGE -->
+
+            <div class="about-image">
+
+                <img
+                    src="{{ url_for('static', filename='image/InstanSoto.png') }}"
+                    alt="Bihun Instan Soto">
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="about-content">
+
+                <span class="section-tag">
+                    TENTANG PRODUK
+                </span>
+
+
+                <h2>
+                    Bihun Instan
+                    Soto
+                </h2>
+
+
+                <p>
+                    Dijual secara eceran maupun grosir. Baik melalui toko offline dan online di e-commerce Manera.
+                </p>
+
+
+
+                <div class="about-feature">
+
+
+                    <div class="feature-item">
+
+                        <i class="fas fa-circle-check"></i>
+
+                        <span>
+                            1 Pack berisi 55 gram
+                        </span>
+
+                    </div>
+
+
+                    <div class="feature-item">
+
+                        <i class="fas fa-circle-check"></i>
+
+                        <span>
+                            1 Karton berisi 50 Pack
+                        </span>
+
+                    </div>
+                 
+                </div>
+
+
+                <a
+                    href="#contact"
+                    class="btn-primary">
+
+                    Pesan Sekarang
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     KEUNGGULAN PRODUK
+===================================================== -->
+
+<section
+    class="advantages"
+    id="advantages">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <span>
+                KENAPA MEMILIH KAMI
+            </span>
+
+
+            <h2>
+                Keunggulan Bihun Instan Soto
+            </h2>
+
+
+            <p>
+                Dibuat dari bahan pilihan dan diproses dengan standar kualitas tinggi
+                sehingga menghasilkan bihun instan soto yang disukai keluarga Indonesia.
+            </p>
+
+        </div>
+
+
+
+        <div class="advantages-grid">
+
+
+            <!-- ADVANTAGE 1 -->
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    🌽
+                </div>
+
+
+                <h3>
+                    100% Jagung Berkualitas
+                </h3>
+
+
+                <p>
+                    Terbuat dari 99,8% pati jagung yang berkualitas tinggi,
+                    sehingga rendah kalori dan bebas gluten.
+                </p>
+
+            </div>
+
+
+
+            <!-- ADVANTAGE 2 -->
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    🍜
+                </div>
+
+
+                <h3>
+                    Tersertifikasi Halal & BPOM
+                </h3>
+
+
+                <p>
+                    Bihun Instan Soto sudah tersertifikasi Halal Indonesia
+                    dan memiliki izin edar BPOM sehingga lebih terpercaya.
+                </p>
+
+            </div>
+
+
+
+            <!-- ADVANTAGE 3 -->
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    ⚡
+                </div>
+
+
+                <h3>
+                    Praktis dan Cepat Dibuat
+                </h3>
+
+
+                <p>
+                    Tidak membutuhkan waktu lama untuk memasak, mudah dibuat kapan saja
+                    baik pagi, siang maupun saat lapar.
+                </p>
+
+            </div>
+
+
+
+            <!-- ADVANTAGE 4 -->
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    🥗
+                </div>
+
+
+                <h3>
+                    Cita Rasa Soto
+                </h3>
+
+
+                <p>
+                    Perpaduan rasa gurih soto dan aroma bumbu yang khas, cocok untuk dimakan langsung 
+                    atau dikreasikan dengan berbagai topping.
+                </p>
+
+            </div>
+
+
+
+            <!-- ADVANTAGE 5 -->
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    🍲
+                </div>
+
+
+                <h3>
+                    Cocok untuk stok di rumah
+                </h3>
+
+
+                <p>
+                    Produk instan punya keunggulan dari sisi kemudahan penyimpanan dan kesiapan saat dibutuhkan,
+                    selama penyimpanan mengikuti petunjuk pada kemasan.
+                </p>
+
+            </div>
+
+
+
+            <!-- ADVANTAGE 6 -->
+
+            <div class="adv-card">
+
+                <div class="adv-icon">
+                    ✅
+                </div>
+
+
+                <h3>
+                    Lebih Ekonomis
+                </h3>
+
+
+                <p>
+                    Bisa jadi pilihan makanan praktis dengan tambahan bahan sesuai selera.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA PEMBELIAN
+===================================================== -->
+
+<section
+    class="purchase-cta"
+    id="contact">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+
+            <!-- BACKGROUND DECORATION -->
+
+            <div class="cta-decoration cta-decoration-1"></div>
+
+            <div class="cta-decoration cta-decoration-2"></div>
+
+
+
+            <!-- CTA CONTENT -->
+
+            <div class="cta-content">
+
+                <span class="cta-label">
+                    SIAP MENCOBA?
+                </span>
+
+
+                <h2>
+
+                    Saatnya Hadirkan<br>
+
+                    <strong>
+                        Bihun Instan Soto
+                    </strong>
+
+                    di Dapur Anda
+
+                </h2>
+
+
+                <p>
+                    Cocok untuk kebutuhan sehari-hari atau stok di rumah. Bisa jadi
+                    pilihan makanan praktis yang cepat dibuat.
+                </p>
+
+
+
+                <div class="cta-buttons">
+
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        href="https://wa.me/6282322238885?text=Halo%20PT%20Manera,%20saya%20ingin%20memesan%20Bihun%20Jagung%20Pion%20Tunggal%20140gr"
+                        class="cta-primary"
+                        target="_blank"
+                        rel="noopener">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                        Pesan Sekarang
+
+                    </a>
+
+
+
+                    <!-- KEMBALI KE PRODUK -->
+
+                    <a
+                     href="/Katalog"
+                     class="cta-secondary">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                     Lihat Produk Lain
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- TRUST -->
+
+                <div class="cta-trust">
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Halal Indonesia
+                        </span>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Terdaftar BPOM
+                        </span>
+
+                    </div>
+
+
+                    <div class="trust-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>
+                            Produk Berkualitas
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="cta-product">
+
+                <div class="product-glow"></div>
+
+
+                <img
+                    src="{{ url_for('static', filename='image/potraitSoto.png') }}"
+                    alt="Bihun Instan Soto">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SWIPER JS
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<!-- =====================================================
+     HERO SWIPER
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const heroSwiper = document.querySelector(".heroSwiper");
+
+    if (heroSwiper && typeof Swiper !== "undefined") {
+
+        new Swiper(".heroSwiper", {
+
+            loop: true,
+
+            speed: 1000,
+
+            effect: "fade",
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     NAVBAR SCROLL
+===================================================== -->
+
+<script>
+
+window.addEventListener("scroll", function () {
+
+    const navbar = document.querySelector(".navbar");
+
+    if (!navbar) return;
+
+
+    if (window.scrollY > 80) {
+
+        navbar.classList.add("scrolled");
+
+    } else {
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     HAMBURGER MOBILE
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hamburger =
+        document.getElementById("hamburger");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    if (!hamburger || !mobileMenu) return;
+
+
+
+    hamburger.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+
+        const isActive =
+            hamburger.classList.toggle("active");
+
+
+        mobileMenu.classList.toggle("active");
+
+
+        hamburger.setAttribute(
+            "aria-expanded",
+            isActive ? "true" : "false"
+        );
+
+    });
+
+
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            hamburger.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+
+
+    document.addEventListener("click", function (event) {
+
+        if (
+            !mobileMenu.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ) {
+
+            hamburger.classList.remove("active");
+
+            mobileMenu.classList.remove("active");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     RECIPE POPUP
+===================================================== -->
+
+<script>
+
+function openRecipe(card) {
+
+    const image =
+        card.querySelector("img");
+
+    const modal =
+        document.getElementById("recipeModal");
+
+    const modalImage =
+        document.getElementById("recipeModalImage");
+
+
+    if (!image || !modal || !modalImage) return;
+
+
+    modalImage.src = image.src;
+
+    modalImage.alt =
+        image.alt || "Resep Bihun Jagung";
+
+
+    modal.classList.add("active");
+
+    document.body.classList.add("recipe-modal-open");
+
+}
+
+
+
+function closeRecipe() {
+
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    if (!modal) return;
+
+
+    modal.classList.remove("active");
+
+    document.body.classList.remove("recipe-modal-open");
+
+}
+
+
+
+document.addEventListener("click", function (event) {
+
+    const modal =
+        document.getElementById("recipeModal");
+
+
+    if (!modal) return;
+
+
+    if (event.target === modal) {
+
+        closeRecipe();
+
+    }
+
+});
+
+
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        closeRecipe();
+
+    }
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     VIDEO DEBUG
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const videos =
+        document.querySelectorAll("video");
+
+
+    videos.forEach(function (video) {
+
+        video.addEventListener(
+            "loadedmetadata",
+            function () {
+
+                console.log(
+                    "VIDEO BERHASIL DIBACA"
+                );
+
+                console.log(
+                    "Durasi:",
+                    video.duration
+                );
+
+                console.log(
+                    "Lebar:",
+                    video.videoWidth
+                );
+
+                console.log(
+                    "Tinggi:",
+                    video.videoHeight
+                );
+
+            }
+        );
+
+
+        video.addEventListener(
+            "error",
+            function () {
+
+                console.log(
+                    "VIDEO ERROR"
+                );
+
+                if (video.error) {
+
+                    console.log(
+                        "Code:",
+                        video.error.code
+                    );
+
+                    console.log(
+                        "Message:",
+                        video.error.message
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     SMOOTH SCROLL
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const links =
+        document.querySelectorAll('a[href^="#"]');
+
+
+    links.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (!target) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>

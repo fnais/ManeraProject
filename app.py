@@ -49,6 +49,14 @@ def penyedap_rasa_sisuka():
 def katalog():
     return render_template('Katalog.html')
 
+@app.route('/BihunInstanAyamBawang')
+def bihun_instan_ayam_bawang():
+    return render_template('BihunInstanAyamBawang.html')
+
+@app.route('/BihunInstanSoto')
+def bihun_instan_soto():
+    return render_template('BihunInstanSoto.html')
+
 
 # =====================================================
 # DISTRIBUSI
