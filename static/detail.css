@@ -3,9 +3,9 @@
    PT MANERA PACIFIC INDONESIA
 ========================================================= */
 
-*,
-*::before,
-*::after {
+
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -117,16 +117,13 @@ button {
 .main-nav {
     display: flex;
     align-items: center;
-
     margin-left: auto;
 }
 
 .main-nav ul {
     display: flex;
     align-items: center;
-
     gap: 30px;
-
     list-style: none;
 }
 
@@ -137,36 +134,24 @@ button {
 
 .main-nav a {
     position: relative;
-
     display: block;
-
     padding: 10px 0;
-
     color: #1C304E;
-
     font-size: 14px;
     font-weight: 600;
-
     white-space: nowrap;
-
     transition: color .25s ease;
 }
 
 .main-nav a::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: 2px;
-
     width: 0;
     height: 2px;
-
     background: #FFD200;
-
     border-radius: 10px;
-
     transition: width .25s ease;
 }
 
@@ -183,26 +168,17 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
-
     gap: 9px;
-
     min-height: 46px;
-
     padding: 0 22px;
-
     border-radius: 999px;
-
     background: #1C304E;
     color: #ffffff;
-
     font-size: 13px;
     font-weight: 700;
-
     box-shadow:
         0 8px 20px rgba(28, 48, 78, .16);
-
     transition:
         transform .25s ease,
         background .25s ease,
@@ -211,9 +187,7 @@ button {
 
 .btn-wa:hover {
     transform: translateY(-2px);
-
     background: #15253d;
-
     box-shadow:
         0 12px 25px rgba(28, 48, 78, .22);
 }
@@ -315,7 +289,6 @@ button {
     grid-template-columns:
         minmax(0, 1fr)
         500px;
-
     align-items: center;
     gap: 80px;
 }
@@ -637,6 +610,69 @@ button {
     color: #64748b;
     font-size: 16px;
     line-height: 1.8;
+}
+
+/* =========================
+   CARA MEMASAK
+========================= */
+
+.cooking-guide {
+    width: 100%;
+    padding: 70px 20px;
+    background: #f8f9fb;
+    box-sizing: border-box;
+}
+
+.cooking-container {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+}
+
+.cooking-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cooking-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #1c304e;
+    color: #ffd200;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.cooking-header h2 {
+    margin: 0 0 12px;
+    color: #1c304e;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+.cooking-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #626b78;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.cooking-image {
+    width: 100%;
+    text-align: center;
+}
+
+.cooking-image img {
+    display: block;
+    width: 100%;
+    max-width: 950px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 
@@ -1321,7 +1357,6 @@ button {
     .advantages-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
-
         gap: 25px;
     }
 
@@ -1341,7 +1376,6 @@ button {
 
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
-
         gap: 18px;
     }
 
@@ -1370,7 +1404,6 @@ button {
     .video-container {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
-
         gap: 20px;
     }
 
@@ -1383,7 +1416,6 @@ button {
 
     .cta-box {
         min-height: 450px;
-
         padding: 55px;
     }
 
@@ -1416,7 +1448,6 @@ button {
     .container {
         width: 92%;
         max-width: 100%;
-
         padding: 0;
     }
 
@@ -1427,23 +1458,19 @@ button {
 
     .navbar {
         background: #ffffff;
-
         box-shadow:
             0 4px 18px rgba(15,23,42,.08);
     }
 
     .nav-wrapper {
         width: 100%;
-
         min-height: 76px;
-
         padding:
             0 24px;
     }
 
     .logo-img {
         height: 46px;
-
         max-width: 190px;
     }
 
@@ -1471,31 +1498,21 @@ button {
 
     .mobile-menu {
         position: absolute;
-
         top: 100%;
         left: 0;
-
         width: 100%;
-
         display: flex;
         flex-direction: column;
-
         padding:
             10px 20px 18px;
-
         background: #ffffff;
-
         box-shadow:
             0 15px 30px rgba(15,23,42,.10);
-
         opacity: 0;
         visibility: hidden;
-
         transform:
             translateY(-10px);
-
         pointer-events: none;
-
         transition:
             opacity .25s ease,
             transform .25s ease,
@@ -1504,31 +1521,22 @@ button {
 
     .mobile-menu.active {
         opacity: 1;
-
         visibility: visible;
-
         transform:
             translateY(0);
-
         pointer-events: auto;
     }
 
     .mobile-menu a {
         display: flex;
         align-items: center;
-
         min-height: 52px;
-
         padding: 0 15px;
-
         border-bottom:
             1px solid #eef2f7;
-
         color: #1C304E;
-
         font-size: 15px;
         font-weight: 600;
-
         transition:
             background .2s ease,
             color .2s ease;
@@ -1549,7 +1557,6 @@ button {
 
     .hero {
         min-height: 100svh;
-
         padding:
             100px 0
             50px;
@@ -1557,11 +1564,8 @@ button {
 
     .hero-container {
         display: flex;
-
         flex-direction: column;
-
         text-align: center;
-
         gap: 30px;
     }
 
@@ -1573,41 +1577,32 @@ button {
         padding:
             8px
             16px;
-
         margin-bottom: 16px;
-
         font-size: 11px;
-
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
     }
 
     .hero-text h1 {
         margin-bottom: 18px;
-
         font-size:
             clamp(
                 34px,
                 9vw,
                 44px
             );
-
         line-height: 1.08;
     }
 
     .hero-text p {
         max-width: 100%;
-
         font-size: 15px;
-
         line-height: 1.7;
     }
 
     .hero-buttons {
         margin-top: 25px;
-
         gap: 10px;
-
         justify-content: center;
     }
 
@@ -1616,7 +1611,6 @@ button {
         padding:
             13px
             20px;
-
         font-size: 14px;
     }
 
@@ -1626,9 +1620,7 @@ button {
                 68vw,
                 260px
             );
-
         animation: none;
-
         filter: none;
     }
 
@@ -1643,11 +1635,8 @@ button {
 
     .about-wrapper {
         display: flex;
-
         flex-direction: column;
-
         gap: 30px;
-
         text-align: center;
     }
 
@@ -1666,31 +1655,25 @@ button {
                 8vw,
                 38px
             );
-
         line-height: 1.2;
     }
 
     .about-content p {
         margin-bottom: 25px;
-
         font-size: 15px;
-
         line-height: 1.7;
     }
 
     .about-feature {
         grid-template-columns: 1fr;
-
         gap: 10px;
     }
 
     .feature-item {
         justify-content: flex-start;
-
         padding:
             14px
             16px;
-
         text-align: left;
     }
 
@@ -1726,7 +1709,6 @@ button {
 
     .advantages-grid {
         grid-template-columns: 1fr;
-
         gap: 16px;
     }
 
@@ -1734,16 +1716,13 @@ button {
         padding:
             28px
             22px;
-
         border-radius: 20px;
-
         box-shadow:
             0 8px 20px rgba(15,23,42,.05);
     }
 
     .adv-card:hover {
         transform: none;
-
         box-shadow:
             0 8px 20px rgba(15,23,42,.05);
     }
@@ -1751,9 +1730,7 @@ button {
     .adv-icon {
         width: 65px;
         height: 65px;
-
         margin-bottom: 18px;
-
         font-size: 28px;
     }
 
@@ -1780,39 +1757,29 @@ button {
 
     .menu-section .section-title {
         max-width: 100%;
-
         margin:
             0 auto 38px;
-
         padding:
             0 18px;
     }
 
     .menu-section .section-title span {
         margin-bottom: 10px;
-
         font-size: 13px;
-
         letter-spacing: 1.2px;
     }
 
     .menu-section .section-title h2 {
         max-width: 360px;
-
         font-size: 30px;
-
         line-height: 1.2;
-
         letter-spacing: -.4px;
     }
 
     .menu-section .section-title p {
         max-width: 360px;
-
         margin-top: 14px;
-
         font-size: 14px;
-
         line-height: 1.6;
     }
 
@@ -1824,17 +1791,12 @@ button {
 
     .menu-grid {
         width: 100%;
-
         display: grid;
-
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
-
         gap: 12px;
-
         padding:
             0 10px;
-
         margin: 0 auto;
     }
 
@@ -1845,23 +1807,17 @@ button {
 
     .menu-card {
         width: 100%;
-
         min-width: 0;
-
         aspect-ratio: 3 / 4;
-
         border-radius: 14px;
-
         box-shadow:
             0 7px 20px
             rgba(28,48,78,.10);
-
         transform: none;
     }
 
     .menu-card:hover {
         transform: none;
-
         box-shadow:
             0 7px 20px
             rgba(28,48,78,.10);
@@ -1875,9 +1831,7 @@ button {
     .menu-card img {
         width: 100%;
         height: 100%;
-
         object-fit: cover;
-
         transform: none;
     }
 
@@ -1894,12 +1848,10 @@ button {
         left: 0;
         right: 0;
         bottom: 0;
-
         padding:
             45px
             8px
             9px;
-
         background:
             linear-gradient(
                 to top,
@@ -1911,13 +1863,9 @@ button {
 
     .menu-overlay h3 {
         font-size: 12px;
-
         line-height: 1.15;
-
         text-align: left;
-
         word-break: normal;
-
         overflow-wrap: break-word;
     }
 
@@ -1933,23 +1881,34 @@ button {
     .recipe-modal img {
         width: auto;
         height: auto;
-
         max-width: 94vw;
         max-height: 82vh;
-
         border-radius: 10px;
     }
 
     .recipe-close {
         top: 12px;
         right: 12px;
-
         width: 42px;
         height: 42px;
-
         font-size: 27px;
     }
 
+
+/* TABLET */
+@media (max-width: 768px) {
+    .cooking-guide {
+        padding: 50px 18px;
+    }
+
+    .cooking-header {
+        margin-bottom: 25px;
+    }
+
+    .cooking-header p {
+        font-size: 14px;
+    }
+}
 
     /* =====================================================
        VIDEO
@@ -1961,7 +1920,6 @@ button {
 
     .testimoni-title {
         margin-bottom: 35px;
-
         padding:
             0 15px;
     }
@@ -1982,24 +1940,19 @@ button {
     .video-container {
         width: 90%;
         max-width: 360px;
-
         grid-template-columns: 1fr;
-
         gap: 18px;
     }
 
     .video-card {
         padding: 8px;
-
         border-radius: 18px;
-
         box-shadow:
             0 8px 20px rgba(0,0,0,.07);
     }
 
     .video-card:hover {
         transform: none;
-
         box-shadow:
             0 8px 20px rgba(0,0,0,.07);
     }
@@ -2019,16 +1972,12 @@ button {
 
     .cta-box {
         min-height: auto;
-
         padding:
             42px
             22px
             38px;
-
         flex-direction: column;
-
         text-align: center;
-
         border-radius: 26px;
     }
 
@@ -2040,7 +1989,6 @@ button {
         padding:
             7px
             14px;
-
         font-size: 10px;
     }
 
@@ -2051,7 +1999,6 @@ button {
                 8vw,
                 34px
             );
-
         line-height: 1.2;
     }
 
@@ -2059,28 +2006,23 @@ button {
         margin:
             18px auto
             25px;
-
         font-size: 14px;
-
         line-height: 1.7;
     }
 
     .cta-buttons {
         width: 100%;
-
         flex-direction: column;
     }
 
     .cta-primary,
     .cta-secondary {
         width: 100%;
-
         max-width: 300px;
     }
 
     .cta-trust {
         justify-content: center;
-
         gap:
             10px
             16px;
@@ -2089,7 +2031,6 @@ button {
     .cta-product {
         width: 220px;
         min-width: 220px;
-
         margin:
             28px
             0
@@ -2098,7 +2039,6 @@ button {
 
     .cta-product img {
         max-width: 220px;
-
         filter:
             drop-shadow(
                 0 12px 18px rgba(0,0,0,.22)
@@ -2128,21 +2068,18 @@ button {
 
     .nav-wrapper {
         min-height: 70px;
-
         padding:
             0 18px;
     }
 
     .logo-img {
         height: 42px;
-
         max-width: 175px;
     }
 
     .hamburger {
         width: 42px;
         height: 42px;
-
         padding: 7px;
     }
 
@@ -2160,7 +2097,6 @@ button {
 
     .mobile-menu a {
         min-height: 50px;
-
         font-size: 14px;
     }
 
@@ -2185,13 +2121,10 @@ button {
 
     .hero-buttons {
         width: 100%;
-
         max-width: 280px;
-
         margin:
             25px auto
             0;
-
         flex-direction: column;
     }
 
@@ -2238,25 +2171,21 @@ button {
     .menu-section .section-title {
         padding:
             0 15px;
-
         margin-bottom: 30px;
     }
 
     .menu-section .section-title span {
         font-size: 12px;
-
         letter-spacing: 1px;
     }
 
     .menu-section .section-title h2 {
         max-width: 340px;
-
         font-size: 27px;
     }
 
     .menu-section .section-title p {
         max-width: 340px;
-
         font-size: 13px;
     }
 
@@ -2267,26 +2196,21 @@ button {
 
     .menu-grid {
         width: 100%;
-
         grid-template-columns:
             repeat(3, minmax(0, 1fr));
-
         gap: 8px;
-
         padding:
             0 7px;
     }
 
     .menu-card {
         aspect-ratio: 3 / 4;
-
         border-radius: 10px;
     }
 
     .menu-card img {
         width: 100%;
         height: 100%;
-
         object-fit: cover;
     }
 
@@ -2299,7 +2223,6 @@ button {
 
     .menu-overlay h3 {
         font-size: 10px;
-
         line-height: 1.15;
     }
 
@@ -2312,20 +2235,31 @@ button {
 
     .recipe-modal img {
         max-width: 96vw;
-
         max-height: 78vh;
     }
 
     .recipe-close {
         top: 10px;
         right: 10px;
-
         width: 40px;
         height: 40px;
-
         font-size: 25px;
     }
+    .cooking-guide {
+        padding: 38px 14px;
+    }
 
+    .cooking-label {
+        font-size: 10px;
+    }
+
+    .cooking-header h2 {
+        font-size: 27px;
+    }
+
+    .cooking-image img {
+        border-radius: 8px;
+    }
 
     /* VIDEO */
 
@@ -2335,7 +2269,6 @@ button {
 
     .video-container {
         width: 90%;
-
         max-width: 100%;
     }
 
@@ -2397,7 +2330,6 @@ button {
 
     .logo-img {
         height: 39px;
-
         max-width: 160px;
     }
 
@@ -2411,7 +2343,6 @@ button {
 
     .menu-grid {
         gap: 6px;
-
         padding:
             0 6px;
     }
